@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сети за чашкой кофе: как из таблицы «индивид — тип связи — индивид 2» получается картинка — блог corpus</title>
+  <meta name="description" content="Пошагово: как записать связи из интервью в таблицу из трёх столбцов, загрузить её в corpus, разложить, посчитать и не принять красивую картинку за вывод.">
+  <meta name="author" content="Снежана">
+  <meta name="theme-color" content="#f5f1e9">
+  <link rel="canonical" href="https://corpus.example/blog/networks-over-coffee/">
+  <link rel="alternate" type="application/rss+xml" title="corpus — блог" href="/corpus-site/feed.xml">
+  <link rel="icon" href="/corpus-site/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/corpus-site/apple-touch-icon.png">
+  <link rel="preload" href="/corpus-site/fonts/pt-serif-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/corpus-site/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/corpus-site/css/site.css?v=9f0ecba7">
+  <meta property="og:site_name" content="corpus">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Сети за чашкой кофе: как из таблицы «индивид — тип связи — индивид 2» получается картинка — блог corpus">
+  <meta property="og:description" content="Пошагово: как записать связи из интервью в таблицу из трёх столбцов, загрузить её в corpus, разложить, посчитать и не принять красивую картинку за вывод.">
+  <meta property="og:url" content="https://corpus.example/blog/networks-over-coffee/">
+  <meta property="og:image" content="https://corpus.example/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="/corpus-site/js/menu.js?v=9f0ecba7" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">к содержанию</a>
+
+  <header class="masthead" data-masthead>
+    <div class="wrap masthead-inner">
+      <a class="logo" href="/corpus-site/">
+        <img src="/corpus-site/brand/wordmark.svg" alt="corpus — на главную" width="94" height="40">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+        <span class="menu-toggle-lines" aria-hidden="true"></span>меню
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
+        <ul>
+          <li><a href="/corpus-site/features/">возможности</a></li>
+          <li><a href="/corpus-site/blog/" aria-current="page">блог</a></li>
+          <li><a href="/corpus-site/about/">обо мне</a></li>
+          <li><a href="/corpus-site/team/">команда</a></li>
+          <li><a href="/corpus-site/contacts/">контакты</a></li>
+        </ul>
+        <a class="btn btn-small" href="https://app.corpus.example">войти <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+<article class="post wrap">
+  <header class="post-head">
+    <p class="kicker"><a href="/corpus-site/blog/">блог</a> / <a href="/corpus-site/blog/rubric/metody/"><span class="rubric">§ 03 · методы</span></a></p>
+    <h1>Сети за чашкой кофе: как из таблицы «индивид — тип связи — индивид 2» получается картинка</h1>
+    <p class="post-summary">Пошагово: как записать связи из интервью в таблицу из трёх столбцов, загрузить её в corpus, разложить, посчитать и не принять красивую картинку за вывод.</p>
+    <dl class="post-meta">
+      <div><dt>дата</dt><dd><time datetime="2026-10-20">20 октября 2026</time></dd></div>
+      <div><dt>чтение</dt><dd>4 минуты чтения</dd></div>
+      <div><dt>автор</dt><dd>Снежана</dd></div>
+    </dl>
+  </header>
+
+  <div class="prose">
+    <p>В интервью люди постоянно называют других людей. «Земляк позвал на стройку». «Брат помог с жильём». «Соседка по комнате нашла мне первую работу». Это уже сеть — её просто никто не записал. Записать её можно за то время, пока остывает кофе, если знать, в каком виде.</p>
+<h2 id="шаг-1-таблица-из-трёх-столбцов">Шаг 1. Таблица из трёх столбцов</h2>
+<p>Всё начинается с самой скучной таблицы на свете. Одна строка — одна связь:</p>
+<table>
+<thead>
+<tr>
+<th>индивид</th>
+<th>тип связи</th>
+<th>индивид 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-014</td>
+<td>земляк</td>
+<td>P-022</td>
+</tr>
+<tr>
+<td>P-014</td>
+<td>помог с работой</td>
+<td>P-031</td>
+</tr>
+<tr>
+<td>P-022</td>
+<td>родственник</td>
+<td>N-02</td>
+</tr>
+<tr>
+<td>P-031</td>
+<td>земляк</td>
+<td>P-027</td>
+</tr>
+</tbody>
+</table>
+<p>Несколько правил, которые сэкономят час на следующем шаге:</p>
+<ul>
+<li><strong>Люди — под кодами.</strong> Участники — своими кодами (P-014), а те, о ком только рассказали, — отдельными (N-02, «брат P-022»). Имён в таблице связей быть не должно: картинки сетей любят попадать в презентации.</li>
+<li><strong>Одинаковое — одинаково.</strong> «P-14», «P-014» и «P 014» — три разных человека для любой программы. То же с типами связей: заранее договоритесь о коротком списке.</li>
+<li><strong>Направление — осознанно.</strong> «Помог с работой» — связь направленная: первый столбец — тот, кто помог. «Земляки» — ненаправленная. Если не уверены, запишите направление: выбросить его потом проще, чем восстановить.</li>
+</ul>
+<h2 id="шаг-2-загрузить">Шаг 2. Загрузить</h2>
+<p>В corpus таблицу можно загрузить из Excel или CSV или просто вставить из буфера. Заголовки понимаются на русском, английском и французском, а шаблон с правильными столбцами можно скачать прямо на странице сети. Если у вас вместо списка связей матрица смежности — подойдёт и она.</p>
+<p>Если коды в таблице совпадают с кодами участников исследования, узлы сами получат их признаки: возраст, регион, волну интервью. Это пригодится, когда захочется раскрасить сеть по группам.</p>
+<h2 id="шаг-3-разложить">Шаг 3. Разложить</h2>
+<p>Раскладка — это способ расставить точки на плоскости. Их несколько, и они отвечают на разные вопросы:</p>
+<ul>
+<li><strong>пружинная</strong> — связанные узлы притягиваются, несвязанные отталкиваются; хорошо видны плотные группы;</li>
+<li><strong>Камада — Каваи</strong> — старается, чтобы расстояние на картинке было похоже на расстояние в сети;</li>
+<li><strong>круг</strong> — все узлы по окружности; для маленьких сетей, где важно видеть каждую связь;</li>
+<li><strong>по группам</strong> — узлы одной группы рядом, например по региону происхождения.</li>
+</ul>
+<p>Узлы можно перетаскивать руками — положение сохраняется. Это удобно для иллюстрации в главе, но здесь стоит остановиться и сказать важное.</p>
+<p class="aside">картинка — не вывод, а повод посмотреть в таблицу.</p>
+<p>Раскладка может нарисовать «кластер» там, где его нет, и спрятать связь за другим узлом. Всё, что вы увидели на картинке, проверьте числами.</p>
+<h2 id="шаг-4-посчитать">Шаг 4. Посчитать</h2>
+<p>Несколько показателей, которые стоит знать в лицо:</p>
+<ul>
+<li><strong>Плотность</strong> — доля реализованных связей от всех возможных. В сети из 20 человек возможно 190 ненаправленных связей; если их 19, плотность — 0,1.</li>
+<li><strong>Степень</strong> — сколько связей у узла. Самые очевидные «центры» сети.</li>
+<li><strong>Посредничество</strong> (betweenness) — как часто узел лежит на кратчайшем пути между другими. В миграционных сетях это нередко тот, кто приехал первым и «всех знает». Через него проходят работа, жильё и новости — и его отсутствие разорвало бы сеть.</li>
+<li><strong>Сообщества</strong> — группы, связанные внутри сильнее, чем с остальными.</li>
+</ul>
+<p>И главная оговорка. Сеть, собранная из двадцати интервью, — это не сеть сообщества, а сеть рассказанного. В неё попали те, кого вспомнили и кого решили назвать. Пропущенный узел здесь не случайный пропуск, а социологический факт, который стоит отметить в мемо.</p>
+<h2 id="шаг-5-сохранить-так-чтобы-найти-через-год">Шаг 5. Сохранить так, чтобы найти через год</h2>
+<p>Картинку можно выгрузить в PNG или SVG (SVG — для печати и правки), скопировать в буфер для слайдов или сохранить снимком в галерею или полевой архив исследования. Снимок помнит дату, поэтому через год будет понятно, какая версия сети стоит в главе 3.</p>
+<p>Для дальнейшего анализа сеть выгружается в GraphML и GEXF (Gephi), в матрицу и в скрипт для R. Например, так:</p>
+<pre><code class="language-r">library(igraph)
+g &lt;- read_graph(&quot;network.graphml&quot;, format = &quot;graphml&quot;)
+sort(betweenness(g), decreasing = TRUE)[1:5]
+</code></pre>
+<h2 id="чек-лист-на-одну-чашку">Чек-лист на одну чашку</h2>
+<ol>
+<li>Три столбца: индивид, тип связи, индивид 2.</li>
+<li>Коды вместо имён, одинаковое написание, короткий список типов.</li>
+<li>Загрузить, проверить, что узлы совпали с участниками.</li>
+<li>Разложить двумя способами и сравнить.</li>
+<li>Посчитать плотность, степень, посредничество.</li>
+<li>Написать мемо: чего в этой сети нет и почему.</li>
+<li>Сохранить снимок в архив.</li>
+</ol>
+<p>Кофе, скорее всего, остыл. Зато сеть теперь есть — и у неё есть происхождение.</p>
+  </div>
+
+  <footer class="post-foot">
+    <nav class="prev-next" aria-label="Соседние записи">
+      <a class="pn pn-prev" href="/corpus-site/blog/clinical-rigor/" rel="prev">
+        <span class="pn-label">← раньше</span><span class="pn-title">Чему социологу поучиться у клинических исследований</span>
+      </a>
+    </nav>
+    <p class="more"><a href="/corpus-site/blog/">все записи</a> · <a href="/corpus-site/feed.xml">rss</a> · <a href="/corpus-site/contacts/">написать автору</a></p>
+  </footer>
+</article>
+  </main>
+
+  <footer class="site-footer">
+    <section class="board" aria-labelledby="universe">
+      <div class="wrap">
+        <h2 class="board-label" id="universe">одна тетрадь, три проекта</h2>
+        <ul class="cutouts">
+          <li class="cutout cutout-dispositif">
+            <span class="d-mark" aria-hidden="true">Д</span>
+            <p class="cutout-title">диспозитив</p>
+            <p>социология повседневности на youtube: одно понятие — одно видео.</p>
+            <p><span class="todo">[ссылка на канал — site.toml → projects.dispositif.url]</span></p>
+          </li>
+          <li class="cutout cutout-garbage">
+            <p class="cutout-title">garbage <i>n., uncountable</i></p>
+            <p>визуальная социология парижского мусора: что город выбрасывает и что этим говорит.</p>
+            <a href="https://garbageofparis.fr" lang="en">see the evidence <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="cutout cutout-corpus">
+            <img src="/corpus-site/brand/mark.svg" alt="" width="44" height="44">
+            <p class="cutout-title">corpus</p>
+            <p>тело исследования в одном месте. вы сейчас здесь.</p>
+            <a href="/corpus-site/features/">что внутри <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="wrap footer-base">
+      <p class="footer-sign">© 2026 Снежана · corpus</p>
+      <nav aria-label="Служебные ссылки">
+        <ul class="footer-links">
+          <li><a href="https://app.corpus.example">платформа</a></li>
+          <li><a href="/corpus-site/blog/">блог</a></li>
+          <li><a href="/corpus-site/feed.xml">rss</a></li>
+          <li><a href="/corpus-site/contacts/">контакты</a></li>
+          <li><a href="/corpus-site/privacy/">конфиденциальность</a></li>
+        </ul>
+      </nav>
+      <p class="footer-note">на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+    </div>
+  </footer>
+</body>
+</html>

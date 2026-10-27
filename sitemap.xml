@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://corpus.example/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/features/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/about/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/team/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/contacts/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/blog/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/blog/rubric/slovar/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/blog/rubric/pole/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/blog/rubric/metody/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/blog/rubric/novosti/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://corpus.example/blog/networks-over-coffee/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://corpus.example/blog/clinical-rigor/</loc><lastmod>2026-10-13</lastmod></url>
+  <url><loc>https://corpus.example/blog/corpus/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://corpus.example/privacy/</loc><lastmod>2026-10-26</lastmod></url>
+</urlset>

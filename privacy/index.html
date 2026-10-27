@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Конфиденциальность — corpus</title>
+  <meta name="description" content="Какие данные хранят сайт и платформа corpus, как они защищены и где лежат. Коротко и без мелкого шрифта.">
+  <meta name="author" content="Снежана">
+  <meta name="theme-color" content="#f5f1e9">
+  <link rel="canonical" href="https://corpus.example/privacy/">
+  <link rel="alternate" type="application/rss+xml" title="corpus — блог" href="/corpus-site/feed.xml">
+  <link rel="icon" href="/corpus-site/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/corpus-site/apple-touch-icon.png">
+  <link rel="preload" href="/corpus-site/fonts/pt-serif-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/corpus-site/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/corpus-site/css/site.css?v=9f0ecba7">
+  <meta property="og:site_name" content="corpus">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Конфиденциальность — corpus">
+  <meta property="og:description" content="Какие данные хранят сайт и платформа corpus, как они защищены и где лежат. Коротко и без мелкого шрифта.">
+  <meta property="og:url" content="https://corpus.example/privacy/">
+  <meta property="og:image" content="https://corpus.example/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="/corpus-site/js/menu.js?v=9f0ecba7" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">к содержанию</a>
+
+  <header class="masthead" data-masthead>
+    <div class="wrap masthead-inner">
+      <a class="logo" href="/corpus-site/">
+        <img src="/corpus-site/brand/wordmark.svg" alt="corpus — на главную" width="94" height="40">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+        <span class="menu-toggle-lines" aria-hidden="true"></span>меню
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
+        <ul>
+          <li><a href="/corpus-site/features/">возможности</a></li>
+          <li><a href="/corpus-site/blog/">блог</a></li>
+          <li><a href="/corpus-site/about/">обо мне</a></li>
+          <li><a href="/corpus-site/team/">команда</a></li>
+          <li><a href="/corpus-site/contacts/">контакты</a></li>
+        </ul>
+        <a class="btn btn-small" href="https://app.corpus.example">войти <span aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+<article class="post wrap">
+  <header class="post-head">
+    <h1>Конфиденциальность</h1>
+<p class="post-summary">Какие данные хранят сайт и платформа corpus, как они защищены и где лежат. Коротко и без мелкого шрифта.</p><dl class="post-meta"><div><dt>редакция</dt><dd>черновик от 20 октября 2026</dd></div></dl>  </header>
+  <div class="prose">
+    <div class="draft-note">
+<p><strong>Черновик.</strong> Этот текст честно описывает, как устроены сайт и платформа, но ещё не проверен юристом. Требования зависят от страны, где работает сервер, и от того, кто оператор данных. <span class="todo">[проверить с юристом: GDPR / 152-ФЗ, оператор, сроки хранения]</span></p>
+</div>
+<h2 id="этот-сайт">Этот сайт</h2>
+<ul>
+<li>На сайте нет cookies, счётчиков посещений, трекеров, рекламы, внешних шрифтов и скриптов. Страницы не обращаются к чужим серверам.</li>
+<li>Хостинг, как любой веб-сервер, ведёт технические журналы: IP-адрес, время, адрес страницы, тип браузера. <span class="todo">[провайдер хостинга и срок хранения журналов]</span></li>
+<li>Если вы пишете на почту или в мессенджер, ваше сообщение хранится там и используется только для ответа.</li>
+</ul>
+<h2 id="платформа">Платформа</h2>
+<h3 id="что-хранится">Что хранится</h3>
+<ul>
+<li><strong>Учётная запись:</strong> почта, имя, язык интерфейса и хэш пароля. Сам пароль не хранится.</li>
+<li><strong>Данные исследований,</strong> которые загружает команда: файлы, тексты, анкеты, заметки, фотографии. По отношению к участникам исследований оператором данных остаётся исследователь или его организация; платформа хранит и обрабатывает их по поручению команды. <span class="todo">[проверить формулировку с юристом]</span></li>
+<li><strong>Журнал действий:</strong> кто, что и когда сделал в исследовании. Это часть проверяемости данных, а не слежка: журнал видит команда исследования.</li>
+</ul>
+<h3 id="как-защищено">Как защищено</h3>
+<ul>
+<li>Имена и контакты участников исследований зашифрованы (Fernet: AES-128 и HMAC). Их видят только две роли — руководитель и исследователь, — и каждый просмотр записывается в журнал.</li>
+<li>Пароли и токены API хранятся только в виде хэшей.</li>
+<li>Файлы исследования отдаются только участникам его команды; сканы согласий — только ролям с доступом к персональным данным.</li>
+<li>Соединение с платформой — только по HTTPS.</li>
+</ul>
+<h3 id="где-лежат-данные">Где лежат данные</h3>
+<ul>
+<li>Сервер: <span class="todo">[страна, провайдер, город дата-центра]</span>.</li>
+<li>Резервные копии: <span class="todo">[как часто, где хранятся, сколько живут]</span>.</li>
+<li>Если вы запускаете corpus на своём компьютере, данные никуда не отправляются: база, файлы и ключи шифрования лежат в папке программы.</li>
+</ul>
+<h3 id="удаление">Удаление</h3>
+<ul>
+<li>Записи в исследовании удаляются «мягко»: скрываются, но остаются в базе и журнале, чтобы данные оставались проверяемыми. Удаление требует причины.</li>
+<li>Персональные данные участника по его запросу стираются одной кнопкой; материалы под кодом сохраняются.</li>
+<li>Удаление учётной записи и всех данных исследования: <span class="todo">[порядок и сроки]</span>.</li>
+</ul>
+<h2 id="ваши-права">Ваши права</h2>
+<p>Вы можете узнать, какие данные о вас хранятся, исправить их или попросить удалить. <span class="todo">[перечень прав по применимому закону и порядок обращения]</span></p>
+<p>Написать по любому вопросу о данных — на странице <a href="../contacts/">контактов</a>.</p>
+  </div>
+</article>
+  </main>
+
+  <footer class="site-footer">
+    <section class="board" aria-labelledby="universe">
+      <div class="wrap">
+        <h2 class="board-label" id="universe">одна тетрадь, три проекта</h2>
+        <ul class="cutouts">
+          <li class="cutout cutout-dispositif">
+            <span class="d-mark" aria-hidden="true">Д</span>
+            <p class="cutout-title">диспозитив</p>
+            <p>социология повседневности на youtube: одно понятие — одно видео.</p>
+            <p><span class="todo">[ссылка на канал — site.toml → projects.dispositif.url]</span></p>
+          </li>
+          <li class="cutout cutout-garbage">
+            <p class="cutout-title">garbage <i>n., uncountable</i></p>
+            <p>визуальная социология парижского мусора: что город выбрасывает и что этим говорит.</p>
+            <a href="https://garbageofparis.fr" lang="en">see the evidence <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="cutout cutout-corpus">
+            <img src="/corpus-site/brand/mark.svg" alt="" width="44" height="44">
+            <p class="cutout-title">corpus</p>
+            <p>тело исследования в одном месте. вы сейчас здесь.</p>
+            <a href="/corpus-site/features/">что внутри <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="wrap footer-base">
+      <p class="footer-sign">© 2026 Снежана · corpus</p>
+      <nav aria-label="Служебные ссылки">
+        <ul class="footer-links">
+          <li><a href="https://app.corpus.example">платформа</a></li>
+          <li><a href="/corpus-site/blog/">блог</a></li>
+          <li><a href="/corpus-site/feed.xml">rss</a></li>
+          <li><a href="/corpus-site/contacts/">контакты</a></li>
+          <li><a href="/corpus-site/privacy/">конфиденциальность</a></li>
+        </ul>
+      </nav>
+      <p class="footer-note">на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+    </div>
+  </footer>
+</body>
+</html>
