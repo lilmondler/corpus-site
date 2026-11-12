@@ -1,10 +1,12 @@
-# corpus — сайт
+# corpus — сайт moncorpus.fr
 
-Статический сайт corpus, версия 0.4.0.
+Готовая сборка публичного сайта corpus. **Исходники здесь не правят**: они живут в
+`site/` основного репозитория [lilmondler/corpus](https://github.com/lilmondler/corpus),
+а сюда сборка попадает скриптом `deploy/push-site.sh` оттуда.
 
-Открыть: https://lilmondler.github.io/corpus-site/
+Выкладка на хостинг OVH (moncorpus.fr): Actions → **deploy** → Run workflow. По умолчанию
+пробный прогон; чтобы выложить, снимите галочку «Только показать, что изменится».
+Секреты репозитория: `OVH_FTP_HOST`, `OVH_FTP_USER`, `OVH_FTP_PASSWORD` (Settings → Secrets → Actions).
 
-Сайт публикуется через GitHub Pages из ветки `main` (папка `/`).
-Абсолютные ссылки в HTML начинаются с `/corpus-site/`, потому что Pages
-открывает проект по этому адресу. Если репозиторий переименовать,
-префикс в ссылках нужно поменять на новое имя.
+Ссылки в HTML абсолютные от корня домена, поэтому на GitHub Pages
+(lilmondler.github.io/corpus-site/) сайт больше не работает — Pages можно выключить.

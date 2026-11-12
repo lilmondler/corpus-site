@@ -1,0 +1,35 @@
+# Выкладка сайта moncorpus.fr на хостинг OVH по FTPS. Запускается вручную (Actions → deploy →
+# Run workflow); по умолчанию — пробный прогон, который только показывает, что изменится.
+# Секреты репозитория: OVH_FTP_HOST, OVH_FTP_USER, OVH_FTP_PASSWORD.
+name: deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Только показать, что изменится"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: sudo apt-get install -y --no-install-recommends lftp
+      - name: Выложить на OVH
+        env:
+          OVH_FTP_HOST: ${{ secrets.OVH_FTP_HOST }}
+          OVH_FTP_USER: ${{ secrets.OVH_FTP_USER }}
+          OVH_FTP_PASSWORD: ${{ secrets.OVH_FTP_PASSWORD }}
+        run: bash deploy.sh ${{ inputs.dry_run && '--dry-run' || '' }}
