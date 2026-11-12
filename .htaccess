@@ -1,0 +1,42 @@
+# Настройки для хостинга OVH (Apache): сайт moncorpus.fr — статические файлы.
+# На своём сервере с nginx этот файл не нужен: там то же делает deploy/nginx/site.conf.template.
+
+ErrorDocument 404 /404.html
+Options -Indexes
+AddDefaultCharset utf-8
+AddType image/webp .webp
+AddType font/woff2 .woff2
+<Files "feed.xml">
+  ForceType application/rss+xml
+</Files>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Всегда https и без www.
+  # На хостинге OVH https видно по X-Forwarded-Proto, а не по %{HTTPS}.
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://moncorpus.fr%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Сайт ничего не грузит с чужих серверов и ничего не встраивает.
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  Header always set X-Frame-Options "DENY"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # CSS и JS подключаются с ?v=<отпечаток>, шрифты и скриншоты меняются редко.
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

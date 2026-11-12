@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>corpus — notebook</title>
+  <link>https://moncorpus.fr/en/blog/</link>
+  <atom:link href="https://moncorpus.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>One place for the data of a sociological study: interviews, field notes, surveys, networks and quotes together — with the history of every change.</description>
+  <language>en</language>
+  <item>
+    <title>Networks over coffee: how an “individual — tie type — individual 2” table becomes a picture</title>
+    <link>https://moncorpus.fr/en/blog/networks-over-coffee/</link>
+    <guid isPermaLink="true">https://moncorpus.fr/en/blog/networks-over-coffee/</guid>
+    <pubDate>Tue, 20 Oct 2026 09:00:00 +0000</pubDate>
+    <category>methods</category>
+    <description>Step by step: how to record ties from interviews in a three-column table, upload it to corpus, lay it out, run the numbers, and not mistake a pretty picture for a finding.</description>
+    <content:encoded><![CDATA[<p>In interviews, people constantly mention other people. “A guy from my home town got me onto a building site.” “My brother helped me find a place to live.” “My flatmate found me my first job.” That is already a network; it’s just that nobody has written it down. You can write it down in the time it takes a coffee to go cold, if you know what form to put it in.</p>
+<h2 id="step-1-a-three-column-table">Step 1. A three-column table</h2>
+<p>It all starts with the most boring table in the world. One row, one tie:</p>
+<table>
+<thead>
+<tr>
+<th>individual</th>
+<th>tie type</th>
+<th>individual 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-014</td>
+<td>same home town</td>
+<td>P-022</td>
+</tr>
+<tr>
+<td>P-014</td>
+<td>helped find work</td>
+<td>P-031</td>
+</tr>
+<tr>
+<td>P-022</td>
+<td>relative</td>
+<td>N-02</td>
+</tr>
+<tr>
+<td>P-031</td>
+<td>same home town</td>
+<td>P-027</td>
+</tr>
+</tbody>
+</table>
+<p>A few rules that will save you an hour at the next step:</p>
+<ul>
+<li><strong>People are behind codes.</strong> Participants get their own codes (P-014), and people who were only mentioned get separate ones (N-02, “P-022’s brother”). There should be no names in the tie table: network pictures have a habit of ending up in presentations.</li>
+<li><strong>The same thing, written the same way.</strong> “P-14”, “P-014” and “P 014” are three different people to any software. The same goes for tie types: agree on a short list in advance.</li>
+<li><strong>Direction, on purpose.</strong> “Helped find work” is a directed tie: the first column is the person who helped. “Same home town” is undirected. If in doubt, record the direction: it is easier to drop it later than to reconstruct it.</li>
+</ul>
+<h2 id="step-2-upload">Step 2. Upload</h2>
+<p>In corpus, you can upload the table from Excel or CSV, or simply paste it from the clipboard. Headers are recognised in Russian, English and French, and a template with the right columns can be downloaded straight from the network page. If you have an adjacency matrix rather than a list of ties, that works too.</p>
+<p>If the codes in the table match the codes of the study’s participants, the nodes automatically pick up their attributes: age, region, interview wave. That comes in handy when you want to colour the network by group.</p>
+<h2 id="step-3-lay-it-out">Step 3. Lay it out</h2>
+<p>A layout is a way of placing the points on a plane. There are several, and they answer different questions:</p>
+<ul>
+<li><strong>force-directed</strong>: connected nodes attract, unconnected ones repel; dense groups stand out clearly;</li>
+<li><strong>Kamada–Kawai</strong>: tries to make distance in the picture resemble distance in the network;</li>
+<li><strong>circle</strong>: all the nodes around a circle; for small networks where you need to see every tie;</li>
+<li><strong>by group</strong>: nodes from the same group are placed together, for example by region of origin.</li>
+</ul>
+<p>You can drag nodes around by hand, and their positions are saved. That is useful for an illustration in a chapter, but this is the moment to stop and say something important.</p>
+<p class="aside">a picture is not a finding, it’s a reason to look at the table.</p>
+<p>A layout can draw a “cluster” where there is none, and hide a tie behind another node. Whatever you see in the picture, check it with numbers.</p>
+<h2 id="step-4-run-the-numbers">Step 4. Run the numbers</h2>
+<p>A few measures worth knowing by sight:</p>
+<ul>
+<li><strong>Density</strong>: the share of ties present out of all possible ties. In a network of 20 people, 190 undirected ties are possible; if there are 19, the density is 0.1.</li>
+<li><strong>Degree</strong>: how many ties a node has. These are the most obvious “centres” of the network.</li>
+<li><strong>Betweenness</strong>: how often a node lies on the shortest path between others. In migration networks, this is often the person who arrived first and “knows everyone”. Work, housing and news pass through them, and without them the network would fall apart.</li>
+<li><strong>Communities</strong>: groups that are more closely connected internally than to the rest.</li>
+</ul>
+<p>And the main caveat. A network built from twenty interviews is not the network of a community; it is a network of what was told. It contains the people who were remembered and whom the interviewees chose to name. A missing node here is not a random gap but a sociological fact, and one worth noting in a memo.</p>
+<h2 id="step-5-save-it-so-you-can-find-it-in-a-year">Step 5. Save it so you can find it in a year</h2>
+<p>You can export the picture as PNG or SVG (SVG for print and editing), copy it to the clipboard for slides, or save it as a snapshot in the gallery or the study’s field archive. A snapshot remembers its date, so a year from now it will be clear which version of the network is in chapter 3.</p>
+<p>For further analysis, the network can be exported to GraphML and GEXF (Gephi), to a matrix and to an R script. For example:</p>
+<pre><code class="language-r">library(igraph)
+g &lt;- read_graph(&quot;network.graphml&quot;, format = &quot;graphml&quot;)
+sort(betweenness(g), decreasing = TRUE)[1:5]
+</code></pre>
+<h2 id="a-one-cup-checklist">A one-cup checklist</h2>
+<ol>
+<li>Three columns: individual, tie type, individual 2.</li>
+<li>Codes instead of names, consistent spelling, a short list of types.</li>
+<li>Upload, and check that the nodes match the participants.</li>
+<li>Lay it out two ways and compare.</li>
+<li>Calculate density, degree and betweenness.</li>
+<li>Write a memo: what is missing from this network and why.</li>
+<li>Save a snapshot to the archive.</li>
+</ol>
+<p>The coffee has probably gone cold. But the network now exists, and it has a provenance.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>What sociologists can learn from clinical trials</title>
+    <link>https://moncorpus.fr/en/blog/clinical-rigor/</link>
+    <guid isPermaLink="true">https://moncorpus.fr/en/blog/clinical-rigor/</guid>
+    <pubDate>Tue, 13 Oct 2026 09:00:00 +0000</pubDate>
+    <category>methods</category>
+    <description>ALCOA+, audit trails, edit checks, queries, double data entry and database lock: what they are, and why they matter to qualitative and quantitative researchers alike.</description>
+    <content:encoded><![CDATA[<p>In a clinical trial, an error in the data can cost someone their health: if the wrong blood pressure or the wrong dose ends up in the spreadsheet, the conclusion about the drug will be wrong. Over the decades, a whole culture of data handling has grown up there, with its own rules, roles and checks. From the outside, it looks like bureaucracy. From the inside, it is a set of habits that make it possible, years later, to answer the question “where does this figure come from?” from the records rather than from memory.</p>
+<p>Sociological data is about people too. An error in it rarely kills anyone, but it quietly shifts the conclusions, and nobody notices. Below are six clinical practices that I think are worth bringing into sociology. Not wholesale, but in their logic.</p>
+<h2 id="alcoa-nine-questions-for-any-record">ALCOA+: nine questions for any record</h2>
+<p>The acronym originated at the FDA, the US regulator, and has since acquired a plus. It reads well as a checklist of questions to ask of any record in a study:</p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Requirement</th>
+<th>The sociologist’s question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Attributable</td>
+<td>Who recorded, coded or corrected this?</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Legible</td>
+<td>Could I read it without the software I made it in?</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Contemporaneous</td>
+<td>Was it recorded when it happened, or reconstructed afterwards?</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Original</td>
+<td>Where is the source: the audio, the paper questionnaire, the first file?</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Accurate</td>
+<td>If it was corrected, can you see what changed and why?</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Complete</td>
+<td>Has anything gone missing without a trace?</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Consistent</td>
+<td>Are the same things recorded in the same way?</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Enduring</td>
+<td>Will the data survive to be reanalysed in ten years’ time?</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Available</td>
+<td>Can you quickly retrieve what you need when someone asks?</td>
+</tr>
+</tbody>
+</table>
+<p>None of these points requires sophisticated technology. All that is required is that the answer to each question exists next to the data, not in someone’s head.</p>
+<h2 id="the-audit-trail-a-memory-that-doesnt-lie">The audit trail: a memory that doesn’t lie</h2>
+<p>In a clinical trial, every change to a record leaves a trace: who, when, the old value, the new value, the reason. This is called an audit trail. The trace cannot be deleted; you can only add a new change on top.</p>
+<p>Compare this with ordinary work in Excel. You replace “Manc” with “Manchester” in two hundred cells, and that’s it: the spreadsheet is clean, and the knowledge that it was ever messy is gone. For a single replacement, that doesn’t matter much. For forty replacements made by three people over six months, it is a different spreadsheet altogether, and nobody will be able to reconstruct where it came from.</p>
+<p>The good news is that the log can be kept automatically. And if each entry also contains a fingerprint of the previous one (a hash chain), even an edit made directly in the database will show up.</p>
+<h2 id="edit-checks-catch-the-error-while-everyone-still-remembers">Edit checks: catch the error while everyone still remembers</h2>
+<p>Edit checks are rules that fire at the moment of entry: an age of 214, an interview date in the future, more years in work than years alive. In clinical research they are written before the study begins, alongside the forms.</p>
+<p>The key idea is timing. An error found on the day of entry is corrected by the person who had the questionnaire in their hands. An error found a year later, during analysis, has to be guessed at.</p>
+<h2 id="queries-a-question-instead-of-a-correction">Queries: a question instead of a correction</h2>
+<p>When a clinical data manager sees an odd value, they don’t correct it themselves. They raise a query, a question to whoever entered the data: “Age 214 — a typo? Please check against the source document.” The answer and the correction are stored together with the question.</p>
+<p>In sociology this carries over almost word for word. A coder reads “I arrived in 2009” in a transcript, but according to the questionnaire the participant was nine at the time: that is a question for the interviewer, not a silent fix. A transcriber has marked “[inaudible 00:14:32]”: that is a question for the person who conducted the interview and may remember. The difference is small but fundamental: the correction is made by the person who has grounds for it, and those grounds stay on record.</p>
+<h2 id="double-data-entry-two-people-are-better-than-one">Double data entry: two people are better than one</h2>
+<p>In clinical trials, paper forms are often entered twice, by two people working independently, and the discrepancies are then checked against the paper. It is expensive, but the number of entry errors drops dramatically.</p>
+<p>For three hundred paper questionnaires, that is a couple of extra days. In qualitative analysis this practice has long had a close relative: double coding and inter-coder agreement (Cohen’s kappa, for example). The logic is the same: one pair of eyes makes mistakes unnoticed; two pairs make them noticeable.</p>
+<h2 id="database-lock-the-point-after-which-nothing-gets-adjusted">Database lock: the point after which nothing gets adjusted</h2>
+<p>Before analysis, a clinical database is “locked”: after the lock, changes are possible only through a documented unlock. This guards against the most human of temptations — tweaking the data once you have seen the result.</p>
+<p>For a sociologist, a lock is not a ban on changing your mind. A qualitative codebook lives and changes, and that is fine. A lock fixes a moment: “chapter 3 was written on this data and this version of the rules”. If something changes later, the chapter at least knows what it was based on.</p>
+<h2 id="what-is-not-worth-importing">What is not worth importing</h2>
+<p>Clinical data culture grew up in a world of regulators, insurers and enormous budgets. Standard operating procedures for every action, a signature on every page, software validation at great expense: sociology does not need any of this and could not afford it anyway. What it needs is the logic: the source stays intact, changes are visible, decisions are explained, and data is checked early.</p>
+<p class="aside">clinicians, forgive the simplifications.</p>
+<h2 id="how-it-works-in-corpus">How it works in corpus</h2>
+<p>In corpus, these practices are built in so that you don’t have to remember them: the hash-chained activity log keeps itself, correcting a text creates a new version, and cleaning survey data means applying rules, each with a reason, on top of the raw responses. Edit checks, queries, double entry and database lock are currently being brought together in the <a href="../../features/#quality">“checks and queries”</a> module.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>corpus, n.</title>
+    <link>https://moncorpus.fr/en/blog/corpus/</link>
+    <guid isPermaLink="true">https://moncorpus.fr/en/blog/corpus/</guid>
+    <pubDate>Tue, 06 Oct 2026 09:00:00 +0000</pubDate>
+    <category>vocabulary</category>
+    <description>Why the platform is called what it is called, and what the “body of a study” means when it lives in twelve different folders.</description>
+    <content:encoded><![CDATA[<p><strong>corpus</strong> [ˈkɔːpəs] <em>n., pl.</em> corpora — Latin for “body”. In linguistics, it is a collection of texts against which hunches about language are tested. In law there is <em>habeas corpus</em>, “you shall have the body”: a demand to produce the person, not an account of them. I like the fact that one word holds both meanings: the collection, and the demand to produce it.</p>
+<h2 id="the-body-of-a-study">The body of a study</h2>
+<p>Every empirical study has a body. It is not the text of the thesis or the article; it is everything they are made of: interview recordings, transcripts, field notes, questionnaires, photographs, tables of relationships, scanned consent forms, notes from sources. The body is what remains once the conclusions have been written. And it is what people return to when someone challenges those conclusions.</p>
+<p>The problem is that the body of a study is almost never kept in one place. The audio is on the recorder and in the cloud. The transcript is in someone’s email, in three versions. The consent form is in a paper folder, and the folder is in a rucksack. The questionnaires are in Excel, cleaned by hand, and exactly how they were cleaned is remembered only by the person who did it, and only until their holiday. The codes are in a qualitative analysis package, the quotations are in a draft chapter, and the only link left between a quotation and its line in the transcript is memory.</p>
+<p class="aside">as long as you remember everything, it feels like order.</p>
+<p>This is not carelessness. It is how the work goes: fieldwork happens quickly, analysis slowly, and between them there are months, and sometimes other people. The researcher who conducted the interviews and the researcher who codes them are often different people, even when they share a name.</p>
+<h2 id="what-it-means-to-produce-the-body">What it means to “produce the body”</h2>
+<p>In sociology, verifiability is usually understood as transparency of method: describing the sample, the topic guide, the coding procedure. That matters, but it is an account of the body, not the body itself. Real verification is when you can walk back from a conclusion: from a sentence in the article to the quotation, from the quotation to a version of the transcript, from that version to the audio recording, from the recording to the participant’s consent. And when, behind the figure “38% of respondents”, you can see which questionnaires were included, which were excluded and why.</p>
+<p>In clinical trials this path back is mandatory and has long been formalised; there is <a href="../clinical-rigor/">a separate post</a> about that. In sociology it more often exists as a good intention. Not because sociologists are less careful, but because they have no tool in which carefulness is the default behaviour rather than extra work done in the evenings.</p>
+<h2 id="why-a-dedicated-platform">Why a dedicated platform</h2>
+<p>corpus is an attempt to build such a tool. Not yet another coding program, and not a cloud drive full of folders, but a place where the body of a study is kept whole and every part of it has a provenance.</p>
+<p>It all rests on a few rules:</p>
+<ul>
+<li><strong>The source is untouchable.</strong> An uploaded file is never overwritten. The first version of a transcript and the raw answer to a questionnaire never change.</li>
+<li><strong>Processing is a recipe.</strong> Cleaning a text or a questionnaire is not an edit on top, but a new version that remembers what it was made from and how. You can revise the recipe, and the result is rebuilt.</li>
+<li><strong>Every action is recorded.</strong> Who, what, when, what it was before and what it became. The entries are linked in a chain, so the past cannot be quietly rewritten.</li>
+<li><strong>The why is data too.</strong> A decision such as “exclude questionnaires completed in under a minute” is recorded together with its reason.</li>
+<li><strong>People are behind codes.</strong> Participants’ names and contact details are encrypted and never appear in any export.</li>
+</ul>
+<p>That sounds strict, and it is meant to. But rigour should not feel like bureaucracy. A good notebook does not demand discipline from you; it simply won’t let a page be torn out unnoticed.</p>
+<h2 id="what-corpus-is-not">What corpus is not</h2>
+<p>It is not a “smart” system that will analyse your interviews for you. Interpretation remains the researcher’s job, and it is the best part of the job. corpus is there to free up time for it: less searching for files, less comparing versions, less trying to remember where a figure came from.</p>
+<p>Nor is it a replacement for R, Python or Word. Data leaves corpus in open formats (CSV, JSON, DOCX, GraphML) and stays readable without it. The body of a study should not depend on the program it is stored in.</p>
+<h2 id="why-latin">Why Latin</h2>
+<p>We could have used an English word. But “body” in English is also a car body, a governing body, a body of water and the body of a letter. <em>corpus</em>, on the other hand, is at once a collection of texts, a body, and the demand to produce it. Three meanings: the three senses in the dictionary entry on the home page.</p>
+<p class="aside">pl. corpora. checked.</p>]]></content:encoded>
+  </item>
+</channel>
+</rss>

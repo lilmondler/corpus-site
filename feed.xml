@@ -1,223 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>corpus — блог</title>
-  <link>https://corpus.example/blog/</link>
-  <atom:link href="https://corpus.example/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>Единая среда для данных социологического исследования: интервью, полевые заметки, анкеты, сети и цитаты в одном месте — с историей каждого изменения.</description>
-  <language>ru</language>
+  <title>corpus — carnet</title>
+  <link>https://moncorpus.fr/blog/</link>
+  <atom:link href="https://moncorpus.fr/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Un environnement unique pour les données d’une enquête sociologique : entretiens, notes de terrain, questionnaires, réseaux et verbatims en un seul lieu — avec l’historique de chaque modification.</description>
+  <language>fr</language>
   <item>
-    <title>Сети за чашкой кофе: как из таблицы «индивид — тип связи — индивид 2» получается картинка</title>
-    <link>https://corpus.example/blog/networks-over-coffee/</link>
-    <guid isPermaLink="true">https://corpus.example/blog/networks-over-coffee/</guid>
+    <title>Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image</title>
+    <link>https://moncorpus.fr/blog/networks-over-coffee/</link>
+    <guid isPermaLink="true">https://moncorpus.fr/blog/networks-over-coffee/</guid>
     <pubDate>Tue, 20 Oct 2026 09:00:00 +0000</pubDate>
-    <category>методы</category>
-    <description>Пошагово: как записать связи из интервью в таблицу из трёх столбцов, загрузить её в corpus, разложить, посчитать и не принять красивую картинку за вывод.</description>
-    <content:encoded><![CDATA[<p>В интервью люди постоянно называют других людей. «Земляк позвал на стройку». «Брат помог с жильём». «Соседка по комнате нашла мне первую работу». Это уже сеть — её просто никто не записал. Записать её можно за то время, пока остывает кофе, если знать, в каком виде.</p>
-<h2 id="шаг-1-таблица-из-трёх-столбцов">Шаг 1. Таблица из трёх столбцов</h2>
-<p>Всё начинается с самой скучной таблицы на свете. Одна строка — одна связь:</p>
+    <category>méthodes</category>
+    <description>Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, le disposer, calculer, et ne pas prendre une belle image pour une conclusion.</description>
+    <content:encoded><![CDATA[<p>En entretien, les gens citent sans cesse d’autres gens. « Un gars de mon village m’a fait venir sur un chantier. » « Mon frère m’a aidé à trouver un logement. » « Ma colocataire m’a trouvé mon premier boulot. » C’est déjà un réseau ; simplement, personne ne l’a noté. On peut le noter le temps qu’un café refroidisse, à condition de savoir sous quelle forme.</p>
+<h2 id="étape-1-un-tableau-à-trois-colonnes">Étape 1. Un tableau à trois colonnes</h2>
+<p>Tout commence par le tableau le plus ennuyeux du monde. Une ligne, un lien :</p>
 <table>
 <thead>
 <tr>
-<th>индивид</th>
-<th>тип связи</th>
-<th>индивид 2</th>
+<th>individu</th>
+<th>type de lien</th>
+<th>individu 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>P-014</td>
-<td>земляк</td>
+<td>même village</td>
 <td>P-022</td>
 </tr>
 <tr>
 <td>P-014</td>
-<td>помог с работой</td>
+<td>a aidé à trouver du travail</td>
 <td>P-031</td>
 </tr>
 <tr>
 <td>P-022</td>
-<td>родственник</td>
+<td>parent</td>
 <td>N-02</td>
 </tr>
 <tr>
 <td>P-031</td>
-<td>земляк</td>
+<td>même village</td>
 <td>P-027</td>
 </tr>
 </tbody>
 </table>
-<p>Несколько правил, которые сэкономят час на следующем шаге:</p>
+<p>Quelques règles qui vous feront gagner une heure à l’étape suivante :</p>
 <ul>
-<li><strong>Люди — под кодами.</strong> Участники — своими кодами (P-014), а те, о ком только рассказали, — отдельными (N-02, «брат P-022»). Имён в таблице связей быть не должно: картинки сетей любят попадать в презентации.</li>
-<li><strong>Одинаковое — одинаково.</strong> «P-14», «P-014» и «P 014» — три разных человека для любой программы. То же с типами связей: заранее договоритесь о коротком списке.</li>
-<li><strong>Направление — осознанно.</strong> «Помог с работой» — связь направленная: первый столбец — тот, кто помог. «Земляки» — ненаправленная. Если не уверены, запишите направление: выбросить его потом проще, чем восстановить.</li>
+<li><strong>Les personnes sont désignées par des codes.</strong> Les enquêté·es ont leur propre code (P-014), et les personnes seulement évoquées en ont un distinct (N-02, « frère de P-022 »). Aucun nom ne doit figurer dans le tableau des liens : les images de réseaux ont une fâcheuse tendance à finir dans des présentations.</li>
+<li><strong>Ce qui est identique s’écrit de façon identique.</strong> « P-14 », « P-014 » et « P 014 », ce sont trois personnes différentes pour n’importe quel logiciel. Même chose pour les types de liens : mettez-vous d’accord à l’avance sur une liste courte.</li>
+<li><strong>L’orientation, en connaissance de cause.</strong> « A aidé à trouver du travail » est un lien orienté : la première colonne, c’est la personne qui a aidé. « Même village » est un lien non orienté. En cas de doute, notez l’orientation : il est plus facile de la supprimer ensuite que de la reconstituer.</li>
 </ul>
-<h2 id="шаг-2-загрузить">Шаг 2. Загрузить</h2>
-<p>В corpus таблицу можно загрузить из Excel или CSV или просто вставить из буфера. Заголовки понимаются на русском, английском и французском, а шаблон с правильными столбцами можно скачать прямо на странице сети. Если у вас вместо списка связей матрица смежности — подойдёт и она.</p>
-<p>Если коды в таблице совпадают с кодами участников исследования, узлы сами получат их признаки: возраст, регион, волну интервью. Это пригодится, когда захочется раскрасить сеть по группам.</p>
-<h2 id="шаг-3-разложить">Шаг 3. Разложить</h2>
-<p>Раскладка — это способ расставить точки на плоскости. Их несколько, и они отвечают на разные вопросы:</p>
+<h2 id="étape-2-importer">Étape 2. Importer</h2>
+<p>Dans corpus, le tableau peut être importé depuis Excel ou un fichier CSV, ou tout simplement collé depuis le presse-papiers. Les en-têtes sont reconnus en russe, en anglais et en français, et un modèle avec les bonnes colonnes se télécharge directement depuis la page du réseau. Si vous avez une matrice d’adjacence plutôt qu’une liste de liens, elle convient aussi.</p>
+<p>Si les codes du tableau correspondent à ceux des enquêté·es de l’enquête, les nœuds récupèrent automatiquement leurs caractéristiques : âge, région, vague d’entretiens. Ce sera utile le jour où vous voudrez colorer le réseau par groupe.</p>
+<h2 id="étape-3-disposer">Étape 3. Disposer</h2>
+<p>Une disposition (layout), c’est une manière de placer les points sur le plan. Il en existe plusieurs, et elles répondent à des questions différentes :</p>
 <ul>
-<li><strong>пружинная</strong> — связанные узлы притягиваются, несвязанные отталкиваются; хорошо видны плотные группы;</li>
-<li><strong>Камада — Каваи</strong> — старается, чтобы расстояние на картинке было похоже на расстояние в сети;</li>
-<li><strong>круг</strong> — все узлы по окружности; для маленьких сетей, где важно видеть каждую связь;</li>
-<li><strong>по группам</strong> — узлы одной группы рядом, например по региону происхождения.</li>
+<li><strong>par forces</strong> : les nœuds liés s’attirent, les autres se repoussent ; les groupes denses ressortent bien ;</li>
+<li><strong>Kamada–Kawai</strong> : cherche à ce que la distance sur l’image ressemble à la distance dans le réseau ;</li>
+<li><strong>en cercle</strong> : tous les nœuds sur une circonférence ; pour les petits réseaux, où il importe de voir chaque lien ;</li>
+<li><strong>par groupes</strong> : les nœuds d’un même groupe sont rapprochés, par exemple selon la région d’origine.</li>
 </ul>
-<p>Узлы можно перетаскивать руками — положение сохраняется. Это удобно для иллюстрации в главе, но здесь стоит остановиться и сказать важное.</p>
-<p class="aside">картинка — не вывод, а повод посмотреть в таблицу.</p>
-<p>Раскладка может нарисовать «кластер» там, где его нет, и спрятать связь за другим узлом. Всё, что вы увидели на картинке, проверьте числами.</p>
-<h2 id="шаг-4-посчитать">Шаг 4. Посчитать</h2>
-<p>Несколько показателей, которые стоит знать в лицо:</p>
+<p>On peut déplacer les nœuds à la main, et leur position est enregistrée. C’est pratique pour une illustration dans un chapitre, mais c’est le moment de s’arrêter pour dire une chose importante.</p>
+<p class="aside">l’image n’est pas une conclusion, c’est une invitation à retourner au tableau.</p>
+<p>Une disposition peut dessiner un « cluster » là où il n’y en a pas, et cacher un lien derrière un autre nœud. Tout ce que vous avez vu sur l’image, vérifiez-le par les chiffres.</p>
+<h2 id="étape-4-calculer">Étape 4. Calculer</h2>
+<p>Quelques indicateurs à connaître de vue :</p>
 <ul>
-<li><strong>Плотность</strong> — доля реализованных связей от всех возможных. В сети из 20 человек возможно 190 ненаправленных связей; если их 19, плотность — 0,1.</li>
-<li><strong>Степень</strong> — сколько связей у узла. Самые очевидные «центры» сети.</li>
-<li><strong>Посредничество</strong> (betweenness) — как часто узел лежит на кратчайшем пути между другими. В миграционных сетях это нередко тот, кто приехал первым и «всех знает». Через него проходят работа, жильё и новости — и его отсутствие разорвало бы сеть.</li>
-<li><strong>Сообщества</strong> — группы, связанные внутри сильнее, чем с остальными.</li>
+<li><strong>La densité</strong> : la part des liens effectivement présents parmi tous les liens possibles. Dans un réseau de 20 personnes, 190 liens non orientés sont possibles ; s’il y en a 19, la densité est de 0,1.</li>
+<li><strong>Le degré</strong> : le nombre de liens d’un nœud. Ce sont les « centres » les plus évidents du réseau.</li>
+<li><strong>L’intermédiarité</strong> (betweenness) : la fréquence à laquelle un nœud se trouve sur le plus court chemin entre deux autres. Dans les réseaux migratoires, c’est souvent la personne arrivée la première et qui « connaît tout le monde ». Par elle passent le travail, le logement et les nouvelles, et son absence couperait le réseau en morceaux.</li>
+<li><strong>Les communautés</strong> : des groupes plus fortement liés en interne qu’avec le reste du réseau.</li>
 </ul>
-<p>И главная оговорка. Сеть, собранная из двадцати интервью, — это не сеть сообщества, а сеть рассказанного. В неё попали те, кого вспомнили и кого решили назвать. Пропущенный узел здесь не случайный пропуск, а социологический факт, который стоит отметить в мемо.</p>
-<h2 id="шаг-5-сохранить-так-чтобы-найти-через-год">Шаг 5. Сохранить так, чтобы найти через год</h2>
-<p>Картинку можно выгрузить в PNG или SVG (SVG — для печати и правки), скопировать в буфер для слайдов или сохранить снимком в галерею или полевой архив исследования. Снимок помнит дату, поэтому через год будет понятно, какая версия сети стоит в главе 3.</p>
-<p>Для дальнейшего анализа сеть выгружается в GraphML и GEXF (Gephi), в матрицу и в скрипт для R. Например, так:</p>
+<p>Et la principale réserve. Un réseau reconstitué à partir de vingt entretiens n’est pas le réseau d’une communauté : c’est le réseau de ce qui a été raconté. Y figurent celles et ceux dont on s’est souvenu et qu’on a choisi de nommer. Un nœud absent n’est pas ici une donnée manquante au hasard, mais un fait sociologique, qui mérite d’être noté dans un mémo.</p>
+<h2 id="étape-5-enregistrer-pour-retrouver-dans-un-an">Étape 5. Enregistrer pour retrouver dans un an</h2>
+<p>L’image peut être exportée en PNG ou en SVG (le SVG pour l’impression et la retouche), copiée dans le presse-papiers pour des diapositives, ou enregistrée sous forme d’instantané dans la galerie ou dans les archives de terrain de l’enquête. L’instantané garde sa date : dans un an, on saura quelle version du réseau figure dans le chapitre 3.</p>
+<p>Pour la suite de l’analyse, le réseau s’exporte en GraphML et en GEXF (Gephi), en matrice et en script R. Par exemple :</p>
 <pre><code class="language-r">library(igraph)
 g &lt;- read_graph(&quot;network.graphml&quot;, format = &quot;graphml&quot;)
 sort(betweenness(g), decreasing = TRUE)[1:5]
 </code></pre>
-<h2 id="чек-лист-на-одну-чашку">Чек-лист на одну чашку</h2>
+<h2 id="la-check-list-dun-café">La check-list d’un café</h2>
 <ol>
-<li>Три столбца: индивид, тип связи, индивид 2.</li>
-<li>Коды вместо имён, одинаковое написание, короткий список типов.</li>
-<li>Загрузить, проверить, что узлы совпали с участниками.</li>
-<li>Разложить двумя способами и сравнить.</li>
-<li>Посчитать плотность, степень, посредничество.</li>
-<li>Написать мемо: чего в этой сети нет и почему.</li>
-<li>Сохранить снимок в архив.</li>
+<li>Trois colonnes : individu, type de lien, individu 2.</li>
+<li>Des codes au lieu des noms, une graphie uniforme, une liste courte de types.</li>
+<li>Importer, vérifier que les nœuds correspondent bien aux enquêté·es.</li>
+<li>Disposer de deux façons différentes et comparer.</li>
+<li>Calculer la densité, le degré, l’intermédiarité.</li>
+<li>Rédiger un mémo : ce qui manque dans ce réseau, et pourquoi.</li>
+<li>Enregistrer un instantané dans les archives.</li>
 </ol>
-<p>Кофе, скорее всего, остыл. Зато сеть теперь есть — и у неё есть происхождение.</p>]]></content:encoded>
+<p>Le café a sans doute refroidi. Mais le réseau existe désormais, et il a une provenance.</p>]]></content:encoded>
   </item>
   <item>
-    <title>Чему социологу поучиться у клинических исследований</title>
-    <link>https://corpus.example/blog/clinical-rigor/</link>
-    <guid isPermaLink="true">https://corpus.example/blog/clinical-rigor/</guid>
+    <title>Ce que la sociologie peut apprendre des essais cliniques</title>
+    <link>https://moncorpus.fr/blog/clinical-rigor/</link>
+    <guid isPermaLink="true">https://moncorpus.fr/blog/clinical-rigor/</guid>
     <pubDate>Tue, 13 Oct 2026 09:00:00 +0000</pubDate>
-    <category>методы</category>
-    <description>ALCOA+, журнал изменений, проверки при вводе, запросы, двойной ввод и блокировка базы — что это такое и зачем всё это качественникам и количественникам.</description>
-    <content:encoded><![CDATA[<p>В клиническом исследовании ошибка в данных может стоить здоровья: если в таблицу попало не то давление или не та доза, неверным окажется вывод о лекарстве. Поэтому за десятилетия там выросла целая культура обращения с данными — с правилами, ролями и проверками. Со стороны она выглядит как бюрократия. Изнутри — как набор привычек, которые позволяют через несколько лет ответить на вопрос «откуда эта цифра?» не по памяти, а по документам.</p>
-<p>Социологические данные тоже про людей. Ошибка в них редко кого-то убивает, но тихо меняет выводы — и этого никто не замечает. Ниже — шесть клинических практик, которые, по-моему, стоит перенести в социологию. Не целиком, а логикой.</p>
-<h2 id="alcoa-девять-вопросов-к-любой-записи">ALCOA+: девять вопросов к любой записи</h2>
-<p>Аббревиатура появилась в американском регуляторе FDA и с тех пор обросла плюсом. Её удобно читать как чек-лист вопросов к любой записи в исследовании:</p>
+    <category>méthodes</category>
+    <description>ALCOA+, historique des modifications, contrôles de saisie, requêtes, double saisie et gel de la base : de quoi s’agit-il, et en quoi cela concerne aussi bien les qualitativistes que les quantitativistes ?</description>
+    <content:encoded><![CDATA[<p>Dans un essai clinique, une erreur dans les données peut coûter la santé de quelqu’un : si la mauvaise tension artérielle ou la mauvaise dose se glisse dans le tableau, c’est la conclusion sur le médicament qui devient fausse. En quelques décennies, toute une culture du traitement des données s’y est donc construite, avec ses règles, ses rôles et ses contrôles. Vue de l’extérieur, elle ressemble à de la bureaucratie. Vue de l’intérieur, c’est un ensemble d’habitudes qui permettent, des années plus tard, de répondre à la question « d’où vient ce chiffre ? » à partir des documents, et non de mémoire.</p>
+<p>Les données sociologiques portent elles aussi sur des personnes. Une erreur y tue rarement qui que ce soit, mais elle déplace les conclusions en silence, sans que personne ne s’en aperçoive. Voici six pratiques cliniques qui, à mon sens, méritent d’être transposées en sociologie. Pas telles quelles : dans leur logique.</p>
+<h2 id="alcoa-neuf-questions-à-poser-à-chaque-donnée">ALCOA+ : neuf questions à poser à chaque donnée</h2>
+<p>L’acronyme est né à la FDA, l’autorité sanitaire américaine, et s’est enrichi depuis d’un « + ». Chaque lettre renvoie, en anglais, à une qualité attendue d’une donnée fiable. Ensemble, elles se lisent comme une liste de questions à poser à n’importe quelle donnée d’une enquête :</p>
 <table>
 <thead>
 <tr>
-<th>Буква</th>
-<th>Требование</th>
-<th>Вопрос социолога</th>
+<th>Lettre</th>
+<th>Exigence</th>
+<th>La question du sociologue</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A</td>
-<td>Attributable</td>
-<td>Кто это записал, закодировал, исправил?</td>
+<td>Attributable (attribuable)</td>
+<td>Qui l’a saisie, codée, corrigée ?</td>
 </tr>
 <tr>
 <td>L</td>
-<td>Legible</td>
-<td>Прочитаю ли я это без программы, в которой делала?</td>
+<td>Legible (lisible)</td>
+<td>Pourrai-je la relire sans le logiciel qui a servi à la produire ?</td>
 </tr>
 <tr>
 <td>C</td>
-<td>Contemporaneous</td>
-<td>Записано тогда же, когда произошло, или восстановлено потом?</td>
+<td>Contemporaneous (contemporaine)</td>
+<td>A-t-elle été notée sur le moment, ou reconstituée après coup ?</td>
 </tr>
 <tr>
 <td>O</td>
-<td>Original</td>
-<td>Где исходник — аудио, бумажная анкета, первый файл?</td>
+<td>Original (originale)</td>
+<td>Où est la source : l’enregistrement audio, le questionnaire papier, le premier fichier ?</td>
 </tr>
 <tr>
 <td>A</td>
-<td>Accurate</td>
-<td>Если исправляли — видно ли, что и почему?</td>
+<td>Accurate (exacte)</td>
+<td>Si elle a été corrigée, voit-on quoi et pourquoi ?</td>
 </tr>
 <tr>
 <td>C</td>
-<td>Complete</td>
-<td>Не пропало ли что-то молча?</td>
+<td>Complete (complète)</td>
+<td>Quelque chose a-t-il disparu sans bruit ?</td>
 </tr>
 <tr>
 <td>C</td>
-<td>Consistent</td>
-<td>Одинаковые вещи записаны одинаково?</td>
+<td>Consistent (cohérente)</td>
+<td>Les mêmes choses sont-elles notées de la même façon ?</td>
 </tr>
 <tr>
 <td>E</td>
-<td>Enduring</td>
-<td>Доживут ли данные до повторного анализа через десять лет?</td>
+<td>Enduring (durable)</td>
+<td>Les données seront-elles encore exploitables pour une réanalyse dans dix ans ?</td>
 </tr>
 <tr>
 <td>A</td>
-<td>Available</td>
-<td>Можно ли быстро достать нужное, когда спросят?</td>
+<td>Available (disponible)</td>
+<td>Peut-on retrouver rapidement ce qu’il faut quand on nous le demande ?</td>
 </tr>
 </tbody>
 </table>
-<p>Ни один пункт не требует сложной техники. Требуется только, чтобы ответ на каждый вопрос существовал не в голове, а рядом с данными.</p>
-<h2 id="журнал-изменений-память-которая-не-врёт">Журнал изменений: память, которая не врёт</h2>
-<p>В клиническом исследовании любое изменение записи оставляет след: кто, когда, старое значение, новое значение, причина. Это называется audit trail. Удалить след нельзя, можно только добавить новое изменение поверх.</p>
-<p>Сравните с обычной работой в Excel. Вы заменили «Мск» на «Москва» в двухстах ячейках — и всё: таблица чистая, а знания о том, что она была грязной, больше нет. Для одной замены это не страшно. Для сорока замен, сделанных тремя людьми за полгода, — это уже другая таблица, происхождение которой никто не восстановит.</p>
-<p>Хорошая новость: журнал можно вести автоматически. Если каждая запись ещё и содержит отпечаток предыдущей (хэш-цепочка), то даже правка напрямую в базе станет заметной.</p>
-<h2 id="проверки-при-вводе-поймать-ошибку-пока-все-помнят">Проверки при вводе: поймать ошибку, пока все помнят</h2>
-<p>Edit checks — правила, которые срабатывают в момент ввода: возраст 214, дата интервью в будущем, стаж работы больше возраста. В клинике их пишут до начала исследования, вместе с формами.</p>
-<p>Главная идея — время. Ошибку, найденную в день ввода, исправляет человек, который держал анкету в руках. Ошибку, найденную через год при анализе, приходится угадывать.</p>
-<h2 id="запросы-вопрос-вместо-исправления">Запросы: вопрос вместо исправления</h2>
-<p>Когда менеджер данных в клинике видит странное значение, он не исправляет его сам. Он открывает query — вопрос к тому, кто вносил данные: «Возраст 214 — опечатка? Уточните по первичному документу». Ответ и исправление сохраняются вместе с вопросом.</p>
-<p>В социологии это переносится почти буквально. Кодировщик видит в транскрипте «приехал в 2009-м», а по анкете участнику тогда было девять лет — вопрос интервьюеру, а не тихая правка. Расшифровщик пометил «[неразборчиво 00:14:32]» — вопрос тому, кто был на интервью и может помнить. Разница маленькая, но принципиальная: исправляет тот, у кого есть основание, и основание остаётся записанным.</p>
-<h2 id="двойной-ввод-два-человека-лучше-одного">Двойной ввод: два человека лучше одного</h2>
-<p>Бумажные формы в клинике часто вводят дважды, двумя людьми независимо, а потом сверяют расхождения с бумагой. Это дорого, но число ошибок ввода падает радикально.</p>
-<p>Для трёхсот бумажных анкет это пара дополнительных дней. Для качественного анализа у этой практики давно есть родственник — двойное кодирование и коэффициент согласия кодировщиков (например, каппа Коэна). Логика та же: одна пара глаз ошибается незаметно, две — заметно.</p>
-<h2 id="блокировка-базы-момент-после-которого-не-подгоняют">Блокировка базы: момент, после которого не подгоняют</h2>
-<p>Перед анализом клиническую базу «замораживают»: после блокировки изменения возможны только через документированную разблокировку. Это защищает от самого человеческого соблазна — поправить данные, увидев результат.</p>
-<p>Для социолога блокировка — это не запрет передумать. Качественный кодбук живёт и меняется, и это нормально. Блокировка — это фиксация момента: «на этих данных и этой версии правил написана глава 3». Если потом что-то изменилось, глава хотя бы знает, на что она опиралась.</p>
-<h2 id="чего-переносить-не-стоит">Чего переносить не стоит</h2>
-<p>Клиническая культура данных выросла в среде регуляторов, страховок и огромных бюджетов. Стандартные операционные процедуры на каждое действие, подпись на каждой странице, валидация программ за большие деньги — социологии это не нужно и не по карману. Нужна логика: исходник цел, изменения видны, решения объяснены, данные проверяются рано.</p>
-<p class="aside">клиницисты, простите за упрощения.</p>
-<h2 id="как-это-устроено-в-corpus">Как это устроено в corpus</h2>
-<p>В corpus эти практики встроены так, чтобы их не приходилось помнить: журнал действий с хэш-цепочкой ведётся сам, исправление текста — это новая версия, очистка анкет — правила с причинами поверх сырых ответов. Проверки при вводе, запросы, двойной ввод и блокировка сейчас собираются в модуле <a href="../../features/#quality">«проверки и запросы»</a>.</p>]]></content:encoded>
+<p>Aucun de ces points n’exige une technique sophistiquée. Il faut seulement que la réponse à chaque question existe ailleurs que dans une tête : à côté des données.</p>
+<h2 id="lhistorique-des-modifications-une-mémoire-qui-ne-ment-pas">L’historique des modifications : une mémoire qui ne ment pas</h2>
+<p>Dans un essai clinique, toute modification d’une donnée laisse une trace : qui, quand, l’ancienne valeur, la nouvelle, le motif. C’est ce qu’on appelle l’audit trail. La trace ne peut pas être effacée ; on peut seulement ajouter une nouvelle modification par-dessus.</p>
+<p>Comparez avec le travail ordinaire sous Excel. Vous remplacez « Seine-St-Denis » par « Seine-Saint-Denis » dans deux cents cellules, et c’est tout : le tableau est propre, mais on a perdu l’information qu’il ne l’était pas. Pour un seul remplacement, ce n’est pas grave. Pour quarante remplacements faits par trois personnes en six mois, c’est déjà un autre tableau, dont personne ne pourra reconstituer l’origine.</p>
+<p>La bonne nouvelle, c’est que cet historique peut être tenu automatiquement. Et si chaque entrée contient en plus l’empreinte de la précédente (une chaîne de hachage), même une modification faite directement dans la base devient visible.</p>
+<h2 id="les-contrôles-de-saisie-attraper-lerreur-tant-que-tout-le-monde-sen-souvient">Les contrôles de saisie : attraper l’erreur tant que tout le monde s’en souvient</h2>
+<p>Les edit checks sont des règles qui se déclenchent au moment de la saisie : un âge de 214 ans, une date d’entretien dans le futur, une ancienneté professionnelle supérieure à l’âge. En recherche clinique, on les rédige avant le début de l’étude, en même temps que les formulaires.</p>
+<p>L’idée centrale, c’est le temps. Une erreur repérée le jour de la saisie est corrigée par la personne qui a eu le questionnaire entre les mains. Une erreur découverte un an plus tard, pendant l’analyse, il faut la deviner.</p>
+<h2 id="les-requêtes-une-question-plutôt-quune-correction">Les requêtes : une question plutôt qu’une correction</h2>
+<p>Quand le data manager d’un essai clinique tombe sur une valeur étrange, il ne la corrige pas lui-même. Il ouvre une query, une question adressée à la personne qui a saisi la donnée : « Âge 214 : faute de frappe ? Merci de vérifier sur le document source. » La réponse et la correction sont conservées avec la question.</p>
+<p>En sociologie, la transposition est presque littérale. Le codeur lit dans un verbatim « je suis arrivé en 2009 », alors que, d’après le questionnaire, l’enquêté avait neuf ans à l’époque : on pose la question à l’enquêtrice, on ne corrige pas en douce. La personne qui a fait la transcription a noté « [inaudible 00:14:32] » : on interroge celle ou celui qui a mené l’entretien et qui s’en souvient peut-être. La différence est mince, mais elle est de principe : c’est la personne qui a un motif de corriger qui corrige, et ce motif reste consigné.</p>
+<h2 id="la-double-saisie-deux-personnes-valent-mieux-quune">La double saisie : deux personnes valent mieux qu’une</h2>
+<p>En recherche clinique, les formulaires papier sont souvent saisis deux fois, par deux personnes indépendantes, puis les écarts sont confrontés au papier. C’est coûteux, mais le nombre d’erreurs de saisie chute radicalement.</p>
+<p>Pour trois cents questionnaires papier, cela représente deux jours de travail supplémentaires. En analyse qualitative, cette pratique a depuis longtemps une cousine : le double codage et le coefficient d’accord inter-codeurs (le kappa de Cohen, par exemple). La logique est la même : une seule paire d’yeux se trompe sans que cela se voie, deux paires se trompent de façon visible.</p>
+<h2 id="le-gel-de-la-base-le-moment-après-lequel-on-najuste-plus">Le gel de la base : le moment après lequel on n’ajuste plus</h2>
+<p>Avant l’analyse, la base d’un essai clinique est « gelée » : une fois le gel prononcé, toute modification passe par un dégel documenté. Cela protège contre la plus humaine des tentations : retoucher les données après avoir vu le résultat.</p>
+<p>En sociologie, le gel n’est pas une interdiction de changer d’avis. Une grille de codes qualitative vit et évolue, et c’est normal. Le gel, c’est la fixation d’un moment : « le chapitre 3 a été écrit à partir de ces données et de cette version des règles ». Si quelque chose change ensuite, le chapitre sait au moins sur quoi il s’appuyait.</p>
+<h2 id="ce-quil-vaut-mieux-ne-pas-importer">Ce qu’il vaut mieux ne pas importer</h2>
+<p>La culture clinique des données s’est développée dans un univers de régulateurs, d’assurances et de budgets considérables. Des procédures opératoires standardisées pour chaque geste, une signature sur chaque page, une validation des logiciels à prix d’or : la sociologie n’en a pas besoin, et n’en a pas les moyens. Ce dont elle a besoin, c’est de la logique : la source reste intacte, les modifications sont visibles, les décisions sont justifiées, les données sont vérifiées tôt.</p>
+<p class="aside">que les cliniciens me pardonnent ces raccourcis.</p>
+<h2 id="comment-cest-fait-dans-corpus">Comment c’est fait dans corpus</h2>
+<p>Dans corpus, ces pratiques sont intégrées de façon à ce qu’on n’ait pas à y penser : le journal des actions, avec sa chaîne de hachage, se tient tout seul ; corriger un texte, c’est en créer une nouvelle version ; le nettoyage des questionnaires passe par des règles motivées, appliquées par-dessus les réponses brutes. Les contrôles de saisie, les requêtes, la double saisie et le gel sont en cours d’intégration dans le module <a href="../../features/#quality">« contrôles et requêtes »</a>.</p>]]></content:encoded>
   </item>
   <item>
-    <title>corpus, сущ.</title>
-    <link>https://corpus.example/blog/corpus/</link>
-    <guid isPermaLink="true">https://corpus.example/blog/corpus/</guid>
+    <title>corpus, n. m.</title>
+    <link>https://moncorpus.fr/blog/corpus/</link>
+    <guid isPermaLink="true">https://moncorpus.fr/blog/corpus/</guid>
     <pubDate>Tue, 06 Oct 2026 09:00:00 +0000</pubDate>
-    <category>словарь</category>
-    <description>Почему платформа называется так, как называется, и что такое «тело исследования», когда оно лежит в двенадцати папках.</description>
-    <content:encoded><![CDATA[<p><strong>corpus</strong> [ˈkɔːpəs] <em>сущ., мн.</em> corpora — по-латыни «тело». В лингвистике так называют собрание текстов, на котором проверяют догадки о языке. В праве есть <em>habeas corpus</em> — «предъяви тело»: требование показать человека, а не рассказ о нём. Мне нравится, что в одном слове уживаются оба смысла: и собрание, и требование его предъявить.</p>
-<h2 id="тело-исследования">Тело исследования</h2>
-<p>У любого эмпирического исследования есть тело. Это не текст диссертации и не статья — это всё, из чего они сделаны: записи интервью, расшифровки, полевые заметки, анкеты, фотографии, таблицы связей, сканы согласий, выписки из источников. Тело — то, что остаётся, когда выводы уже написаны. И то, к чему возвращаются, когда выводы кто-то оспаривает.</p>
-<p>Проблема в том, что тело исследования почти никогда не лежит в одном месте. Аудио — на диктофоне и в облаке. Расшифровка — в почте, в трёх версиях. Согласие — в бумажной папке, папка — в рюкзаке. Анкеты — в Excel, очищенные вручную, а как именно очищенные — помнит только тот, кто чистил, и то до отпуска. Коды — в программе для качественного анализа, цитаты — в черновике главы, и между цитатой и строкой транскрипта уже нет никакой связи, кроме памяти.</p>
-<p class="aside">пока всё помнишь, кажется, что это и есть порядок.</p>
-<p>Это не небрежность. Так устроена работа: поле происходит быстро, анализ — медленно, а между ними месяцы, а иногда и другие люди. Исследователь, который вёл интервью, и исследователь, который их кодирует, — часто разные люди, даже если у них одно имя.</p>
-<h2 id="что-значит-предъявить-тело">Что значит «предъявить тело»</h2>
-<p>Проверяемость в социологии обычно понимают как прозрачность метода: описать выборку, гайд, процедуру кодирования. Это важно, но это рассказ о теле, а не оно само. Настоящая проверка — когда от вывода можно пройти назад: от фразы в статье к цитате, от цитаты к версии транскрипта, от версии к аудиозаписи, от записи к согласию участника. И когда за цифрой «38% респондентов» видно, какие анкеты в неё вошли, какие исключены и почему.</p>
-<p>В клинических исследованиях этот путь назад обязателен и давно формализован — об этом <a href="../clinical-rigor/">отдельная запись</a>. В социологии он чаще существует в виде доброго намерения. Не потому, что социологи менее аккуратны, а потому, что у них нет инструмента, в котором аккуратность — поведение по умолчанию, а не дополнительная работа по вечерам.</p>
-<h2 id="зачем-отдельная-платформа">Зачем отдельная платформа</h2>
-<p>Corpus — попытка сделать такой инструмент. Не ещё одну программу для кодирования и не облачный диск с папками, а место, где тело исследования собрано целиком и у каждой его части есть происхождение.</p>
-<p>Всё держится на нескольких правилах:</p>
+    <category>vocabulaire</category>
+    <description>Pourquoi la plateforme s’appelle ainsi, et ce qu’est le « corps de l’enquête » quand il est éparpillé dans douze dossiers.</description>
+    <content:encoded><![CDATA[<p><strong>corpus</strong> [kɔʁpys] <em>n. m.</em>, pl. lat. corpora — « corps » en latin. En linguistique, on appelle ainsi un ensemble de textes sur lequel on met à l’épreuve des hypothèses sur la langue. En droit, il y a l’<em>habeas corpus</em>, « que tu aies le corps » : l’obligation de présenter la personne elle-même, et non un récit à son sujet. J’aime que les deux sens cohabitent dans un seul mot : l’ensemble, et l’exigence de le présenter.</p>
+<h2 id="le-corps-de-lenquête">Le corps de l’enquête</h2>
+<p>Toute enquête empirique a un corps. Ce n’est ni le texte de la thèse ni l’article : c’est tout ce dont ils sont faits. Les enregistrements d’entretiens, les transcriptions, les notes de terrain, les questionnaires, les photos, les tableaux de relations, les scans des formulaires de consentement, les extraits de sources. Le corps, c’est ce qui reste une fois les conclusions écrites. Et c’est ce à quoi l’on revient quand quelqu’un les conteste.</p>
+<p>Le problème, c’est que le corps d’une enquête n’est presque jamais rangé au même endroit. L’audio est sur l’enregistreur et dans le cloud. La transcription est dans la messagerie, en trois versions. Le consentement est dans une chemise cartonnée, la chemise dans un sac à dos. Les questionnaires sont dans Excel, nettoyés à la main, et la façon dont ils ont été nettoyés, seule la personne qui l’a fait s’en souvient, et encore, jusqu’aux vacances. Les codes sont dans un logiciel d’analyse qualitative, les verbatim dans le brouillon d’un chapitre, et entre la citation et la ligne de la transcription il n’y a plus d’autre lien que la mémoire.</p>
+<p class="aside">tant qu’on se souvient de tout, on croit que c’est ça, l’ordre.</p>
+<p>Ce n’est pas de la négligence. C’est la nature du travail : le terrain va vite, l’analyse lentement, et entre les deux il y a des mois, parfois d’autres personnes. La chercheuse qui a mené les entretiens et celle qui les code sont souvent deux personnes différentes, même quand elles portent le même nom.</p>
+<h2 id="ce-que-veut-dire-présenter-le-corps">Ce que veut dire « présenter le corps »</h2>
+<p>En sociologie, on entend généralement la vérifiabilité comme la transparence de la méthode : décrire l’échantillon, la grille d’entretien, la procédure de codage. C’est important, mais c’est un récit sur le corps, pas le corps lui-même. La vraie vérification, c’est quand on peut remonter depuis la conclusion : de la phrase de l’article au verbatim, du verbatim à une version de la transcription, de cette version à l’enregistrement, de l’enregistrement au consentement de la personne enquêtée. Et quand, derrière le chiffre « 38 % des répondants », on voit quels questionnaires ont été retenus, lesquels ont été exclus, et pourquoi.</p>
+<p>Dans les essais cliniques, ce chemin à rebours est obligatoire et formalisé depuis longtemps ; j’y consacre <a href="../clinical-rigor/">un billet à part</a>. En sociologie, il relève le plus souvent de la bonne intention. Non que les sociologues soient moins rigoureux, mais parce qu’ils n’ont pas d’outil où la rigueur est le comportement par défaut, et non un travail supplémentaire à faire le soir.</p>
+<h2 id="pourquoi-une-plateforme-à-part">Pourquoi une plateforme à part</h2>
+<p>corpus est une tentative de construire cet outil. Pas un logiciel de codage de plus, ni un espace de stockage en ligne avec des dossiers, mais un lieu où le corps de l’enquête est réuni en entier, et où chacune de ses parties a une provenance.</p>
+<p>Tout repose sur quelques règles :</p>
 <ul>
-<li><strong>Исходник неприкосновенен.</strong> Загруженный файл не перезаписывается. Первая версия расшифровки и сырой ответ анкеты не меняются никогда.</li>
-<li><strong>Обработка — это рецепт.</strong> Очистка текста или анкеты — не правка поверх, а новая версия, которая помнит, из чего и как получена. Рецепт можно пересмотреть — результат пересоберётся.</li>
-<li><strong>Каждое действие записано.</strong> Кто, что, когда, что было и что стало. Записи связаны в цепочку, так что тихо поправить прошлое не получится.</li>
-<li><strong>Почему — тоже данные.</strong> Решение «исключаем анкеты, заполненные быстрее минуты» записывается вместе с причиной.</li>
-<li><strong>Люди — под кодами.</strong> Имена и контакты участников зашифрованы и не попадают ни в одну выгрузку.</li>
+<li><strong>La source est intouchable.</strong> Un fichier importé n’est jamais écrasé. La première version d’une transcription et la réponse brute à un questionnaire ne changent jamais.</li>
+<li><strong>Un traitement est une recette.</strong> Nettoyer un texte ou un questionnaire, ce n’est pas corriger par-dessus : c’est créer une nouvelle version qui garde la trace de ce dont elle provient et de la manière dont elle a été obtenue. On peut revoir la recette : le résultat se recalcule.</li>
+<li><strong>Chaque action est consignée.</strong> Qui, quoi, quand, ce qu’il y avait avant et ce qu’il y a après. Les entrées sont chaînées entre elles : impossible de retoucher le passé en douce.</li>
+<li><strong>Le pourquoi est aussi une donnée.</strong> La décision « on exclut les questionnaires remplis en moins d’une minute » est enregistrée avec son motif.</li>
+<li><strong>Les personnes sont désignées par des codes.</strong> Les noms et coordonnées des enquêté·es sont chiffrés et n’apparaissent dans aucun export.</li>
 </ul>
-<p>Звучит строго, и это намеренно. Но строгость не должна ощущаться как бюрократия. Хорошая тетрадь не требует от вас дисциплины — она просто не даёт вырвать страницу незаметно.</p>
-<h2 id="чем-corpus-не-является">Чем corpus не является</h2>
-<p>Это не «умная» система, которая проанализирует интервью за вас. Интерпретация остаётся работой исследователя — и это лучшая часть работы. Corpus нужен, чтобы освободить для неё время: меньше искать файлы, меньше сверять версии, меньше вспоминать, откуда взялась цифра.</p>
-<p>И это не замена R, Python или Word. Данные выходят из corpus в открытых форматах — CSV, JSON, DOCX, GraphML — и остаются читаемыми без него. Тело исследования не должно зависеть от программы, в которой хранится.</p>
-<h2 id="почему-по-латыни">Почему по-латыни</h2>
-<p>Можно было назвать по-русски. Но «корпус» по-русски — это ещё и здание, и туловище, и армейское соединение, и корпус часов. А <em>corpus</em> — сразу и собрание текстов, и тело, и требование его предъявить. Три значения — три пункта словарной статьи на главной странице.</p>
-<p class="aside">мн. ч. — corpora. проверено.</p>]]></content:encoded>
+<p>Cela paraît strict, et c’est voulu. Mais la rigueur ne doit pas se vivre comme de la bureaucratie. Un bon carnet n’exige pas de discipline de votre part : il empêche simplement d’en arracher une page sans que cela se voie.</p>
+<h2 id="ce-que-corpus-nest-pas">Ce que corpus n’est pas</h2>
+<p>Ce n’est pas un système « intelligent » qui analysera vos entretiens à votre place. L’interprétation reste le travail du chercheur ou de la chercheuse, et c’en est la meilleure part. corpus sert à lui libérer du temps : moins de fichiers à chercher, moins de versions à comparer, moins d’efforts pour se rappeler d’où vient un chiffre.</p>
+<p>Ce n’est pas non plus un substitut à R, Python ou Word. Les données sortent de corpus dans des formats ouverts (CSV, JSON, DOCX, GraphML) et restent lisibles sans lui. Le corps d’une enquête ne doit pas dépendre du logiciel où il est conservé.</p>
+<h2 id="pourquoi-en-latin">Pourquoi en latin</h2>
+<p>On aurait pu choisir un mot français. Mais « corps », en français, c’est aussi le corps d’armée, le corps enseignant, le corps de métier, le corps d’un texte de loi. <em>corpus</em>, lui, désigne à la fois l’ensemble de textes, le corps et l’exigence de le présenter. Trois sens, trois entrées de l’article de dictionnaire sur la page d’accueil.</p>
+<p class="aside">pl. lat. corpora. vérifié.</p>]]></content:encoded>
   </item>
 </channel>
 </rss>

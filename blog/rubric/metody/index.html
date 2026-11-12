@@ -1,93 +1,102 @@
 <!doctype html>
-<html lang="ru">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>§ 03 · методы — блог corpus</title>
-  <meta name="description" content="Практика: как собрать, очистить, разметить и проверить данные.">
-  <meta name="author" content="Снежана">
+  <title>§ 03 · méthodes — blog corpus</title>
+  <meta name="description" content="La pratique : recueillir, nettoyer, coder et vérifier les données.">
+  <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
-  <link rel="canonical" href="https://corpus.example/blog/rubric/metody/">
-  <link rel="alternate" type="application/rss+xml" title="corpus — блог" href="/corpus-site/feed.xml">
-  <link rel="icon" href="/corpus-site/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/corpus-site/apple-touch-icon.png">
-  <link rel="preload" href="/corpus-site/fonts/pt-serif-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/corpus-site/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/corpus-site/css/site.css?v=9f0ecba7">
+<link rel="canonical" href="https://moncorpus.fr/blog/rubric/metody/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/blog/rubric/metody/">
+  <link rel="alternate" hreflang="en" href="https://moncorpus.fr/en/blog/rubric/metody/">
+  <link rel="alternate" hreflang="ru" href="https://moncorpus.fr/ru/blog/rubric/metody/">
+<link rel="alternate" hreflang="x-default" href="https://moncorpus.fr/blog/rubric/metody/">  <link rel="alternate" type="application/rss+xml" title="corpus — blog" href="/feed.xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=b808fa92">
+  <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="§ 03 · методы — блог corpus">
-  <meta property="og:description" content="Практика: как собрать, очистить, разметить и проверить данные.">
-  <meta property="og:url" content="https://corpus.example/blog/rubric/metody/">
-  <meta property="og:image" content="https://corpus.example/og.png">
+  <meta property="og:title" content="§ 03 · méthodes — blog corpus">
+  <meta property="og:description" content="La pratique : recueillir, nettoyer, coder et vérifier les données.">
+  <meta property="og:url" content="https://moncorpus.fr/blog/rubric/metody/">
+  <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/corpus-site/js/menu.js?v=9f0ecba7" defer></script>
+  <script src="/js/site.js?v=b808fa92"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">к содержанию</a>
+  <a class="skip-link" href="#main">aller au contenu</a>
 
   <header class="masthead" data-masthead>
     <div class="wrap masthead-inner">
-      <a class="logo" href="/corpus-site/">
-        <img src="/corpus-site/brand/wordmark.svg" alt="corpus — на главную" width="94" height="40">
+      <a class="logo" href="/">
+        <img src="/brand/wordmark.svg" alt="corpus — accueil" width="94" height="40">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
-        <span class="menu-toggle-lines" aria-hidden="true"></span>меню
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+              data-open="menu" data-close="fermer" hidden>menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Rubriques du site">
         <ul>
-          <li><a href="/corpus-site/features/">возможности</a></li>
-          <li><a href="/corpus-site/blog/" aria-current="page">блог</a></li>
-          <li><a href="/corpus-site/about/">обо мне</a></li>
-          <li><a href="/corpus-site/team/">команда</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
+          <li><a href="/features/">fonctionnalités</a></li>
+          <li><a href="/blog/" aria-current="page">blog</a></li>
+          <li><a href="/about/">à propos</a></li>
+          <li><a href="/team/">équipe</a></li>
+          <li><a href="/contacts/">contact</a></li>
         </ul>
-        <a class="btn btn-small" href="https://app.corpus.example">войти <span aria-hidden="true">→</span></a>
+        <ul class="lang-switch" aria-label="Langue du site">
+          <li><span class="current" aria-current="true" title="français">fr</span></li>
+          <li><a href="/en/blog/rubric/metody/" hreflang="en" lang="en" aria-label="English">en</a></li>
+          <li><a href="/ru/blog/rubric/metody/" hreflang="ru" lang="ru" aria-label="русский">ru</a></li>
+        </ul>
+        <a class="btn btn-small btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
 <header class="page-head wrap">
-  <p class="kicker"><a href="/corpus-site/blog/">блог</a> / рубрика</p>
-  <h1 class="entry-title">§ 03 · методы</h1>
-  <p class="page-lead">Практика: как собрать, очистить, разметить и проверить данные.</p>
+  <p class="kicker"><a href="/blog/">blog</a> / rubrique</p>
+  <h1 class="entry-title">§ 03 · méthodes</h1>
+  <p class="page-lead">La pratique : recueillir, nettoyer, coder et vérifier les données.</p>
 </header>
 
 <div class="wrap blog-layout">
-  <nav class="rubrics" aria-label="Рубрики блога">
+  <nav class="rubrics" aria-label="Rubriques du blog">
     <ul>
-      <li><a href="/corpus-site/blog/">все записи <span class="count">3</span></a></li>
-      <li><a href="/corpus-site/blog/rubric/slovar/">§ 01 · словарь <span class="count">1</span></a></li>
-      <li><a href="/corpus-site/blog/rubric/pole/">§ 02 · заметки с поля <span class="count">0</span></a></li>
-      <li><a href="/corpus-site/blog/rubric/metody/" aria-current="page">§ 03 · методы <span class="count">2</span></a></li>
-      <li><a href="/corpus-site/blog/rubric/novosti/">§ 04 · новости продукта <span class="count">0</span></a></li>
+      <li><a href="/blog/">toutes les notes <span class="count">3</span></a></li>
+      <li><a href="/blog/rubric/slovar/">§ 01 · vocabulaire <span class="count">1</span></a></li>
+      <li><a href="/blog/rubric/pole/">§ 02 · notes de terrain <span class="count">0</span></a></li>
+      <li><a href="/blog/rubric/metody/" aria-current="page">§ 03 · méthodes <span class="count">2</span></a></li>
+      <li><a href="/blog/rubric/novosti/">§ 04 · nouvelles du produit <span class="count">0</span></a></li>
     </ul>
-    <p class="rss-note"><a href="/corpus-site/feed.xml">подписаться через rss</a></p>
+    <p class="rss-note"><a href="/feed.xml">s’abonner par rss</a></p>
   </nav>
 
   <div class="post-list">
       <article class="post-card">
   <p class="post-card-meta">
-    <a href="/corpus-site/blog/rubric/metody/"><span class="rubric">§ 03 · методы</span></a>
-    <time datetime="2026-10-20">20 октября 2026</time>
+    <a href="/blog/rubric/metody/"><span class="rubric">§ 03 · méthodes</span></a>
+    <time datetime="2026-10-20">20 octobre 2026</time>
   </p>
-  <h2 class="post-card-title"><a href="/corpus-site/blog/networks-over-coffee/">Сети за чашкой кофе: как из таблицы «индивид — тип связи — индивид 2» получается картинка</a></h2>
-  <p class="post-card-summary">Пошагово: как записать связи из интервью в таблицу из трёх столбцов, загрузить её в corpus, разложить, посчитать и не принять красивую картинку за вывод.</p>
-  <p class="post-card-foot"><span>4 минуты чтения</span> <a href="/corpus-site/blog/networks-over-coffee/" aria-hidden="true" tabindex="-1">читать →</a></p>
+  <h2 class="post-card-title"><a href="/blog/networks-over-coffee/">Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image</a></h2>
+  <p class="post-card-summary">Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, le disposer, calculer, et ne pas prendre une belle image pour une conclusion.</p>
+  <p class="post-card-foot"><span>6 min de lecture</span> <a href="/blog/networks-over-coffee/" aria-hidden="true" tabindex="-1">lire →</a></p>
 </article>
 
       <article class="post-card">
   <p class="post-card-meta">
-    <a href="/corpus-site/blog/rubric/metody/"><span class="rubric">§ 03 · методы</span></a>
-    <time datetime="2026-10-13">13 октября 2026</time>
+    <a href="/blog/rubric/metody/"><span class="rubric">§ 03 · méthodes</span></a>
+    <time datetime="2026-10-13">13 octobre 2026</time>
   </p>
-  <h2 class="post-card-title"><a href="/corpus-site/blog/clinical-rigor/">Чему социологу поучиться у клинических исследований</a></h2>
-  <p class="post-card-summary">ALCOA+, журнал изменений, проверки при вводе, запросы, двойной ввод и блокировка базы — что это такое и зачем всё это качественникам и количественникам.</p>
-  <p class="post-card-foot"><span>5 минут чтения</span> <a href="/corpus-site/blog/clinical-rigor/" aria-hidden="true" tabindex="-1">читать →</a></p>
+  <h2 class="post-card-title"><a href="/blog/clinical-rigor/">Ce que la sociologie peut apprendre des essais cliniques</a></h2>
+  <p class="post-card-summary">ALCOA+, historique des modifications, contrôles de saisie, requêtes, double saisie et gel de la base : de quoi s’agit-il, et en quoi cela concerne aussi bien les qualitativistes que les quantitativistes ?</p>
+  <p class="post-card-foot"><span>7 min de lecture</span> <a href="/blog/clinical-rigor/" aria-hidden="true" tabindex="-1">lire →</a></p>
 </article>
 
   </div>
@@ -95,42 +104,42 @@
   </main>
 
   <footer class="site-footer">
-    <section class="board" aria-labelledby="universe">
-      <div class="wrap">
-        <h2 class="board-label" id="universe">одна тетрадь, три проекта</h2>
-        <ul class="cutouts">
-          <li class="cutout cutout-dispositif">
-            <span class="d-mark" aria-hidden="true">Д</span>
-            <p class="cutout-title">диспозитив</p>
-            <p>социология повседневности на youtube: одно понятие — одно видео.</p>
-            <p><span class="todo">[ссылка на канал — site.toml → projects.dispositif.url]</span></p>
-          </li>
-          <li class="cutout cutout-garbage">
-            <p class="cutout-title">garbage <i>n., uncountable</i></p>
-            <p>визуальная социология парижского мусора: что город выбрасывает и что этим говорит.</p>
-            <a href="https://garbageofparis.fr" lang="en">see the evidence <span aria-hidden="true">→</span></a>
-          </li>
-          <li class="cutout cutout-corpus">
-            <img src="/corpus-site/brand/mark.svg" alt="" width="44" height="44">
-            <p class="cutout-title">corpus</p>
-            <p>тело исследования в одном месте. вы сейчас здесь.</p>
-            <a href="/corpus-site/features/">что внутри <span aria-hidden="true">→</span></a>
-          </li>
-        </ul>
+    <div class="wrap">
+      <p class="footer-word">corpus <span class="pos">n. m., de l’enquête</span></p>
+      <p class="footer-def"><span class="struck">douze dossiers et une seule tête.</span> <span class="hand">un seul lieu pour toute l’enquête. Paris, 2026 — en chantier.</span></p>
+
+      <div class="footer-cols">
+        <nav aria-label="Liens utiles">
+          <h2>le site</h2>
+          <ul class="footer-links">
+<li><a href="/features/">fonctionnalités</a></li>
+<li><a href="/blog/">blog</a></li>
+<li><a href="/about/">à propos</a></li>
+<li><a href="/team/">équipe</a></li>
+<li><a href="/contacts/">contact</a></li>
+            <li><a href="/feed.xml">rss</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>écrire</h2>
+          <ul class="footer-links">
+<li><a href="mailto:contact@moncorpus.fr">e-mail</a></li><li><a href="https://www.linkedin.com/in/snezhana-galimova" rel="me">linkedin ↗</a></li><li><a href="https://www.instagram.com/raretarantul/" rel="me">instagram ↗</a></li>          </ul>
+        </div>
+        <div>
+          <h2>un carnet, trois projets</h2>
+          <ul class="footer-projects">
+            <li><b lang="ru">диспозитив</b> <span class="soon">bientôt</span></li>
+            <li><b lang="en">garbage</b> <span class="pos" lang="en">of Paris</span> <a href="https://garbageofparis.fr">garbageofparis.fr ↗</a></li>
+            <li><b>corpus</b> <span class="pos">vous êtes ici</span></li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <div class="wrap footer-base">
-      <p class="footer-sign">© 2026 Снежана · corpus</p>
-      <nav aria-label="Служебные ссылки">
-        <ul class="footer-links">
-          <li><a href="https://app.corpus.example">платформа</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/feed.xml">rss</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
-          <li><a href="/corpus-site/privacy/">конфиденциальность</a></li>
-        </ul>
-      </nav>
-      <p class="footer-note">на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+
+      <div class="footer-base">
+        <p>© 2026 Snezhana Galimova · <a href="/mentions-legales/">mentions légales</a> · <a href="/privacy/">confidentialité</a></p>
+        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme.</p>
+        <a class="to-top" href="#main">↑ haut</a>
+      </div>
     </div>
   </footer>
 </body>

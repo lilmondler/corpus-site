@@ -1,155 +1,151 @@
 <!doctype html>
-<html lang="ru">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Обо мне — corpus</title>
-  <meta name="description" content="Кто делает corpus: социолог, автор канала «диспозитив» и фотопроекта garbage of paris.">
-  <meta name="author" content="Снежана">
+  <title>À propos — corpus</title>
+  <meta name="description" content="Qui fait corpus : Snezhana Galimova, sociologue à Paris, autrice du projet photo garbage of paris.">
+  <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
-  <link rel="canonical" href="https://corpus.example/about/">
-  <link rel="alternate" type="application/rss+xml" title="corpus — блог" href="/corpus-site/feed.xml">
-  <link rel="icon" href="/corpus-site/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/corpus-site/apple-touch-icon.png">
-  <link rel="preload" href="/corpus-site/fonts/pt-serif-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/corpus-site/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/corpus-site/css/site.css?v=9f0ecba7">
+<link rel="canonical" href="https://moncorpus.fr/about/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/about/">
+  <link rel="alternate" hreflang="en" href="https://moncorpus.fr/en/about/">
+  <link rel="alternate" hreflang="ru" href="https://moncorpus.fr/ru/about/">
+<link rel="alternate" hreflang="x-default" href="https://moncorpus.fr/about/">  <link rel="alternate" type="application/rss+xml" title="corpus — blog" href="/feed.xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=b808fa92">
+  <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Обо мне — corpus">
-  <meta property="og:description" content="Кто делает corpus: социолог, автор канала «диспозитив» и фотопроекта garbage of paris.">
-  <meta property="og:url" content="https://corpus.example/about/">
-  <meta property="og:image" content="https://corpus.example/og.png">
+  <meta property="og:title" content="À propos — corpus">
+  <meta property="og:description" content="Qui fait corpus : Snezhana Galimova, sociologue à Paris, autrice du projet photo garbage of paris.">
+  <meta property="og:url" content="https://moncorpus.fr/about/">
+  <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/corpus-site/js/menu.js?v=9f0ecba7" defer></script>
+  <script src="/js/site.js?v=b808fa92"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">к содержанию</a>
+  <a class="skip-link" href="#main">aller au contenu</a>
 
   <header class="masthead" data-masthead>
     <div class="wrap masthead-inner">
-      <a class="logo" href="/corpus-site/">
-        <img src="/corpus-site/brand/wordmark.svg" alt="corpus — на главную" width="94" height="40">
+      <a class="logo" href="/">
+        <img src="/brand/wordmark.svg" alt="corpus — accueil" width="94" height="40">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
-        <span class="menu-toggle-lines" aria-hidden="true"></span>меню
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+              data-open="menu" data-close="fermer" hidden>menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Rubriques du site">
         <ul>
-          <li><a href="/corpus-site/features/">возможности</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/about/" aria-current="page">обо мне</a></li>
-          <li><a href="/corpus-site/team/">команда</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
+          <li><a href="/features/">fonctionnalités</a></li>
+          <li><a href="/blog/">blog</a></li>
+          <li><a href="/about/" aria-current="page">à propos</a></li>
+          <li><a href="/team/">équipe</a></li>
+          <li><a href="/contacts/">contact</a></li>
         </ul>
-        <a class="btn btn-small" href="https://app.corpus.example">войти <span aria-hidden="true">→</span></a>
+        <ul class="lang-switch" aria-label="Langue du site">
+          <li><span class="current" aria-current="true" title="français">fr</span></li>
+          <li><a href="/en/about/" hreflang="en" lang="en" aria-label="English">en</a></li>
+          <li><a href="/ru/about/" hreflang="ru" lang="ru" aria-label="русский">ru</a></li>
+        </ul>
+        <a class="btn btn-small btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
 <header class="page-head wrap">
-  <p class="kicker">словарная статья</p>
-  <h1 class="entry-title">социолог</h1>
-  <p class="grammar"><i>сущ., м. и ж.</i></p>
-  <ol class="senses senses-small">
-    <li>Человек, который смотрит на интервью, сети и мусорные баки — и видит в них общество.</li>
-    <li>Автор этого сайта. <span class="visually-hidden">Ниже — о ней подробнее.</span></li>
-  </ol>
+  <p class="kicker">§ 07 · qui et pourquoi —</p>
+  <h1 class="entry-title">à propos <span class="pos">loc. adv.</span></h1>
+  <p class="senses senses-small"><b>1.</b>Une sociologue, un terrain, et beaucoup trop de fichiers.</p>
+  <p class="correction"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 15 10 4l7 11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>coucou&nbsp;! c’est moi →</span></p>
 </header>
 
 <section class="wrap about" aria-labelledby="bio-title">
-  <div class="about-photo">
-    <figure class="polaroid tilt-l">
-  <div class="polaroid-photo polaroid-empty" role="img" aria-label="Скриншот появится позже. Портрет автора." data-shot="about-portrait.jpg">
-    <span aria-hidden="true">кадр ещё не проявлен</span>
+  <div class="about-card">
+    <div class="receipt-wrap tilt-l reveal">
+      <div class="receipt">
+        <p class="receipt-head">fiche <span>auteur</span></p>
+        <dl class="receipt-list receipt-list-wide">
+          <div><dt>nom</dt><dd>Snezhana Galimova</dd></div>
+          <div><dt>ou</dt><dd>Jane</dd></div>
+          <div><dt>métier</dt><dd>sociologue</dd></div>
+          <div><dt>basée à</dt><dd>Paris</dd></div>
+          <div><dt>langues</dt><dd>fr · en · ru</dd></div>
+        </dl>
+        <hr>
+        <dl class="receipt-list receipt-list-wide">
+<div><dt>e-mail</dt><dd><a href="mailto:contact@moncorpus.fr">contact@moncorpus.fr</a></dd></div><div><dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/snezhana-galimova">profil ↗</a></dd></div><div><dt>instagram</dt><dd><a href="https://www.instagram.com/raretarantul/">@raretarantul ↗</a></dd></div>        </dl>
+        <span class="receipt-stamp">bonjour&nbsp;!</span>
+      </div>
+    </div>
   </div>
-  <figcaption>это я</figcaption>
-</figure>
 
-  </div>
   <div class="about-text">
-    <h2 id="bio-title">Коротко</h2>
-    <p>Меня зовут Снежана. <span class="todo">[2–3 предложения о себе: образование, исследовательские интересы, чем занимаетесь сейчас]</span></p>
-    <h2>Почему corpus</h2>
-    <p><span class="todo">[один абзац: откуда идея — своя история с потерянными файлами, версиями, вопросом рецензента «откуда цифра?»]</span></p>
-    <p>Corpus — попытка сделать инструмент, в котором аккуратность с данными — поведение по умолчанию, а не дополнительная работа по вечерам. Подробнее — в записи <a href="/corpus-site/blog/corpus/">«corpus, сущ.»</a>.</p>
-    <h2>Публикации и выступления</h2>
-    <ul class="dash-list">
-      <li><span class="todo">[публикация или доклад: название, где, год, ссылка]</span></li>
-      <li><span class="todo">[ещё одна — или удалите этот раздел]</span></li>
-    </ul>
-  </div>
-</section>
+    <h2 id="bio-title"><span>1.</span>qui suis-je&nbsp;?</h2>
+    <p>Je m’appelle Snezhana Galimova — ou Jane, comme vous voulez. Je suis sociologue, je vis et j’étudie à Paris. Je m’intéresse à la sociologie du quotidien&nbsp;: ce que les gens font, gardent, jettent, et ce que cela dit de nous.</p>
 
-<section class="board board-inline" aria-labelledby="projects-title">
-  <div class="wrap">
-    <h2 class="board-label" id="projects-title">чем я занимаюсь</h2>
-    <ul class="project-polaroids">
-      <li>
-        <figure class="polaroid tilt-l">
-          <div class="polaroid-photo cover cover-dispositif" aria-hidden="true">
-            <span class="d-mark d-mark-big">Д</span>
-            <span class="cover-word">ресурс <i>сущ., м.</i></span>
-          </div>
-          <figcaption>диспозитив</figcaption>
-        </figure>
-        <p>YouTube-канал: социологические заметки — понятия, которые помогают видеть повседневность. Бумага в клетку, маркер, вырезки на скотче.</p>
-<p><span class="todo">[ссылка на канал — site.toml]</span></p>      </li>
-      <li>
-        <figure class="polaroid tilt-r">
-          <div class="polaroid-photo cover cover-garbage" aria-hidden="true">
-            <span class="cover-word" lang="en"><b>garbage</b> <i>n., uncountable</i></span>
-            <span class="cover-small" lang="en">inventory · paris · § 1</span>
-          </div>
-          <figcaption>garbage of paris</figcaption>
-        </figure>
-        <p>Фотопроект: визуальная социология парижского мусора. Что город выбрасывает, где и как — и что это говорит о нём самом.</p>
-        <a href="https://garbageofparis.fr" lang="en">see the evidence →</a>
-      </li>
-      <li>
-        <figure class="polaroid tilt-l">
-          <div class="polaroid-photo cover cover-corpus" aria-hidden="true">
-            <img src="/corpus-site/brand/wordmark.svg" alt="" width="140" height="60">
-            <span class="cover-small">[ˈkɔːpəs] сущ., мн. corpora</span>
-          </div>
-          <figcaption>corpus</figcaption>
-        </figure>
-        <p>Платформа для данных исследования: интервью, заметки, анкеты, сети и цитаты в одном месте, с историей каждого изменения.</p>
-        <a href="/corpus-site/features/">что внутри →</a>
-      </li>
-    </ul>
-  </div>
-</section>
+    <h2><span>2.</span>pourquoi corpus</h2>
+    <p>Comme beaucoup, j’ai connu l’enquête éparpillée&nbsp;: des enregistrements sur un téléphone, des transcriptions dans des mails, des questionnaires «&nbsp;nettoyés(1)&nbsp;», et cette question du relecteur qui finit toujours par arriver&nbsp;: d’où vient ce chiffre&nbsp;?</p>
+    <p>Dans les essais cliniques, on a appris depuis longtemps à répondre à cette question par des règles simples&nbsp;: tout est daté, signé, la source n’est jamais écrasée. corpus essaie d’apporter ce soin à la sociologie — sans jargon, et sans en faire un travail de plus le soir.</p>
+    <p class="margin-note">«&nbsp;Une enquête, ce n’est pas seulement des conclusions.&nbsp;»</p>
 
-<section class="wrap closing">
-  <div class="closing-sheet taped">
-    <h2>Написать</h2>
-    <p>Про исследование, про платформу, про мусор — всё подходит.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="/corpus-site/contacts/">контакты <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="/corpus-site/team/">в команду</a>
+    <h2><span>3.</span>un carnet, trois projets</h2>
+    <p><b>corpus</b> — la plateforme pour les données d’enquête, que vous êtes en train de découvrir.</p>
+    <p><b lang="en">garbage of Paris</b> — une sociologie visuelle des déchets parisiens, commencée en 2022&nbsp;: ce que la ville jette, et ce que cela dit d’elle. <a href="https://garbageofparis.fr">garbageofparis.fr&nbsp;↗</a></p>
+    <p><b lang="ru">диспозитив</b> — une chaîne de sociologie du quotidien, une notion par vidéo. <span class="hand">bientôt</span></p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="/contacts/">m’écrire <span aria-hidden="true">→</span></a>
+      <a class="hand-link" href="/team/">rejoindre l’équipe</a>
     </div>
   </div>
 </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-base">
-      <p class="footer-sign">© 2026 Снежана · corpus</p>
-      <nav aria-label="Служебные ссылки">
-        <ul class="footer-links">
-          <li><a href="https://app.corpus.example">платформа</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/feed.xml">rss</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
-          <li><a href="/corpus-site/privacy/">конфиденциальность</a></li>
-        </ul>
-      </nav>
-      <p class="footer-note">на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+    <div class="wrap">
+      <p class="footer-word">corpus <span class="pos">n. m., de l’enquête</span></p>
+      <p class="footer-def"><span class="struck">douze dossiers et une seule tête.</span> <span class="hand">un seul lieu pour toute l’enquête. Paris, 2026 — en chantier.</span></p>
+
+      <div class="footer-cols">
+        <nav aria-label="Liens utiles">
+          <h2>le site</h2>
+          <ul class="footer-links">
+<li><a href="/features/">fonctionnalités</a></li>
+<li><a href="/blog/">blog</a></li>
+<li><a href="/about/">à propos</a></li>
+<li><a href="/team/">équipe</a></li>
+<li><a href="/contacts/">contact</a></li>
+            <li><a href="/feed.xml">rss</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>écrire</h2>
+          <ul class="footer-links">
+<li><a href="mailto:contact@moncorpus.fr">e-mail</a></li><li><a href="https://www.linkedin.com/in/snezhana-galimova" rel="me">linkedin ↗</a></li><li><a href="https://www.instagram.com/raretarantul/" rel="me">instagram ↗</a></li>          </ul>
+        </div>
+        <div>
+          <h2>un carnet, trois projets</h2>
+          <ul class="footer-projects">
+            <li><b lang="ru">диспозитив</b> <span class="soon">bientôt</span></li>
+            <li><b lang="en">garbage</b> <span class="pos" lang="en">of Paris</span> <a href="https://garbageofparis.fr">garbageofparis.fr ↗</a></li>
+            <li><b>corpus</b> <span class="pos">vous êtes ici</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <p>© 2026 Snezhana Galimova · <a href="/mentions-legales/">mentions légales</a> · <a href="/privacy/">confidentialité</a></p>
+        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme.</p>
+        <a class="to-top" href="#main">↑ haut</a>
+      </div>
     </div>
   </footer>
 </body>

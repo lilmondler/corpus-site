@@ -1,51 +1,60 @@
 <!doctype html>
-<html lang="ru">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Конфиденциальность — corpus</title>
-  <meta name="description" content="Какие данные хранят сайт и платформа corpus, как они защищены и где лежат. Коротко и без мелкого шрифта.">
-  <meta name="author" content="Снежана">
+  <title>Politique de confidentialité — corpus</title>
+  <meta name="description" content="Ce que le site moncorpus.fr fait — et ne fait pas — de vos données. En bref, sans petits caractères.">
+  <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
-  <link rel="canonical" href="https://corpus.example/privacy/">
-  <link rel="alternate" type="application/rss+xml" title="corpus — блог" href="/corpus-site/feed.xml">
-  <link rel="icon" href="/corpus-site/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/corpus-site/apple-touch-icon.png">
-  <link rel="preload" href="/corpus-site/fonts/pt-serif-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/corpus-site/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/corpus-site/css/site.css?v=9f0ecba7">
+<link rel="canonical" href="https://moncorpus.fr/privacy/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/privacy/">
+  <link rel="alternate" hreflang="en" href="https://moncorpus.fr/en/privacy/">
+  <link rel="alternate" hreflang="ru" href="https://moncorpus.fr/ru/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://moncorpus.fr/privacy/">  <link rel="alternate" type="application/rss+xml" title="corpus — blog" href="/feed.xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=b808fa92">
+  <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Конфиденциальность — corpus">
-  <meta property="og:description" content="Какие данные хранят сайт и платформа corpus, как они защищены и где лежат. Коротко и без мелкого шрифта.">
-  <meta property="og:url" content="https://corpus.example/privacy/">
-  <meta property="og:image" content="https://corpus.example/og.png">
+  <meta property="og:title" content="Politique de confidentialité — corpus">
+  <meta property="og:description" content="Ce que le site moncorpus.fr fait — et ne fait pas — de vos données. En bref, sans petits caractères.">
+  <meta property="og:url" content="https://moncorpus.fr/privacy/">
+  <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/corpus-site/js/menu.js?v=9f0ecba7" defer></script>
+  <script src="/js/site.js?v=b808fa92"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">к содержанию</a>
+  <a class="skip-link" href="#main">aller au contenu</a>
 
   <header class="masthead" data-masthead>
     <div class="wrap masthead-inner">
-      <a class="logo" href="/corpus-site/">
-        <img src="/corpus-site/brand/wordmark.svg" alt="corpus — на главную" width="94" height="40">
+      <a class="logo" href="/">
+        <img src="/brand/wordmark.svg" alt="corpus — accueil" width="94" height="40">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
-        <span class="menu-toggle-lines" aria-hidden="true"></span>меню
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+              data-open="menu" data-close="fermer" hidden>menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Rubriques du site">
         <ul>
-          <li><a href="/corpus-site/features/">возможности</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/about/">обо мне</a></li>
-          <li><a href="/corpus-site/team/">команда</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
+          <li><a href="/features/">fonctionnalités</a></li>
+          <li><a href="/blog/">blog</a></li>
+          <li><a href="/about/">à propos</a></li>
+          <li><a href="/team/">équipe</a></li>
+          <li><a href="/contacts/">contact</a></li>
         </ul>
-        <a class="btn btn-small" href="https://app.corpus.example">войти <span aria-hidden="true">→</span></a>
+        <ul class="lang-switch" aria-label="Langue du site">
+          <li><span class="current" aria-current="true" title="français">fr</span></li>
+          <li><a href="/en/privacy/" hreflang="en" lang="en" aria-label="English">en</a></li>
+          <li><a href="/ru/privacy/" hreflang="ru" lang="ru" aria-label="русский">ru</a></li>
+        </ul>
+        <a class="btn btn-small btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
@@ -53,88 +62,76 @@
   <main id="main" tabindex="-1">
 <article class="post wrap">
   <header class="post-head">
-    <h1>Конфиденциальность</h1>
-<p class="post-summary">Какие данные хранят сайт и платформа corpus, как они защищены и где лежат. Коротко и без мелкого шрифта.</p><dl class="post-meta"><div><dt>редакция</dt><dd>черновик от 20 октября 2026</dd></div></dl>  </header>
+    <h1>Politique de confidentialité</h1>
+<p class="post-summary">Ce que le site moncorpus.fr fait — et ne fait pas — de vos données. En bref, sans petits caractères.</p><dl class="post-meta"><div><dt>version</dt><dd>12 novembre 2026</dd></div></dl>  </header>
   <div class="prose">
-    <div class="draft-note">
-<p><strong>Черновик.</strong> Этот текст честно описывает, как устроены сайт и платформа, но ещё не проверен юристом. Требования зависят от страны, где работает сервер, и от того, кто оператор данных. <span class="todo">[проверить с юристом: GDPR / 152-ФЗ, оператор, сроки хранения]</span></p>
-</div>
-<h2 id="этот-сайт">Этот сайт</h2>
+    <p><strong>En une phrase&nbsp;:</strong> ce site ne vous suit pas. Pas de cookies, pas de mesure d’audience, pas de publicité, aucune ressource chargée depuis un autre serveur. Tout est hébergé en France.</p>
+<h2 id="responsable-du-traitement">Responsable du traitement</h2>
+<p>Snezhana Galimova, éditrice du site — <a href="mailto:contact@moncorpus.fr">contact@moncorpus.fr</a>. Voir les <a href="../mentions-legales/">mentions légales</a>.</p>
+<h2 id="ce-que-ce-site-ne-fait-pas">Ce que ce site ne fait pas</h2>
 <ul>
-<li>На сайте нет cookies, счётчиков посещений, трекеров, рекламы, внешних шрифтов и скриптов. Страницы не обращаются к чужим серверам.</li>
-<li>Хостинг, как любой веб-сервер, ведёт технические журналы: IP-адрес, время, адрес страницы, тип браузера. <span class="todo">[провайдер хостинга и срок хранения журналов]</span></li>
-<li>Если вы пишете на почту или в мессенджер, ваше сообщение хранится там и используется только для ответа.</li>
+<li>Aucun cookie n’est déposé sur votre appareil, ni par nous, ni par un tiers. Il n’y a donc pas de bandeau de consentement&nbsp;: il n’y a rien à accepter.</li>
+<li>Aucune mesure d’audience (pas de Google Analytics ni d’équivalent), aucun pixel, aucun bouton de réseau social intégré.</li>
+<li>Aucune police, aucun script, aucune image n’est chargé depuis un autre serveur&nbsp;: tout vient de moncorpus.fr.</li>
+<li>Aucune donnée n’est vendue, louée ni transmise à des fins commerciales.</li>
 </ul>
-<h2 id="платформа">Платформа</h2>
-<h3 id="что-хранится">Что хранится</h3>
+<h2 id="ce-qui-est-traité-malgré-tout">Ce qui est traité malgré tout</h2>
+<p><strong>Journaux techniques de l’hébergeur.</strong> Comme tout serveur web, celui d’OVHcloud (centre de données en France) enregistre pour chaque requête l’adresse IP, la date et l’heure, la page demandée et le type de navigateur. Ces journaux servent uniquement à la sécurité et au bon fonctionnement du service&nbsp;; ils sont conservés par l’hébergeur pendant la durée prévue par la loi, puis supprimés. Base légale&nbsp;: intérêt légitime (sécurité du site), article 6.1.f du RGPD.</p>
+<p><strong>Vos e-mails.</strong> Si vous écrivez à contact@moncorpus.fr, votre message et votre adresse sont conservés dans cette boîte, hébergée par OVH en France, uniquement pour vous répondre et suivre l’échange — au plus trois ans après le dernier message, sauf si une collaboration s’ensuit. Base légale&nbsp;: notre intérêt légitime à répondre à votre demande.</p>
+<h2 id="où-sont-les-données">Où sont les données</h2>
+<p>En France, chez OVH SAS (2 rue Kellermann, 59100 Roubaix). Aucune donnée de ce site n’est transférée hors de l’Union européenne.</p>
+<h2 id="la-plateforme-corpus">La plateforme corpus</h2>
+<p>La plateforme en ligne (l’application où l’on mène une enquête) n’est pas encore ouverte au public&nbsp;: l’accès se fait sur invitation, dans le cadre d’un pilote. Avant toute ouverture, une politique dédiée sera publiée, avec notamment&nbsp;:</p>
 <ul>
-<li><strong>Учётная запись:</strong> почта, имя, язык интерфейса и хэш пароля. Сам пароль не хранится.</li>
-<li><strong>Данные исследований,</strong> которые загружает команда: файлы, тексты, анкеты, заметки, фотографии. По отношению к участникам исследований оператором данных остаётся исследователь или его организация; платформа хранит и обрабатывает их по поручению команды. <span class="todo">[проверить формулировку с юристом]</span></li>
-<li><strong>Журнал действий:</strong> кто, что и когда сделал в исследовании. Это часть проверяемости данных, а не слежка: журнал видит команда исследования.</li>
+<li>l’hébergement des données d’enquête en France, chez un hébergeur européen, sans transfert hors de l’Union européenne&nbsp;;</li>
+<li>un accord de traitement des données (article 28 du RGPD) avec chaque établissement&nbsp;: pour les données d’une enquête, le responsable de traitement est l’établissement ou le chercheur, corpus agit comme sous-traitant&nbsp;;</li>
+<li>le chiffrement des noms et coordonnées des enquêtés, et un journal d’audit consultable par la seule équipe de l’enquête.</li>
 </ul>
-<h3 id="как-защищено">Как защищено</h3>
-<ul>
-<li>Имена и контакты участников исследований зашифрованы (Fernet: AES-128 и HMAC). Их видят только две роли — руководитель и исследователь, — и каждый просмотр записывается в журнал.</li>
-<li>Пароли и токены API хранятся только в виде хэшей.</li>
-<li>Файлы исследования отдаются только участникам его команды; сканы согласий — только ролям с доступом к персональным данным.</li>
-<li>Соединение с платформой — только по HTTPS.</li>
-</ul>
-<h3 id="где-лежат-данные">Где лежат данные</h3>
-<ul>
-<li>Сервер: <span class="todo">[страна, провайдер, город дата-центра]</span>.</li>
-<li>Резервные копии: <span class="todo">[как часто, где хранятся, сколько живут]</span>.</li>
-<li>Если вы запускаете corpus на своём компьютере, данные никуда не отправляются: база, файлы и ключи шифрования лежат в папке программы.</li>
-</ul>
-<h3 id="удаление">Удаление</h3>
-<ul>
-<li>Записи в исследовании удаляются «мягко»: скрываются, но остаются в базе и журнале, чтобы данные оставались проверяемыми. Удаление требует причины.</li>
-<li>Персональные данные участника по его запросу стираются одной кнопкой; материалы под кодом сохраняются.</li>
-<li>Удаление учётной записи и всех данных исследования: <span class="todo">[порядок и сроки]</span>.</li>
-</ul>
-<h2 id="ваши-права">Ваши права</h2>
-<p>Вы можете узнать, какие данные о вас хранятся, исправить их или попросить удалить. <span class="todo">[перечень прав по применимому закону и порядок обращения]</span></p>
-<p>Написать по любому вопросу о данных — на странице <a href="../contacts/">контактов</a>.</p>
+<h2 id="vos-droits">Vos droits</h2>
+<p>Vous pouvez demander l’accès aux données qui vous concernent, leur rectification ou leur effacement, la limitation du traitement, leur portabilité, vous y opposer, ou définir des directives sur leur sort après votre décès, en écrivant à <a href="mailto:contact@moncorpus.fr">contact@moncorpus.fr</a>. Nous répondons dans un délai d’un mois. Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr/fr/plaintes">cnil.fr</a>).</p>
+<h2 id="modifications">Modifications</h2>
+<p>Cette politique peut évoluer avec le projet. La date de mise à jour figure en haut de la page.</p>
   </div>
 </article>
   </main>
 
   <footer class="site-footer">
-    <section class="board" aria-labelledby="universe">
-      <div class="wrap">
-        <h2 class="board-label" id="universe">одна тетрадь, три проекта</h2>
-        <ul class="cutouts">
-          <li class="cutout cutout-dispositif">
-            <span class="d-mark" aria-hidden="true">Д</span>
-            <p class="cutout-title">диспозитив</p>
-            <p>социология повседневности на youtube: одно понятие — одно видео.</p>
-            <p><span class="todo">[ссылка на канал — site.toml → projects.dispositif.url]</span></p>
-          </li>
-          <li class="cutout cutout-garbage">
-            <p class="cutout-title">garbage <i>n., uncountable</i></p>
-            <p>визуальная социология парижского мусора: что город выбрасывает и что этим говорит.</p>
-            <a href="https://garbageofparis.fr" lang="en">see the evidence <span aria-hidden="true">→</span></a>
-          </li>
-          <li class="cutout cutout-corpus">
-            <img src="/corpus-site/brand/mark.svg" alt="" width="44" height="44">
-            <p class="cutout-title">corpus</p>
-            <p>тело исследования в одном месте. вы сейчас здесь.</p>
-            <a href="/corpus-site/features/">что внутри <span aria-hidden="true">→</span></a>
-          </li>
-        </ul>
+    <div class="wrap">
+      <p class="footer-word">corpus <span class="pos">n. m., de l’enquête</span></p>
+      <p class="footer-def"><span class="struck">douze dossiers et une seule tête.</span> <span class="hand">un seul lieu pour toute l’enquête. Paris, 2026 — en chantier.</span></p>
+
+      <div class="footer-cols">
+        <nav aria-label="Liens utiles">
+          <h2>le site</h2>
+          <ul class="footer-links">
+<li><a href="/features/">fonctionnalités</a></li>
+<li><a href="/blog/">blog</a></li>
+<li><a href="/about/">à propos</a></li>
+<li><a href="/team/">équipe</a></li>
+<li><a href="/contacts/">contact</a></li>
+            <li><a href="/feed.xml">rss</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>écrire</h2>
+          <ul class="footer-links">
+<li><a href="mailto:contact@moncorpus.fr">e-mail</a></li><li><a href="https://www.linkedin.com/in/snezhana-galimova" rel="me">linkedin ↗</a></li><li><a href="https://www.instagram.com/raretarantul/" rel="me">instagram ↗</a></li>          </ul>
+        </div>
+        <div>
+          <h2>un carnet, trois projets</h2>
+          <ul class="footer-projects">
+            <li><b lang="ru">диспозитив</b> <span class="soon">bientôt</span></li>
+            <li><b lang="en">garbage</b> <span class="pos" lang="en">of Paris</span> <a href="https://garbageofparis.fr">garbageofparis.fr ↗</a></li>
+            <li><b>corpus</b> <span class="pos">vous êtes ici</span></li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <div class="wrap footer-base">
-      <p class="footer-sign">© 2026 Снежана · corpus</p>
-      <nav aria-label="Служебные ссылки">
-        <ul class="footer-links">
-          <li><a href="https://app.corpus.example">платформа</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/feed.xml">rss</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
-          <li><a href="/corpus-site/privacy/">конфиденциальность</a></li>
-        </ul>
-      </nav>
-      <p class="footer-note">на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+
+      <div class="footer-base">
+        <p>© 2026 Snezhana Galimova · <a href="/mentions-legales/">mentions légales</a> · <a href="/privacy/">confidentialité</a></p>
+        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme.</p>
+        <a class="to-top" href="#main">↑ haut</a>
+      </div>
     </div>
   </footer>
 </body>

@@ -1,455 +1,357 @@
 <!doctype html>
-<html lang="ru">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>corpus — тело исследования в одном месте</title>
-  <meta name="description" content="Единая среда для данных социологического исследования: интервью, полевые заметки, анкеты, сети и цитаты в одном месте — с историей каждого изменения.">
-  <meta name="author" content="Снежана">
+  <title>corpus — le corps de l’enquête en un seul lieu</title>
+  <meta name="description" content="Un environnement unique pour les données d’une enquête sociologique : entretiens, notes de terrain, questionnaires, réseaux et verbatims en un seul lieu — avec l’historique de chaque modification.">
+  <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
-  <link rel="canonical" href="https://corpus.example/">
-  <link rel="alternate" type="application/rss+xml" title="corpus — блог" href="/corpus-site/feed.xml">
-  <link rel="icon" href="/corpus-site/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/corpus-site/apple-touch-icon.png">
-  <link rel="preload" href="/corpus-site/fonts/pt-serif-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/corpus-site/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/corpus-site/css/site.css?v=9f0ecba7">
+<link rel="canonical" href="https://moncorpus.fr/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/">
+  <link rel="alternate" hreflang="en" href="https://moncorpus.fr/en/">
+  <link rel="alternate" hreflang="ru" href="https://moncorpus.fr/ru/">
+<link rel="alternate" hreflang="x-default" href="https://moncorpus.fr/">  <link rel="alternate" type="application/rss+xml" title="corpus — blog" href="/feed.xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=b808fa92">
+  <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="corpus — тело исследования в одном месте">
-  <meta property="og:description" content="Единая среда для данных социологического исследования: интервью, полевые заметки, анкеты, сети и цитаты в одном месте — с историей каждого изменения.">
-  <meta property="og:url" content="https://corpus.example/">
-  <meta property="og:image" content="https://corpus.example/og.png">
+  <meta property="og:title" content="corpus — le corps de l’enquête en un seul lieu">
+  <meta property="og:description" content="Un environnement unique pour les données d’une enquête sociologique : entretiens, notes de terrain, questionnaires, réseaux et verbatims en un seul lieu — avec l’historique de chaque modification.">
+  <meta property="og:url" content="https://moncorpus.fr/">
+  <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/corpus-site/js/menu.js?v=9f0ecba7" defer></script>
+  <script src="/js/site.js?v=b808fa92"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">к содержанию</a>
+  <a class="skip-link" href="#main">aller au contenu</a>
 
   <header class="masthead" data-masthead>
     <div class="wrap masthead-inner">
-      <a class="logo" href="/corpus-site/" aria-current="page">
-        <img src="/corpus-site/brand/wordmark.svg" alt="corpus — на главную" width="94" height="40">
+      <a class="logo" href="/" aria-current="page">
+        <img src="/brand/wordmark.svg" alt="corpus — accueil" width="94" height="40">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
-        <span class="menu-toggle-lines" aria-hidden="true"></span>меню
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+              data-open="menu" data-close="fermer" hidden>menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Rubriques du site">
         <ul>
-          <li><a href="/corpus-site/features/">возможности</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/about/">обо мне</a></li>
-          <li><a href="/corpus-site/team/">команда</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
+          <li><a href="/features/">fonctionnalités</a></li>
+          <li><a href="/blog/">blog</a></li>
+          <li><a href="/about/">à propos</a></li>
+          <li><a href="/team/">équipe</a></li>
+          <li><a href="/contacts/">contact</a></li>
         </ul>
-        <a class="btn btn-small" href="https://app.corpus.example">войти <span aria-hidden="true">→</span></a>
+        <ul class="lang-switch" aria-label="Langue du site">
+          <li><span class="current" aria-current="true" title="français">fr</span></li>
+          <li><a href="/en/" hreflang="en" lang="en" aria-label="English">en</a></li>
+          <li><a href="/ru/" hreflang="ru" lang="ru" aria-label="русский">ru</a></li>
+        </ul>
+        <a class="btn btn-small btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
 <section class="hero wrap" aria-labelledby="headword">
-  <div class="hero-entry">
-    <p class="kicker">словарная статья</p>
-    <h1 class="headword" id="headword">corpus<span class="visually-hidden"> — единая среда для данных социологического исследования</span></h1>
-    <p class="grammar"><span class="ipa">[ˈkɔːpəs]</span> <i>сущ., мн.</i> <b>corpora</b></p>
-    <ol class="senses">
-      <li>Собрание текстов, на котором исследователь проверяет свои догадки.</li>
-      <li><mark>Тело исследования</mark>: интервью, наблюдения, анкеты и&nbsp;источники — в&nbsp;одном месте.</li>
-      <li>Среда, где у&nbsp;каждой цифры и&nbsp;цитаты есть <span class="circled">происхождение</span>.</li>
-    </ol>
-    <div class="cta">
-      <a class="btn btn-primary" href="https://app.corpus.example">войти в платформу <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="#what">что это такое <span aria-hidden="true">↓</span></a>
+  <div>
+    <h1 class="headword" id="headword"><span lang="la">corpus</span> <span class="pos">n. m., pl. corpora</span><span class="visually-hidden"> — un environnement unique pour les données d’une enquête sociologique</span></h1>
+    <p class="pron">/kɔʁ.pys/ · <i>lat.</i> corps</p>
+    <p class="senses"><span class="struck"><b>1.</b>Douze dossiers, trois boîtes mail et une seule tête.</span></p>
+    <p class="correction"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 15 10 4l7 11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>le corps de l’enquête,<br>en un seul lieu</span></p>
+    <p class="lede">Entretiens, notes de terrain, questionnaires, réseaux et verbatims dans une même enquête — et chaque chiffre, chaque citation garde sa <mark>provenance</mark>.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a>
+      <a class="hand-link" href="#inside">voir ce qu’il contient</a>
     </div>
-    <p class="hand-note hero-note"><img src="/corpus-site/brand/arrow-blue.svg" alt="" width="54" height="27">доступ — по учётным записям</p>
   </div>
-
   <div class="hero-side">
-    <div class="receipt-wrap tilt-r">
-      <div class="receipt" role="figure" aria-labelledby="receipt-title">
-        <p class="receipt-head" id="receipt-title">corpus · опись <span>MIGR-26</span></p>
-        <p class="receipt-sub">трудовая миграция — демо, данные вымышлены</p>
+    <figure class="polaroid sway polaroid-hero tilt-r">
+  <img class="polaroid-photo" src="/shots/fr/text.webp" alt="Un entretien dans corpus : la transcription à gauche, les extraits surlignés par code, la liste des codes à droite." decoding="async" width="1600" height="1000">
+  <figcaption>un entretien, codé</figcaption>
+</figure>
+
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-row ticker-type">
+<ul><li>entretiens</li><li>transcriptions</li><li>notes de terrain</li><li>questionnaires</li><li>réseaux</li><li>verbatims</li><li>codes</li><li>hypothèses</li><li>photos</li><li>bibliographie</li><li>journal d’audit</li><li>exports R</li><li>entretiens</li><li>transcriptions</li><li>notes de terrain</li><li>questionnaires</li><li>réseaux</li><li>verbatims</li><li>codes</li><li>hypothèses</li><li>photos</li><li>bibliographie</li><li>journal d’audit</li><li>exports R</li></ul><ul><li>entretiens</li><li>transcriptions</li><li>notes de terrain</li><li>questionnaires</li><li>réseaux</li><li>verbatims</li><li>codes</li><li>hypothèses</li><li>photos</li><li>bibliographie</li><li>journal d’audit</li><li>exports R</li><li>entretiens</li><li>transcriptions</li><li>notes de terrain</li><li>questionnaires</li><li>réseaux</li><li>verbatims</li><li>codes</li><li>hypothèses</li><li>photos</li><li>bibliographie</li><li>journal d’audit</li><li>exports R</li></ul>  </div>
+</div>
+
+
+<section class="band band-shade" id="problem" aria-labelledby="problem-title">
+  <div class="wrap problem">
+    <div class="reveal">
+      <span class="sec-no">§ 01 — le problème</span>
+      <h2 class="big-title" id="problem-title">version finale <span class="pos">n. f., introuvable</span></h2>
+      <p class="sec-lead">Une enquête, ce ne sont pas seulement des conclusions. C’est tout ce dont elles sont faites — et d’habitude, cela se perd en route.</p>
+      <ol class="pairs">
+        <li><h3>Les fichiers se perdent</h3><p class="was">L’audio sur l’enregistreur, la transcription dans un mail, le consentement au fond du sac.</p><p class="now">Un entretien, un lieu&nbsp;: audio, texte, enquêté sous code et consentement ensemble.</p></li>
+        <li><h3>Les versions se multiplient</h3><p class="was">«&nbsp;final&nbsp;», «&nbsp;final_2&nbsp;», «&nbsp;corr&nbsp;». Qui a corrigé quoi&nbsp;?</p><p class="now">Chaque traitement crée une version avec sa recette. La source ne bouge pas.</p></li>
+        <li><h3>La provenance est floue</h3><p class="was">Le relecteur demande d’où vient ce 38&nbsp;%. Vous ne savez plus.</p><p class="now">Chaque chiffre renvoie à la réponse brute, chaque verbatim à sa ligne.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="inside" aria-labelledby="inside-title">
+  <div class="wrap reel" data-strip>
+    <div class="sec-row">
+      <header class="sec-head">
+        <span class="sec-no">§ 02 — ce qu’il contient</span>
+        <h2 id="inside-title">sur la table <span class="pos">loc. adv.</span></h2>
+        <p class="sec-lead">De vraies captures de la plateforme, version 0.6. Tout le terrain dans une seule enquête&nbsp;: rien ne reste coincé dans trois logiciels, et tout sort en CSV, JSON, DOCX, R et GraphML.</p>
+      </header>
+      <div class="reel-controls" data-controls hidden>
+  <button class="reel-btn" type="button" data-prev aria-label="captures précédentes">←</button>
+  <button class="reel-btn" type="button" data-next aria-label="captures suivantes">→</button>
+</div>
+
+    </div>
+    <ul class="reel-track" data-track aria-label="Captures d’écran de la plateforme">
+      <li>
+        <figure class="polaroid sway sway-slow">
+  <img class="polaroid-photo" src="/shots/fr/path.webp" alt="Le parcours de recherche : thème, problématique, hypothèses, terrain et analyse, avec l’état de chaque étape." loading="lazy" decoding="async" width="1600" height="1000">
+  <figcaption>le parcours de recherche</figcaption>
+</figure>
+
+        <p class="shot-note">Du thème aux conclusions, chaque étape a son état et ses changements motivés.</p>
+      </li>
+      <li>
+        <figure class="polaroid sway sway-slow">
+  <img class="polaroid-photo" src="/shots/fr/text.webp" alt="Un entretien en cours de codage : extraits surlignés, codes et codeurs." loading="lazy" decoding="async" width="1600" height="1000">
+  <figcaption>coder un entretien</figcaption>
+</figure>
+
+        <p class="shot-note">Surligner, coder, garder la citation — sans perdre la ligne d’origine.</p>
+      </li>
+      <li>
+        <figure class="polaroid sway sway-slow">
+  <img class="polaroid-photo" src="/shots/fr/network.webp" alt="Un réseau de relations dessiné à partir d’un tableau « individu — type de lien — individu 2 »." loading="lazy" decoding="async" width="1600" height="1000">
+  <figcaption>qui a aidé qui</figcaption>
+</figure>
+
+        <p class="shot-note">Un tableau à trois colonnes devient un graphe, avec ses indicateurs.</p>
+      </li>
+      <li>
+        <figure class="polaroid sway sway-slow">
+  <img class="polaroid-photo" src="/shots/fr/survey.webp" alt="L’éditeur de questionnaire avec ses questions et la collecte des réponses." loading="lazy" decoding="async" width="1600" height="1000">
+  <figcaption>un questionnaire</figcaption>
+</figure>
+
+        <p class="shot-note">Questions, collecte, nettoyage motivé et export vers R.</p>
+      </li>
+      <li>
+        <figure class="polaroid sway sway-slow">
+  <img class="polaroid-photo" src="/shots/fr/matrix.webp" alt="Une matrice codes × textes qui montre où chaque code apparaît." loading="lazy" decoding="async" width="1600" height="1000">
+  <figcaption>régularités</figcaption>
+</figure>
+
+        <p class="shot-note">Où chaque code apparaît, et chez qui.</p>
+      </li>
+      <li>
+        <figure class="polaroid sway sway-slow">
+  <img class="polaroid-photo" src="/shots/fr/quality.webp" alt="Les contrôles de qualité et les requêtes ouvertes sur les données." loading="lazy" decoding="async" width="1600" height="1000">
+  <figcaption>contrôles et requêtes</figcaption>
+</figure>
+
+        <p class="shot-note">Les incohérences deviennent des requêtes, qu’on règle et qu’on trace.</p>
+      </li>
+      <li>
+        <figure class="polaroid sway sway-slow">
+  <img class="polaroid-photo" src="/shots/fr/audit.webp" alt="Le journal d’audit : qui, quoi, quand, avant et après." loading="lazy" decoding="async" width="1600" height="1000">
+  <figcaption>le journal d’audit</figcaption>
+</figure>
+
+        <p class="shot-note">Qui, quoi, quand, avant/après — dans une chaîne de hachage.</p>
+      </li>
+    </ul>
+    <p class="reel-hint reel-hint-nojs">← faites défiler →</p>
+    <p class="more"><a class="hand-link" href="/features/">toutes les fonctionnalités</a></p>
+  </div>
+</section>
+
+<section class="band band-warm" aria-labelledby="principles-title">
+  <div class="wrap principles">
+    <div class="reveal">
+      <span class="sec-no">§ 03 — principes</span>
+      <h2 class="big-title" id="principles-title">ALCOA+ <span class="pos">abrév.</span></h2>
+      <p class="sec-lead">Là où une erreur dans les données coûte trop cher — les essais cliniques —, on s’est mis d’accord depuis longtemps sur neuf exigences pour tout enregistrement. corpus les transpose à la sociologie, en mots simples.</p>
+    </div>
+    <div class="receipt-wrap alcoa reveal">
+      <div class="receipt" role="figure" aria-labelledby="alcoa-title">
+        <p class="receipt-head" id="alcoa-title">ALCOA+ <span>reçu de l’enquête</span></p>
         <dl class="receipt-list">
-          <div><dt>интервью</dt><dd>24</dd></div>
-          <div><dt>версий транскриптов</dt><dd>71</dd></div>
-          <div><dt>полевых заметок</dt><dd>58</dd></div>
-          <div><dt>фотографий</dt><dd>143</dd></div>
-          <div><dt>ответов анкеты</dt><dd>412</dd></div>
-          <div><dt>правил очистки</dt><dd>9</dd></div>
-          <div><dt>цитат</dt><dd>296</dd></div>
-          <div><dt>кодов</dt><dd>47</dd></div>
-        </dl>
-        <dl class="receipt-list receipt-total">
-          <div><dt>записей в журнале</dt><dd>9 816</dd></div>
-          <div><dt>цепочка хэшей</dt><dd>цела ✓</dd></div>
+          <div><dt><b>A</b> attribuable</dt><dd>qui l’a fait</dd></div>
+          <div><dt><b>L</b> lisible</dt><dd>se lit sans nous</dd></div>
+          <div><dt><b>C</b> contemporain</dt><dd>daté à l’instant</dd></div>
+          <div><dt><b>O</b> original</dt><dd>source intacte</dd></div>
+          <div><dt><b>A</b> exact</dt><dd>corrections visibles</dd></div>
+          <div><dt><b><sup>+</sup>C</b> complet</dt><dd>rien ne disparaît</dd></div>
+          <div><dt><b><sup>+</sup>C</b> cohérent</dt><dd>mêmes codes partout</dd></div>
+          <div><dt><b><sup>+</sup>E</b> endurant</dt><dd>survit au logiciel</dd></div>
+          <div><dt><b><sup>+</sup>A</b> accessible</dt><dd>export en un clic</dd></div>
         </dl>
         <p class="receipt-hash">sha256 3f9a 07c2 … b81e c21e</p>
-        <p class="receipt-foot">ничего не потеряно и не переписано</p>
+        <span class="receipt-stamp">intact ✓</span>
       </div>
     </div>
-    <p class="sticky-note hero-sticky">Исходник не&nbsp;перезаписывается. Обработка — это рецепт, а&nbsp;не правка поверх.</p>
   </div>
 </section>
 
-<section class="section wrap" id="what" aria-labelledby="problem-title">
-  <header class="sec-head">
-    <p class="sec-no">§ 1 · проблема</p>
-    <h2 id="problem-title">Где финальная версия транскрипта?</h2>
-    <p class="sec-lead">Исследование — это не только выводы, но и всё, из чего они сделаны. Обычно оно лежит в двенадцати папках, трёх почтовых ящиках и одной голове.</p>
+<section class="band wrap" aria-labelledby="who-title">
+  <header class="sec-head reveal">
+    <span class="sec-no">§ 04 — pour qui</span>
+    <h2 id="who-title">pour celles et ceux <span class="pos">loc. pron.</span></h2>
+    <p class="sec-lead">… qui ont plus de données que de mémoire.</p>
   </header>
-
-  <div class="problem">
-    <figure class="folder taped">
-      <p class="folder-path">~/диссертация/поле/интервью/</p>
-      <ul class="files">
-        <li>интервью_14.docx</li>
-        <li>интервью_14_финал.docx</li>
-        <li>интервью_14_финал_2.docx</li>
-        <li>интервью_14_финал_испр_Маша.docx</li>
-        <li><span class="circled">интервью_14_ФИНАЛ_точно.docx</span></li>
-        <li>анкеты_очищенные(1).xlsx</li>
-        <li>анкеты_очищенные(1) — копия.xlsx</li>
-        <li>Новая папка (3)/</li>
-      </ul>
-      <figcaption>узнали? мы тоже.</figcaption>
-    </figure>
-
-    <ol class="pairs">
-      <li>
-        <div class="was"><h3>Файлы теряются</h3><p>Аудио на диктофоне, расшифровка в почте, согласие — в бумажной папке в рюкзаке.</p></div>
-        <span class="pair-arrow" aria-hidden="true">→</span>
-        <p class="now">У интервью одно место: к нему привязаны запись, текст, участник под кодом и скан согласия.</p>
-      </li>
-      <li>
-        <div class="was"><h3>Версии множатся</h3><p>«Финал», «финал_2», «испр». Что именно исправлено и кем — уже никто не скажет.</p></div>
-        <span class="pair-arrow" aria-hidden="true">→</span>
-        <p class="now">Каждая обработка — новая версия с рецептом. Исходник цел, две версии можно сравнить по словам.</p>
-      </li>
-      <li>
-        <div class="was"><h3>Происхождение неясно</h3><p>Рецензент спрашивает, откуда 38%. Вы помните, что анкеты чистили. Как — не помните.</p></div>
-        <span class="pair-arrow" aria-hidden="true">→</span>
-        <p class="now">Каждая цифра в выгрузке ведёт к сырому ответу и правилу очистки, каждая цитата — к строке транскрипта.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<section class="section wrap" aria-labelledby="inside-title">
-  <header class="sec-head">
-    <p class="sec-no">§ 2 · что внутри</p>
-    <h2 id="inside-title">Всё, из чего сделано исследование</h2>
-    <p class="sec-lead">Качественные и количественные данные одного поля — в одном исследовании, а не в трёх программах. Без corpus всё это остаётся читаемым: данные выходят в CSV, JSON, DOCX, R и GraphML.</p>
-  </header>
-
-  <div class="inside">
-    <div class="receipt-wrap">
-      <div class="receipt receipt-wide">
-        <p class="receipt-head">опись · состав corpus <span>0.4</span></p>
-        <ol class="inventory">
-          <li>
-            <span class="inv-no">01</span>
-            <a class="inv-title" href="/corpus-site/features/#interviews">интервью и транскрипты</a>
-            <span class="inv-short">аудио, расшифровки, версии текста</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">02</span>
-            <a class="inv-title" href="/corpus-site/features/#fieldnotes">полевые заметки и архив</a>
-            <span class="inv-short">заметки по разделам, папки как в TMF, фото</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">03</span>
-            <a class="inv-title" href="/corpus-site/features/#coding">кодирование и цитаты</a>
-            <span class="inv-short">кодбук, разметка, цитаты, гипотезы</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">04</span>
-            <a class="inv-title" href="/corpus-site/features/#networks">сети</a>
-            <span class="inv-short">из таблицы связей — в картинку и показатели</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">05</span>
-            <a class="inv-title" href="/corpus-site/features/#surveys">анкеты и очистка для R</a>
-            <span class="inv-short">конструктор, правила очистки, выгрузка в R</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">06</span>
-            <a class="inv-title" href="/corpus-site/features/#stats">статистика</a>
-            <span class="inv-short">описательные таблицы рядом с данными</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">07</span>
-            <a class="inv-title" href="/corpus-site/features/#dictionaries">словари</a>
-            <span class="inv-short">одинаковые вещи — одинаковыми словами</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">08</span>
-            <a class="inv-title" href="/corpus-site/features/#quality">проверки и запросы</a>
-            <span class="inv-short">edit checks, queries, двойной ввод, блокировка</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">09</span>
-            <a class="inv-title" href="/corpus-site/features/#bibliography">библиография</a>
-            <span class="inv-short">Zotero, ГОСТ, APA, BibTeX</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">10</span>
-            <a class="inv-title" href="/corpus-site/features/#audit">журнал действий</a>
-            <span class="inv-short">кто, что, когда, было/стало</span>
-            <span class="status status-ready">есть</span>
-          </li>
-          <li>
-            <span class="inv-no">11</span>
-            <a class="inv-title" href="/corpus-site/features/#team">совместная работа</a>
-            <span class="inv-short">роли, права, уведомления, три языка</span>
-            <span class="status status-ready">есть</span>
-          </li>
-        </ol>
-        <p class="receipt-foot">«собирается» — значит, честно собирается</p>
-      </div>
-    </div>
-
-    <div class="inside-side">
-      <figure class="polaroid tilt-l">
-        <div class="polaroid-photo polaroid-scene scene-transcript">
-          <p><b>И:</b> А как вы нашли первую работу?</p>
-          <p><b>P-014:</b> Через земляка. Он уже <mark>два года там был</mark>, всех знал.</p>
-          <p class="scene-code">код: <span>сети земляков</span></p>
-        </div>
-        <figcaption>фрагмент → код → цитата</figcaption>
-      </figure>
-      <figure class="polaroid tilt-r">
-        <div class="polaroid-photo polaroid-scene">
-<svg class="scene-network" viewBox="0 0 320 240" role="img" aria-labelledby="net-title">
-  <title id="net-title">Небольшая сеть: девять участников, связи «земляк» и «родственник»; узел P-014 связывает две группы.</title>
-  <g fill="none" stroke-linecap="round">
-    <g stroke="#2546a8" stroke-width="1.8">
-      <path d="M62 64 Q90 70 112 98"/>
-      <path d="M48 128 Q78 116 112 98"/>
-      <path d="M62 64 Q52 96 48 128"/>
-      <path d="M112 98 Q138 112 160 124"/>
-      <path d="M160 124 Q196 110 226 92"/>
-      <path d="M226 92 Q258 74 276 54"/>
-      <path d="M226 92 Q252 118 270 146"/>
-      <path d="M276 54 Q282 100 270 146"/>
-    </g>
-    <g stroke="#5e584e" stroke-width="1.5" stroke-dasharray="4 4">
-      <path d="M160 124 Q150 160 120 190"/>
-      <path d="M160 124 Q190 160 214 192"/>
-      <path d="M120 190 Q168 204 214 192"/>
-    </g>
-  </g>
-  <path d="M138 108 C 160 98, 186 110, 184 128 C 182 146, 150 150, 138 138 C 128 126, 134 112, 150 106" fill="none" stroke="#d2372c" stroke-width="1.8" stroke-linecap="round"/>
-  <g fill="#fffdf8" stroke="#23211d" stroke-width="1.6">
-    <circle cx="62" cy="64" r="8"/><circle cx="112" cy="98" r="8"/><circle cx="48" cy="128" r="8"/>
-    <circle cx="160" cy="124" r="10" fill="#f6e27a"/>
-    <circle cx="226" cy="92" r="8"/><circle cx="276" cy="54" r="8"/><circle cx="270" cy="146" r="8"/>
-    <circle cx="120" cy="190" r="7"/><circle cx="214" cy="192" r="7"/>
-  </g>
-  <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#23211d">
-    <text x="70" y="52">P-003</text><text x="118" y="86">P-022</text><text x="14" y="152">P-009</text>
-    <text x="172" y="150">P-014</text><text x="234" y="80">P-031</text><text x="250" y="34">P-027</text>
-    <text x="236" y="170">P-018</text><text x="76" y="214">N-02</text><text x="222" y="216">N-05</text>
-  </g>
-</svg>        </div>
-        <figcaption>индивид — тип связи — индивид 2</figcaption>
-      </figure>
-    </div>
-  </div>
-  <p class="more"><a href="/corpus-site/features/">все возможности подробно <span aria-hidden="true">→</span></a></p>
-</section>
-
-<section class="section wrap" aria-labelledby="principles-title">
-  <header class="sec-head">
-    <p class="sec-no">§ 3 · принципы</p>
-    <h2 id="principles-title">Строгость клинических исследований — простыми словами</h2>
-    <p class="sec-lead">Там, где ошибка в данных стоит слишком дорого, давно договорились о&nbsp;девяти требованиях к&nbsp;любой записи. Они называются <abbr title="Attributable, Legible, Contemporaneous, Original, Accurate + Complete, Consistent, Enduring, Available">ALCOA+</abbr>. Мы перенесли их в&nbsp;социологию.</p>
-  </header>
-
   <ul class="index-cards">
-    <li class="index-card">
-      <span class="ic-letter" aria-hidden="true">A</span>
-      <p class="ic-term" lang="en">Attributable</p>
-      <h3 class="ic-plain">кто это сделал?</h3>
-      <p>У каждой записи есть автор: кто загрузил, закодировал, исправил.</p>
+    <li class="index-card reveal">
+      <p class="ic-head"><span>§ 01</span><span>COR-M1</span></p>
+      <h3>Mémoires et thèses</h3>
+      <p>Une centaine de fichiers, une directrice, un jury qui demandera d’où vient la source.</p>
     </li>
-    <li class="index-card">
-      <span class="ic-letter" aria-hidden="true">L</span>
-      <p class="ic-term" lang="en">Legible</p>
-      <h3 class="ic-plain">читается без нас</h3>
-      <p>Выгрузки открываются в R, Excel, Word и любом текстовом редакторе.</p>
+    <li class="index-card reveal">
+      <p class="ic-head"><span>§ 02</span><span>COR-LAB</span></p>
+      <h3>Équipes de recherche</h3>
+      <p>Les uns mènent les entretiens, les autres codent. Chacun son rôle, tout est tracé.</p>
     </li>
-    <li class="index-card">
-      <span class="ic-letter" aria-hidden="true">C</span>
-      <p class="ic-term" lang="en">Contemporaneous</p>
-      <h3 class="ic-plain">время ставит сервер</h3>
-      <p>Время события пишется в момент события. Дата наблюдения — отдельно от даты записи.</p>
+    <li class="index-card reveal">
+      <p class="ic-head"><span>§ 03</span><span>COR-MIX</span></p>
+      <h3>Méthodes mixtes</h3>
+      <p>Entretiens, questionnaire et réseau d’un même terrain, reliés par le code de l’enquêté.</p>
     </li>
-    <li class="index-card">
-      <span class="ic-letter" aria-hidden="true">O</span>
-      <p class="ic-term" lang="en">Original</p>
-      <h3 class="ic-plain">исходник цел</h3>
-      <p>Загруженный файл хранится под своим отпечатком sha256 и не перезаписывается.</p>
-    </li>
-    <li class="index-card">
-      <span class="ic-letter" aria-hidden="true">A</span>
-      <p class="ic-term" lang="en">Accurate</p>
-      <h3 class="ic-plain">исправления видны</h3>
-      <p>Ошибка исправляется новой версией с причиной, а не тихой правкой поверх.</p>
-    </li>
-    <li class="index-card index-card-plus">
-      <span class="ic-letter" aria-hidden="true">C</span>
-      <p class="ic-term" lang="en">Complete</p>
-      <h3 class="ic-plain">ничего не исчезает молча</h3>
-      <p>Удаление мягкое и с причиной: запись скрыта, но её можно восстановить.</p>
-    </li>
-    <li class="index-card index-card-plus">
-      <span class="ic-letter" aria-hidden="true">C</span>
-      <p class="ic-term" lang="en">Consistent</p>
-      <h3 class="ic-plain">одинаковое — одинаково</h3>
-      <p>Единые коды, словари и шаблоны — между интервью и между исследованиями.</p>
-    </li>
-    <li class="index-card index-card-plus">
-      <span class="ic-letter" aria-hidden="true">E</span>
-      <p class="ic-term" lang="en">Enduring</p>
-      <h3 class="ic-plain">переживёт программу</h3>
-      <p>Открытые форматы и пакет данных с описью и контрольными суммами.</p>
-    </li>
-    <li class="index-card index-card-plus">
-      <span class="ic-letter" aria-hidden="true">A</span>
-      <p class="ic-term" lang="en">Available</p>
-      <h3 class="ic-plain">под рукой, когда нужно</h3>
-      <p>Выгрузка в один клик, API для своих скриптов, поиск по всему исследованию.</p>
+    <li class="index-card reveal">
+      <p class="ic-head"><span>§ 04</span><span>COR-ENS</span></p>
+      <h3>Enseignement</h3>
+      <p>Montrer sur une enquête de démonstration ce qu’est un travail soigné, de la donnée au tableau.</p>
     </li>
   </ul>
-  <p class="sticky-note principles-note">Звучит как бюрократия. На деле это способ через пять лет спокойно ответить рецензенту на вопрос «откуда эта цифра?».
-<a href="/corpus-site/blog/clinical-rigor/">подробнее в блоге →</a></p>
 </section>
 
-<section class="section wrap" aria-labelledby="who-title">
-  <header class="sec-head">
-    <p class="sec-no">§ 4 · для кого</p>
-    <h2 id="who-title">Для тех, у кого данных больше, чем памяти</h2>
-  </header>
-  <div class="who">
-    <ul class="who-list">
-      <li><h3>Аспирантам и магистрантам</h3><p>Одна большая работа, сотня файлов и научный руководитель, который однажды спросит, где исходник.</p></li>
-      <li><h3>Исследовательским группам</h3><p>Интервью ведут одни, кодируют другие, пишут третьи. У каждого своя роль, и видно, кто что сделал.</p></li>
-      <li><h3>Смешанным методам</h3><p>Интервью, анкета и сеть одного поля связаны через участников, а не через имя файла.</p></li>
-      <li><h3>Преподавателям методов</h3><p>Показать на демо-исследовании, как выглядит аккуратная работа с данными — от сырого ответа до таблицы.</p></li>
-    </ul>
-    <aside class="receipt-wrap tilt-l who-not" aria-labelledby="not-yet">
-      <div class="receipt">
-        <p class="receipt-head" id="not-yet">пока не подойдёт, если нужно</p>
-        <ul class="plain-list">
-          <li>обмениваться проектами с NVivo, ATLAS.ti или MAXQDA — в планах;</li>
-          <li>расшифровывать аудио прямо внутри — в планах, через подключаемые сервисы;</li>
-          <li>строить сложные модели — для этого есть выгрузка в R.</li>
-        </ul>
-        <p class="receipt-foot">мы не обещаем того, чего нет</p>
+<section class="band band-cool" aria-labelledby="pilot-title">
+  <div class="wrap status-block">
+    <div class="reveal">
+      <span class="sec-no">§ 05 — où on en est</span>
+      <h2 class="big-title" id="pilot-title">pilote <span class="pos">n. m.</span></h2>
+      <p class="lede">corpus prépare un pilote avec des chercheuses et chercheurs à Paris. L’accès se fait sur invitation&nbsp;: écrivez-nous, nous vous ouvrons une enquête de démonstration complète, avec des données fictives.</p>
+      <div class="actions"><a class="btn btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a></div>
+    </div>
+    <div class="receipt-wrap tilt-back reveal">
+      <div class="receipt" role="figure" aria-labelledby="state-title">
+        <p class="receipt-head" id="state-title">corpus <span>état des lieux</span></p>
+        <p class="receipt-sub">Paris · 2026</p>
+        <dl class="receipt-list">
+          <div><dt>version</dt><dd>0.6</dd></div>
+          <div><dt>langues</dt><dd>fr · en · ru</dd></div>
+          <div><dt>accès</dt><dd>sur invitation</dd></div>
+          <div><dt>ce site</dt><dd>hébergé en France</dd></div>
+          <div><dt>traceurs</dt><dd>0</dd></div>
+          <div><dt>cookies sur ce site</dt><dd>0</dd></div>
+        </dl>
+        <dl class="receipt-list receipt-total"><div><dt>pilote</dt><dd>en préparation</dd></div></dl>
+        <p class="receipt-foot">merci · rien de perdu · rien de réécrit</p>
       </div>
-    </aside>
+    </div>
   </div>
 </section>
 
-<section class="section wrap" aria-labelledby="blog-title">
-  <header class="sec-head">
-    <p class="sec-no">§ 5 · из блога</p>
-    <h2 id="blog-title">Записи на полях</h2>
-  </header>
-  <div class="post-grid">
-<article class="post-card">
-  <p class="post-card-meta">
-    <a href="/corpus-site/blog/rubric/metody/"><span class="rubric">§ 03 · методы</span></a>
-    <time datetime="2026-10-20">20 октября 2026</time>
-  </p>
-  <h3 class="post-card-title"><a href="/corpus-site/blog/networks-over-coffee/">Сети за чашкой кофе: как из таблицы «индивид — тип связи — индивид 2» получается картинка</a></h3>
-  <p class="post-card-summary">Пошагово: как записать связи из интервью в таблицу из трёх столбцов, загрузить её в corpus, разложить, посчитать и не принять красивую картинку за вывод.</p>
-  <p class="post-card-foot"><span>4 минуты чтения</span> <a href="/corpus-site/blog/networks-over-coffee/" aria-hidden="true" tabindex="-1">читать →</a></p>
-</article>
-<article class="post-card">
-  <p class="post-card-meta">
-    <a href="/corpus-site/blog/rubric/metody/"><span class="rubric">§ 03 · методы</span></a>
-    <time datetime="2026-10-13">13 октября 2026</time>
-  </p>
-  <h3 class="post-card-title"><a href="/corpus-site/blog/clinical-rigor/">Чему социологу поучиться у клинических исследований</a></h3>
-  <p class="post-card-summary">ALCOA+, журнал изменений, проверки при вводе, запросы, двойной ввод и блокировка базы — что это такое и зачем всё это качественникам и количественникам.</p>
-  <p class="post-card-foot"><span>5 минут чтения</span> <a href="/corpus-site/blog/clinical-rigor/" aria-hidden="true" tabindex="-1">читать →</a></p>
-</article>
-<article class="post-card">
-  <p class="post-card-meta">
-    <a href="/corpus-site/blog/rubric/slovar/"><span class="rubric">§ 01 · словарь</span></a>
-    <time datetime="2026-10-06">6 октября 2026</time>
-  </p>
-  <h3 class="post-card-title"><a href="/corpus-site/blog/corpus/">corpus, сущ.</a></h3>
-  <p class="post-card-summary">Почему платформа называется так, как называется, и что такое «тело исследования», когда оно лежит в двенадцати папках.</p>
-  <p class="post-card-foot"><span>4 минуты чтения</span> <a href="/corpus-site/blog/corpus/" aria-hidden="true" tabindex="-1">читать →</a></p>
-</article>
-  </div>
-  <p class="more"><a href="/corpus-site/blog/">все записи <span aria-hidden="true">→</span></a> · <a href="/corpus-site/feed.xml">rss</a></p>
-</section>
+<section class="band band-card" aria-labelledby="blog-title">
+  <div class="wrap" data-strip data-auto>
+    <div class="sec-row">
+      <header class="sec-head">
+        <span class="sec-no">§ 06 — carnet</span>
+        <h2 id="blog-title">carnet <span class="pos">n. m.</span></h2>
+        <p class="sec-lead">Des notes sur la méthode, le terrain et les mots que nous employons.</p>
+      </header>
+      <div class="reel-controls" data-controls hidden>
+  <button class="reel-btn" type="button" data-prev aria-label="article précédent">←</button>
+  <button class="reel-btn" type="button" data-next aria-label="article suivant">→</button>
+</div>
 
-<section class="wrap closing" aria-labelledby="try-title">
-  <div class="closing-sheet taped">
-    <h2 id="try-title">Хотите попробовать на&nbsp;своём поле?</h2>
-    <p>Доступ в платформу — по учётным записям. Если учётная запись у&nbsp;вас есть — входите. Если нет — напишите пару строк о&nbsp;своём исследовании, и я расскажу, как начать.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="https://app.corpus.example">войти в платформу <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="/corpus-site/contacts/">написать</a>
+    </div>
+    <ul class="carousel-track" data-track aria-label="Articles du carnet">
+<li><article class="post-card">
+  <p class="post-card-meta">
+    <a href="/blog/rubric/metody/"><span class="rubric">§ 03 · méthodes</span></a>
+    <time datetime="2026-10-20">20 octobre 2026</time>
+  </p>
+  <h3 class="post-card-title"><a href="/blog/networks-over-coffee/">Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image</a></h3>
+  <p class="post-card-summary">Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, le disposer, calculer, et ne pas prendre une belle image pour une conclusion.</p>
+  <p class="post-card-foot"><span>6 min de lecture</span> <a href="/blog/networks-over-coffee/" aria-hidden="true" tabindex="-1">lire →</a></p>
+</article>
+</li><li><article class="post-card">
+  <p class="post-card-meta">
+    <a href="/blog/rubric/metody/"><span class="rubric">§ 03 · méthodes</span></a>
+    <time datetime="2026-10-13">13 octobre 2026</time>
+  </p>
+  <h3 class="post-card-title"><a href="/blog/clinical-rigor/">Ce que la sociologie peut apprendre des essais cliniques</a></h3>
+  <p class="post-card-summary">ALCOA+, historique des modifications, contrôles de saisie, requêtes, double saisie et gel de la base : de quoi s’agit-il, et en quoi cela concerne aussi bien les qualitativistes que les quantitativistes ?</p>
+  <p class="post-card-foot"><span>7 min de lecture</span> <a href="/blog/clinical-rigor/" aria-hidden="true" tabindex="-1">lire →</a></p>
+</article>
+</li><li><article class="post-card">
+  <p class="post-card-meta">
+    <a href="/blog/rubric/slovar/"><span class="rubric">§ 01 · vocabulaire</span></a>
+    <time datetime="2026-10-06">6 octobre 2026</time>
+  </p>
+  <h3 class="post-card-title"><a href="/blog/corpus/">corpus, n. m.</a></h3>
+  <p class="post-card-summary">Pourquoi la plateforme s’appelle ainsi, et ce qu’est le « corps de l’enquête » quand il est éparpillé dans douze dossiers.</p>
+  <p class="post-card-foot"><span>6 min de lecture</span> <a href="/blog/corpus/" aria-hidden="true" tabindex="-1">lire →</a></p>
+</article>
+</li>    </ul>
+    <div class="sec-row flush">
+      <ol class="carousel-dots" data-dots data-label="article"></ol>
+      <a class="hand-link" href="/blog/">tout le carnet</a>
     </div>
   </div>
 </section>
   </main>
 
   <footer class="site-footer">
-    <section class="board" aria-labelledby="universe">
-      <div class="wrap">
-        <h2 class="board-label" id="universe">одна тетрадь, три проекта</h2>
-        <ul class="cutouts">
-          <li class="cutout cutout-dispositif">
-            <span class="d-mark" aria-hidden="true">Д</span>
-            <p class="cutout-title">диспозитив</p>
-            <p>социология повседневности на youtube: одно понятие — одно видео.</p>
-            <p><span class="todo">[ссылка на канал — site.toml → projects.dispositif.url]</span></p>
-          </li>
-          <li class="cutout cutout-garbage">
-            <p class="cutout-title">garbage <i>n., uncountable</i></p>
-            <p>визуальная социология парижского мусора: что город выбрасывает и что этим говорит.</p>
-            <a href="https://garbageofparis.fr" lang="en">see the evidence <span aria-hidden="true">→</span></a>
-          </li>
-          <li class="cutout cutout-corpus">
-            <img src="/corpus-site/brand/mark.svg" alt="" width="44" height="44">
-            <p class="cutout-title">corpus</p>
-            <p>тело исследования в одном месте. вы сейчас здесь.</p>
-            <a href="/corpus-site/features/">что внутри <span aria-hidden="true">→</span></a>
-          </li>
-        </ul>
+    <div class="wrap">
+      <p class="footer-word">corpus <span class="pos">n. m., de l’enquête</span></p>
+      <p class="footer-def"><span class="struck">douze dossiers et une seule tête.</span> <span class="hand">un seul lieu pour toute l’enquête. Paris, 2026 — en chantier.</span></p>
+
+      <div class="footer-cols">
+        <nav aria-label="Liens utiles">
+          <h2>le site</h2>
+          <ul class="footer-links">
+<li><a href="/features/">fonctionnalités</a></li>
+<li><a href="/blog/">blog</a></li>
+<li><a href="/about/">à propos</a></li>
+<li><a href="/team/">équipe</a></li>
+<li><a href="/contacts/">contact</a></li>
+            <li><a href="/feed.xml">rss</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>écrire</h2>
+          <ul class="footer-links">
+<li><a href="mailto:contact@moncorpus.fr">e-mail</a></li><li><a href="https://www.linkedin.com/in/snezhana-galimova" rel="me">linkedin ↗</a></li><li><a href="https://www.instagram.com/raretarantul/" rel="me">instagram ↗</a></li>          </ul>
+        </div>
+        <div>
+          <h2>un carnet, trois projets</h2>
+          <ul class="footer-projects">
+            <li><b lang="ru">диспозитив</b> <span class="soon">bientôt</span></li>
+            <li><b lang="en">garbage</b> <span class="pos" lang="en">of Paris</span> <a href="https://garbageofparis.fr">garbageofparis.fr ↗</a></li>
+            <li><b>corpus</b> <span class="pos">vous êtes ici</span></li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <div class="wrap footer-base">
-      <p class="footer-sign">© 2026 Снежана · corpus</p>
-      <nav aria-label="Служебные ссылки">
-        <ul class="footer-links">
-          <li><a href="https://app.corpus.example">платформа</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/feed.xml">rss</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
-          <li><a href="/corpus-site/privacy/">конфиденциальность</a></li>
-        </ul>
-      </nav>
-      <p class="footer-note">на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+
+      <div class="footer-base">
+        <p>© 2026 Snezhana Galimova · <a href="/mentions-legales/">mentions légales</a> · <a href="/privacy/">confidentialité</a></p>
+        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme.</p>
+        <a class="to-top" href="#main">↑ haut</a>
+      </div>
     </div>
   </footer>
 </body>

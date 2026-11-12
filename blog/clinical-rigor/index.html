@@ -1,51 +1,60 @@
 <!doctype html>
-<html lang="ru">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Чему социологу поучиться у клинических исследований — блог corpus</title>
-  <meta name="description" content="ALCOA+, журнал изменений, проверки при вводе, запросы, двойной ввод и блокировка базы — что это такое и зачем всё это качественникам и количественникам.">
-  <meta name="author" content="Снежана">
+  <title>Ce que la sociologie peut apprendre des essais cliniques — blog corpus</title>
+  <meta name="description" content="ALCOA+, historique des modifications, contrôles de saisie, requêtes, double saisie et gel de la base : de quoi s’agit-il, et en quoi cela concerne aussi bien les qualitativistes que les quantitativistes ?">
+  <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
-  <link rel="canonical" href="https://corpus.example/blog/clinical-rigor/">
-  <link rel="alternate" type="application/rss+xml" title="corpus — блог" href="/corpus-site/feed.xml">
-  <link rel="icon" href="/corpus-site/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/corpus-site/apple-touch-icon.png">
-  <link rel="preload" href="/corpus-site/fonts/pt-serif-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/corpus-site/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/corpus-site/css/site.css?v=9f0ecba7">
+<link rel="canonical" href="https://moncorpus.fr/blog/clinical-rigor/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/blog/clinical-rigor/">
+  <link rel="alternate" hreflang="en" href="https://moncorpus.fr/en/blog/clinical-rigor/">
+  <link rel="alternate" hreflang="ru" href="https://moncorpus.fr/ru/blog/clinical-rigor/">
+<link rel="alternate" hreflang="x-default" href="https://moncorpus.fr/blog/clinical-rigor/">  <link rel="alternate" type="application/rss+xml" title="corpus — blog" href="/feed.xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=b808fa92">
+  <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Чему социологу поучиться у клинических исследований — блог corpus">
-  <meta property="og:description" content="ALCOA+, журнал изменений, проверки при вводе, запросы, двойной ввод и блокировка базы — что это такое и зачем всё это качественникам и количественникам.">
-  <meta property="og:url" content="https://corpus.example/blog/clinical-rigor/">
-  <meta property="og:image" content="https://corpus.example/og.png">
+  <meta property="og:title" content="Ce que la sociologie peut apprendre des essais cliniques — blog corpus">
+  <meta property="og:description" content="ALCOA+, historique des modifications, contrôles de saisie, requêtes, double saisie et gel de la base : de quoi s’agit-il, et en quoi cela concerne aussi bien les qualitativistes que les quantitativistes ?">
+  <meta property="og:url" content="https://moncorpus.fr/blog/clinical-rigor/">
+  <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/corpus-site/js/menu.js?v=9f0ecba7" defer></script>
+  <script src="/js/site.js?v=b808fa92"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">к содержанию</a>
+  <a class="skip-link" href="#main">aller au contenu</a>
 
   <header class="masthead" data-masthead>
     <div class="wrap masthead-inner">
-      <a class="logo" href="/corpus-site/">
-        <img src="/corpus-site/brand/wordmark.svg" alt="corpus — на главную" width="94" height="40">
+      <a class="logo" href="/">
+        <img src="/brand/wordmark.svg" alt="corpus — accueil" width="94" height="40">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
-        <span class="menu-toggle-lines" aria-hidden="true"></span>меню
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+              data-open="menu" data-close="fermer" hidden>menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Rubriques du site">
         <ul>
-          <li><a href="/corpus-site/features/">возможности</a></li>
-          <li><a href="/corpus-site/blog/" aria-current="page">блог</a></li>
-          <li><a href="/corpus-site/about/">обо мне</a></li>
-          <li><a href="/corpus-site/team/">команда</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
+          <li><a href="/features/">fonctionnalités</a></li>
+          <li><a href="/blog/" aria-current="page">blog</a></li>
+          <li><a href="/about/">à propos</a></li>
+          <li><a href="/team/">équipe</a></li>
+          <li><a href="/contacts/">contact</a></li>
         </ul>
-        <a class="btn btn-small" href="https://app.corpus.example">войти <span aria-hidden="true">→</span></a>
+        <ul class="lang-switch" aria-label="Langue du site">
+          <li><span class="current" aria-current="true" title="français">fr</span></li>
+          <li><a href="/en/blog/clinical-rigor/" hreflang="en" lang="en" aria-label="English">en</a></li>
+          <li><a href="/ru/blog/clinical-rigor/" hreflang="ru" lang="ru" aria-label="русский">ru</a></li>
+        </ul>
+        <a class="btn btn-small btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
@@ -53,152 +62,152 @@
   <main id="main" tabindex="-1">
 <article class="post wrap">
   <header class="post-head">
-    <p class="kicker"><a href="/corpus-site/blog/">блог</a> / <a href="/corpus-site/blog/rubric/metody/"><span class="rubric">§ 03 · методы</span></a></p>
-    <h1>Чему социологу поучиться у клинических исследований</h1>
-    <p class="post-summary">ALCOA+, журнал изменений, проверки при вводе, запросы, двойной ввод и блокировка базы — что это такое и зачем всё это качественникам и количественникам.</p>
+    <p class="kicker"><a href="/blog/">blog</a> / <a href="/blog/rubric/metody/"><span class="rubric">§ 03 · méthodes</span></a></p>
+    <h1>Ce que la sociologie peut apprendre des essais cliniques</h1>
+    <p class="post-summary">ALCOA+, historique des modifications, contrôles de saisie, requêtes, double saisie et gel de la base : de quoi s’agit-il, et en quoi cela concerne aussi bien les qualitativistes que les quantitativistes ?</p>
     <dl class="post-meta">
-      <div><dt>дата</dt><dd><time datetime="2026-10-13">13 октября 2026</time></dd></div>
-      <div><dt>чтение</dt><dd>5 минут чтения</dd></div>
-      <div><dt>автор</dt><dd>Снежана</dd></div>
+      <div><dt>date</dt><dd><time datetime="2026-10-13">13 octobre 2026</time></dd></div>
+      <div><dt>lecture</dt><dd>7 min de lecture</dd></div>
+      <div><dt>autrice</dt><dd>Snezhana Galimova</dd></div>
     </dl>
   </header>
 
   <div class="prose">
-    <p>В клиническом исследовании ошибка в данных может стоить здоровья: если в таблицу попало не то давление или не та доза, неверным окажется вывод о лекарстве. Поэтому за десятилетия там выросла целая культура обращения с данными — с правилами, ролями и проверками. Со стороны она выглядит как бюрократия. Изнутри — как набор привычек, которые позволяют через несколько лет ответить на вопрос «откуда эта цифра?» не по памяти, а по документам.</p>
-<p>Социологические данные тоже про людей. Ошибка в них редко кого-то убивает, но тихо меняет выводы — и этого никто не замечает. Ниже — шесть клинических практик, которые, по-моему, стоит перенести в социологию. Не целиком, а логикой.</p>
-<h2 id="alcoa-девять-вопросов-к-любой-записи">ALCOA+: девять вопросов к любой записи</h2>
-<p>Аббревиатура появилась в американском регуляторе FDA и с тех пор обросла плюсом. Её удобно читать как чек-лист вопросов к любой записи в исследовании:</p>
+    <p>Dans un essai clinique, une erreur dans les données peut coûter la santé de quelqu’un : si la mauvaise tension artérielle ou la mauvaise dose se glisse dans le tableau, c’est la conclusion sur le médicament qui devient fausse. En quelques décennies, toute une culture du traitement des données s’y est donc construite, avec ses règles, ses rôles et ses contrôles. Vue de l’extérieur, elle ressemble à de la bureaucratie. Vue de l’intérieur, c’est un ensemble d’habitudes qui permettent, des années plus tard, de répondre à la question « d’où vient ce chiffre ? » à partir des documents, et non de mémoire.</p>
+<p>Les données sociologiques portent elles aussi sur des personnes. Une erreur y tue rarement qui que ce soit, mais elle déplace les conclusions en silence, sans que personne ne s’en aperçoive. Voici six pratiques cliniques qui, à mon sens, méritent d’être transposées en sociologie. Pas telles quelles : dans leur logique.</p>
+<h2 id="alcoa-neuf-questions-à-poser-à-chaque-donnée">ALCOA+ : neuf questions à poser à chaque donnée</h2>
+<p>L’acronyme est né à la FDA, l’autorité sanitaire américaine, et s’est enrichi depuis d’un « + ». Chaque lettre renvoie, en anglais, à une qualité attendue d’une donnée fiable. Ensemble, elles se lisent comme une liste de questions à poser à n’importe quelle donnée d’une enquête :</p>
 <table>
 <thead>
 <tr>
-<th>Буква</th>
-<th>Требование</th>
-<th>Вопрос социолога</th>
+<th>Lettre</th>
+<th>Exigence</th>
+<th>La question du sociologue</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A</td>
-<td>Attributable</td>
-<td>Кто это записал, закодировал, исправил?</td>
+<td>Attributable (attribuable)</td>
+<td>Qui l’a saisie, codée, corrigée ?</td>
 </tr>
 <tr>
 <td>L</td>
-<td>Legible</td>
-<td>Прочитаю ли я это без программы, в которой делала?</td>
+<td>Legible (lisible)</td>
+<td>Pourrai-je la relire sans le logiciel qui a servi à la produire ?</td>
 </tr>
 <tr>
 <td>C</td>
-<td>Contemporaneous</td>
-<td>Записано тогда же, когда произошло, или восстановлено потом?</td>
+<td>Contemporaneous (contemporaine)</td>
+<td>A-t-elle été notée sur le moment, ou reconstituée après coup ?</td>
 </tr>
 <tr>
 <td>O</td>
-<td>Original</td>
-<td>Где исходник — аудио, бумажная анкета, первый файл?</td>
+<td>Original (originale)</td>
+<td>Où est la source : l’enregistrement audio, le questionnaire papier, le premier fichier ?</td>
 </tr>
 <tr>
 <td>A</td>
-<td>Accurate</td>
-<td>Если исправляли — видно ли, что и почему?</td>
+<td>Accurate (exacte)</td>
+<td>Si elle a été corrigée, voit-on quoi et pourquoi ?</td>
 </tr>
 <tr>
 <td>C</td>
-<td>Complete</td>
-<td>Не пропало ли что-то молча?</td>
+<td>Complete (complète)</td>
+<td>Quelque chose a-t-il disparu sans bruit ?</td>
 </tr>
 <tr>
 <td>C</td>
-<td>Consistent</td>
-<td>Одинаковые вещи записаны одинаково?</td>
+<td>Consistent (cohérente)</td>
+<td>Les mêmes choses sont-elles notées de la même façon ?</td>
 </tr>
 <tr>
 <td>E</td>
-<td>Enduring</td>
-<td>Доживут ли данные до повторного анализа через десять лет?</td>
+<td>Enduring (durable)</td>
+<td>Les données seront-elles encore exploitables pour une réanalyse dans dix ans ?</td>
 </tr>
 <tr>
 <td>A</td>
-<td>Available</td>
-<td>Можно ли быстро достать нужное, когда спросят?</td>
+<td>Available (disponible)</td>
+<td>Peut-on retrouver rapidement ce qu’il faut quand on nous le demande ?</td>
 </tr>
 </tbody>
 </table>
-<p>Ни один пункт не требует сложной техники. Требуется только, чтобы ответ на каждый вопрос существовал не в голове, а рядом с данными.</p>
-<h2 id="журнал-изменений-память-которая-не-врёт">Журнал изменений: память, которая не врёт</h2>
-<p>В клиническом исследовании любое изменение записи оставляет след: кто, когда, старое значение, новое значение, причина. Это называется audit trail. Удалить след нельзя, можно только добавить новое изменение поверх.</p>
-<p>Сравните с обычной работой в Excel. Вы заменили «Мск» на «Москва» в двухстах ячейках — и всё: таблица чистая, а знания о том, что она была грязной, больше нет. Для одной замены это не страшно. Для сорока замен, сделанных тремя людьми за полгода, — это уже другая таблица, происхождение которой никто не восстановит.</p>
-<p>Хорошая новость: журнал можно вести автоматически. Если каждая запись ещё и содержит отпечаток предыдущей (хэш-цепочка), то даже правка напрямую в базе станет заметной.</p>
-<h2 id="проверки-при-вводе-поймать-ошибку-пока-все-помнят">Проверки при вводе: поймать ошибку, пока все помнят</h2>
-<p>Edit checks — правила, которые срабатывают в момент ввода: возраст 214, дата интервью в будущем, стаж работы больше возраста. В клинике их пишут до начала исследования, вместе с формами.</p>
-<p>Главная идея — время. Ошибку, найденную в день ввода, исправляет человек, который держал анкету в руках. Ошибку, найденную через год при анализе, приходится угадывать.</p>
-<h2 id="запросы-вопрос-вместо-исправления">Запросы: вопрос вместо исправления</h2>
-<p>Когда менеджер данных в клинике видит странное значение, он не исправляет его сам. Он открывает query — вопрос к тому, кто вносил данные: «Возраст 214 — опечатка? Уточните по первичному документу». Ответ и исправление сохраняются вместе с вопросом.</p>
-<p>В социологии это переносится почти буквально. Кодировщик видит в транскрипте «приехал в 2009-м», а по анкете участнику тогда было девять лет — вопрос интервьюеру, а не тихая правка. Расшифровщик пометил «[неразборчиво 00:14:32]» — вопрос тому, кто был на интервью и может помнить. Разница маленькая, но принципиальная: исправляет тот, у кого есть основание, и основание остаётся записанным.</p>
-<h2 id="двойной-ввод-два-человека-лучше-одного">Двойной ввод: два человека лучше одного</h2>
-<p>Бумажные формы в клинике часто вводят дважды, двумя людьми независимо, а потом сверяют расхождения с бумагой. Это дорого, но число ошибок ввода падает радикально.</p>
-<p>Для трёхсот бумажных анкет это пара дополнительных дней. Для качественного анализа у этой практики давно есть родственник — двойное кодирование и коэффициент согласия кодировщиков (например, каппа Коэна). Логика та же: одна пара глаз ошибается незаметно, две — заметно.</p>
-<h2 id="блокировка-базы-момент-после-которого-не-подгоняют">Блокировка базы: момент, после которого не подгоняют</h2>
-<p>Перед анализом клиническую базу «замораживают»: после блокировки изменения возможны только через документированную разблокировку. Это защищает от самого человеческого соблазна — поправить данные, увидев результат.</p>
-<p>Для социолога блокировка — это не запрет передумать. Качественный кодбук живёт и меняется, и это нормально. Блокировка — это фиксация момента: «на этих данных и этой версии правил написана глава 3». Если потом что-то изменилось, глава хотя бы знает, на что она опиралась.</p>
-<h2 id="чего-переносить-не-стоит">Чего переносить не стоит</h2>
-<p>Клиническая культура данных выросла в среде регуляторов, страховок и огромных бюджетов. Стандартные операционные процедуры на каждое действие, подпись на каждой странице, валидация программ за большие деньги — социологии это не нужно и не по карману. Нужна логика: исходник цел, изменения видны, решения объяснены, данные проверяются рано.</p>
-<p class="aside">клиницисты, простите за упрощения.</p>
-<h2 id="как-это-устроено-в-corpus">Как это устроено в corpus</h2>
-<p>В corpus эти практики встроены так, чтобы их не приходилось помнить: журнал действий с хэш-цепочкой ведётся сам, исправление текста — это новая версия, очистка анкет — правила с причинами поверх сырых ответов. Проверки при вводе, запросы, двойной ввод и блокировка сейчас собираются в модуле <a href="../../features/#quality">«проверки и запросы»</a>.</p>
+<p>Aucun de ces points n’exige une technique sophistiquée. Il faut seulement que la réponse à chaque question existe ailleurs que dans une tête : à côté des données.</p>
+<h2 id="lhistorique-des-modifications-une-mémoire-qui-ne-ment-pas">L’historique des modifications : une mémoire qui ne ment pas</h2>
+<p>Dans un essai clinique, toute modification d’une donnée laisse une trace : qui, quand, l’ancienne valeur, la nouvelle, le motif. C’est ce qu’on appelle l’audit trail. La trace ne peut pas être effacée ; on peut seulement ajouter une nouvelle modification par-dessus.</p>
+<p>Comparez avec le travail ordinaire sous Excel. Vous remplacez « Seine-St-Denis » par « Seine-Saint-Denis » dans deux cents cellules, et c’est tout : le tableau est propre, mais on a perdu l’information qu’il ne l’était pas. Pour un seul remplacement, ce n’est pas grave. Pour quarante remplacements faits par trois personnes en six mois, c’est déjà un autre tableau, dont personne ne pourra reconstituer l’origine.</p>
+<p>La bonne nouvelle, c’est que cet historique peut être tenu automatiquement. Et si chaque entrée contient en plus l’empreinte de la précédente (une chaîne de hachage), même une modification faite directement dans la base devient visible.</p>
+<h2 id="les-contrôles-de-saisie-attraper-lerreur-tant-que-tout-le-monde-sen-souvient">Les contrôles de saisie : attraper l’erreur tant que tout le monde s’en souvient</h2>
+<p>Les edit checks sont des règles qui se déclenchent au moment de la saisie : un âge de 214 ans, une date d’entretien dans le futur, une ancienneté professionnelle supérieure à l’âge. En recherche clinique, on les rédige avant le début de l’étude, en même temps que les formulaires.</p>
+<p>L’idée centrale, c’est le temps. Une erreur repérée le jour de la saisie est corrigée par la personne qui a eu le questionnaire entre les mains. Une erreur découverte un an plus tard, pendant l’analyse, il faut la deviner.</p>
+<h2 id="les-requêtes-une-question-plutôt-quune-correction">Les requêtes : une question plutôt qu’une correction</h2>
+<p>Quand le data manager d’un essai clinique tombe sur une valeur étrange, il ne la corrige pas lui-même. Il ouvre une query, une question adressée à la personne qui a saisi la donnée : « Âge 214 : faute de frappe ? Merci de vérifier sur le document source. » La réponse et la correction sont conservées avec la question.</p>
+<p>En sociologie, la transposition est presque littérale. Le codeur lit dans un verbatim « je suis arrivé en 2009 », alors que, d’après le questionnaire, l’enquêté avait neuf ans à l’époque : on pose la question à l’enquêtrice, on ne corrige pas en douce. La personne qui a fait la transcription a noté « [inaudible 00:14:32] » : on interroge celle ou celui qui a mené l’entretien et qui s’en souvient peut-être. La différence est mince, mais elle est de principe : c’est la personne qui a un motif de corriger qui corrige, et ce motif reste consigné.</p>
+<h2 id="la-double-saisie-deux-personnes-valent-mieux-quune">La double saisie : deux personnes valent mieux qu’une</h2>
+<p>En recherche clinique, les formulaires papier sont souvent saisis deux fois, par deux personnes indépendantes, puis les écarts sont confrontés au papier. C’est coûteux, mais le nombre d’erreurs de saisie chute radicalement.</p>
+<p>Pour trois cents questionnaires papier, cela représente deux jours de travail supplémentaires. En analyse qualitative, cette pratique a depuis longtemps une cousine : le double codage et le coefficient d’accord inter-codeurs (le kappa de Cohen, par exemple). La logique est la même : une seule paire d’yeux se trompe sans que cela se voie, deux paires se trompent de façon visible.</p>
+<h2 id="le-gel-de-la-base-le-moment-après-lequel-on-najuste-plus">Le gel de la base : le moment après lequel on n’ajuste plus</h2>
+<p>Avant l’analyse, la base d’un essai clinique est « gelée » : une fois le gel prononcé, toute modification passe par un dégel documenté. Cela protège contre la plus humaine des tentations : retoucher les données après avoir vu le résultat.</p>
+<p>En sociologie, le gel n’est pas une interdiction de changer d’avis. Une grille de codes qualitative vit et évolue, et c’est normal. Le gel, c’est la fixation d’un moment : « le chapitre 3 a été écrit à partir de ces données et de cette version des règles ». Si quelque chose change ensuite, le chapitre sait au moins sur quoi il s’appuyait.</p>
+<h2 id="ce-quil-vaut-mieux-ne-pas-importer">Ce qu’il vaut mieux ne pas importer</h2>
+<p>La culture clinique des données s’est développée dans un univers de régulateurs, d’assurances et de budgets considérables. Des procédures opératoires standardisées pour chaque geste, une signature sur chaque page, une validation des logiciels à prix d’or : la sociologie n’en a pas besoin, et n’en a pas les moyens. Ce dont elle a besoin, c’est de la logique : la source reste intacte, les modifications sont visibles, les décisions sont justifiées, les données sont vérifiées tôt.</p>
+<p class="aside">que les cliniciens me pardonnent ces raccourcis.</p>
+<h2 id="comment-cest-fait-dans-corpus">Comment c’est fait dans corpus</h2>
+<p>Dans corpus, ces pratiques sont intégrées de façon à ce qu’on n’ait pas à y penser : le journal des actions, avec sa chaîne de hachage, se tient tout seul ; corriger un texte, c’est en créer une nouvelle version ; le nettoyage des questionnaires passe par des règles motivées, appliquées par-dessus les réponses brutes. Les contrôles de saisie, les requêtes, la double saisie et le gel sont en cours d’intégration dans le module <a href="../../features/#quality">« contrôles et requêtes »</a>.</p>
   </div>
 
   <footer class="post-foot">
-    <nav class="prev-next" aria-label="Соседние записи">
-      <a class="pn pn-prev" href="/corpus-site/blog/corpus/" rel="prev">
-        <span class="pn-label">← раньше</span><span class="pn-title">corpus, сущ.</span>
+    <nav class="prev-next" aria-label="Notes voisines">
+      <a class="pn pn-prev" href="/blog/corpus/" rel="prev">
+        <span class="pn-label">← plus ancienne</span><span class="pn-title">corpus, n. m.</span>
       </a>
-      <a class="pn pn-next" href="/corpus-site/blog/networks-over-coffee/" rel="next">
-        <span class="pn-label">позже →</span><span class="pn-title">Сети за чашкой кофе: как из таблицы «индивид — тип связи — индивид 2» получается картинка</span>
+      <a class="pn pn-next" href="/blog/networks-over-coffee/" rel="next">
+        <span class="pn-label">plus récente →</span><span class="pn-title">Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image</span>
       </a>
     </nav>
-    <p class="more"><a href="/corpus-site/blog/">все записи</a> · <a href="/corpus-site/feed.xml">rss</a> · <a href="/corpus-site/contacts/">написать автору</a></p>
+    <p class="more"><a href="/blog/">toutes les notes</a> · <a href="/feed.xml">rss</a> · <a href="/contacts/">écrire à l’autrice</a></p>
   </footer>
 </article>
   </main>
 
   <footer class="site-footer">
-    <section class="board" aria-labelledby="universe">
-      <div class="wrap">
-        <h2 class="board-label" id="universe">одна тетрадь, три проекта</h2>
-        <ul class="cutouts">
-          <li class="cutout cutout-dispositif">
-            <span class="d-mark" aria-hidden="true">Д</span>
-            <p class="cutout-title">диспозитив</p>
-            <p>социология повседневности на youtube: одно понятие — одно видео.</p>
-            <p><span class="todo">[ссылка на канал — site.toml → projects.dispositif.url]</span></p>
-          </li>
-          <li class="cutout cutout-garbage">
-            <p class="cutout-title">garbage <i>n., uncountable</i></p>
-            <p>визуальная социология парижского мусора: что город выбрасывает и что этим говорит.</p>
-            <a href="https://garbageofparis.fr" lang="en">see the evidence <span aria-hidden="true">→</span></a>
-          </li>
-          <li class="cutout cutout-corpus">
-            <img src="/corpus-site/brand/mark.svg" alt="" width="44" height="44">
-            <p class="cutout-title">corpus</p>
-            <p>тело исследования в одном месте. вы сейчас здесь.</p>
-            <a href="/corpus-site/features/">что внутри <span aria-hidden="true">→</span></a>
-          </li>
-        </ul>
+    <div class="wrap">
+      <p class="footer-word">corpus <span class="pos">n. m., de l’enquête</span></p>
+      <p class="footer-def"><span class="struck">douze dossiers et une seule tête.</span> <span class="hand">un seul lieu pour toute l’enquête. Paris, 2026 — en chantier.</span></p>
+
+      <div class="footer-cols">
+        <nav aria-label="Liens utiles">
+          <h2>le site</h2>
+          <ul class="footer-links">
+<li><a href="/features/">fonctionnalités</a></li>
+<li><a href="/blog/">blog</a></li>
+<li><a href="/about/">à propos</a></li>
+<li><a href="/team/">équipe</a></li>
+<li><a href="/contacts/">contact</a></li>
+            <li><a href="/feed.xml">rss</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>écrire</h2>
+          <ul class="footer-links">
+<li><a href="mailto:contact@moncorpus.fr">e-mail</a></li><li><a href="https://www.linkedin.com/in/snezhana-galimova" rel="me">linkedin ↗</a></li><li><a href="https://www.instagram.com/raretarantul/" rel="me">instagram ↗</a></li>          </ul>
+        </div>
+        <div>
+          <h2>un carnet, trois projets</h2>
+          <ul class="footer-projects">
+            <li><b lang="ru">диспозитив</b> <span class="soon">bientôt</span></li>
+            <li><b lang="en">garbage</b> <span class="pos" lang="en">of Paris</span> <a href="https://garbageofparis.fr">garbageofparis.fr ↗</a></li>
+            <li><b>corpus</b> <span class="pos">vous êtes ici</span></li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <div class="wrap footer-base">
-      <p class="footer-sign">© 2026 Снежана · corpus</p>
-      <nav aria-label="Служебные ссылки">
-        <ul class="footer-links">
-          <li><a href="https://app.corpus.example">платформа</a></li>
-          <li><a href="/corpus-site/blog/">блог</a></li>
-          <li><a href="/corpus-site/feed.xml">rss</a></li>
-          <li><a href="/corpus-site/contacts/">контакты</a></li>
-          <li><a href="/corpus-site/privacy/">конфиденциальность</a></li>
-        </ul>
-      </nav>
-      <p class="footer-note">на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+
+      <div class="footer-base">
+        <p>© 2026 Snezhana Galimova · <a href="/mentions-legales/">mentions légales</a> · <a href="/privacy/">confidentialité</a></p>
+        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme.</p>
+        <a class="to-top" href="#main">↑ haut</a>
+      </div>
     </div>
   </footer>
 </body>
