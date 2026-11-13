@@ -12,17 +12,15 @@ AddType font/woff2 .woff2
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  # Всегда https и без www.
-  # На хостинге OVH https видно по X-Forwarded-Proto, а не по %{HTTPS}.
-  RewriteCond %{HTTP:X-Forwarded-Proto} !=https [OR]
-  RewriteCond %{HTTP_HOST} ^www\. [NC]
-  RewriteRule ^ https://moncorpus.fr%{REQUEST_URI} [L,R=301]
+  # Без www. Переход на https включим, когда OVH выпустит сертификат для домена
+  # (Hébergements → Multisite → SSL), иначе сайт не открывается вовсе.
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 <IfModule mod_headers.c>
   # Сайт ничего не грузит с чужих серверов и ничего не встраивает.
   Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
-  Header always set Strict-Transport-Security "max-age=31536000"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
