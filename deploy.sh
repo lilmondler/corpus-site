@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Зеркально залить этот репозиторий (готовую сборку сайта) в каталог www/ хостинга OVH по FTPS.
+# Зеркально залить этот репозиторий (готовую сборку сайта) в каталог www/ хостинга OVH по SFTP
+# (порт 22; хостинг OVH не даёт FTPS, но даёт SFTP на всех тарифах).
 # Лишние файлы на хостинге удаляются: там лежит ровно эта версия. Пароль — только из переменной
 # окружения (секрет GitHub), никогда в аргументах и в git.
 #
@@ -20,12 +21,9 @@ done
 command -v lftp >/dev/null || { echo "Нужен lftp" >&2; exit 2; }
 
 export LFTP_PASSWORD="$OVH_FTP_PASSWORD"
-lftp --env-password -u "$OVH_FTP_USER" "ftp://$OVH_FTP_HOST" <<EOF
+lftp --env-password -u "$OVH_FTP_USER" "sftp://$OVH_FTP_HOST" <<EOF
 set cmd:fail-exit yes
-set ftp:ssl-allow yes
-set ftp:ssl-force yes
-set ftp:ssl-protect-data yes
-set ssl:verify-certificate yes
+set sftp:connect-program "ssh -a -x -o StrictHostKeyChecking=accept-new"
 set net:max-retries 3
 set net:timeout 30
 mirror --reverse --delete --verbose --parallel=4 \
