@@ -27,19 +27,6 @@ jobs:
         with:
           persist-credentials: false
       - run: sudo apt-get install -y --no-install-recommends lftp
-      - name: Проверка доступа (без пароля в логе)
-        env:
-          OVH_FTP_HOST: ${{ secrets.OVH_FTP_HOST }}
-          OVH_FTP_USER: ${{ secrets.OVH_FTP_USER }}
-          OVH_FTP_PASSWORD: ${{ secrets.OVH_FTP_PASSWORD }}
-          SSHPASS: ${{ secrets.OVH_FTP_PASSWORD }}
-        run: |
-          echo "host_length=${#OVH_FTP_HOST} user_length=${#OVH_FTP_USER} password_length=${#OVH_FTP_PASSWORD}"
-          [[ "$OVH_FTP_HOST" =~ ^ftp\.cluster[0-9]+\.hosting\.ovh\.net$ ]] && echo "host: формат OVH" || echo "host: НЕ похож на ftp.clusterNNN.hosting.ovh.net"
-          [[ "$OVH_FTP_USER" =~ ^[a-z0-9-]+$ ]] && echo "user: только буквы/цифры" || echo "user: есть лишние символы (пробел?)"
-          [[ "$OVH_FTP_PASSWORD" =~ [[:space:]] ]] && echo "password: содержит пробел/перенос строки" || echo "password: без пробелов"
-          sudo apt-get install -y --no-install-recommends sshpass >/dev/null
-          sshpass -e -P assword ssh -v -o StrictHostKeyChecking=accept-new -o PreferredAuthentications=password -o NumberOfPasswordPrompts=1 -s "$OVH_FTP_USER@$OVH_FTP_HOST" sftp </dev/null 2>&1 | grep -iE "Authenticat|denied|accepted|Connection|banner|method" | head -20 || true
       - name: Выложить на OVH
         env:
           OVH_FTP_HOST: ${{ secrets.OVH_FTP_HOST }}
