@@ -136,7 +136,7 @@
 <p>None of these points requires sophisticated technology. All that is required is that the answer to each question exists next to the data, not in someone’s head.</p>
 <h2 id="the-audit-trail-a-memory-that-doesnt-lie">The audit trail: a memory that doesn’t lie</h2>
 <p>In a clinical trial, every change to a record leaves a trace: who, when, the old value, the new value, the reason. This is called an audit trail. The trace cannot be deleted; you can only add a new change on top.</p>
-<p>Compare this with ordinary work in Excel. You replace “Manc” with “Manchester” in two hundred cells, and that’s it: the spreadsheet is clean, and the knowledge that it was ever messy is gone. For a single replacement, that doesn’t matter much. For forty replacements made by three people over six months, it is a different spreadsheet altogether, and nobody will be able to reconstruct where it came from.</p>
+<p>Compare this with ordinary work in a spreadsheet. You replace “Manc” with “Manchester” in two hundred cells, and that’s it: the spreadsheet is clean, and the knowledge that it was ever messy is gone. For a single replacement, that doesn’t matter much. For forty replacements made by three people over six months, it is a different spreadsheet altogether, and nobody will be able to reconstruct where it came from.</p>
 <p>The good news is that the log can be kept automatically. And if each entry also contains a fingerprint of the previous one (a hash chain), even an edit made directly in the database will show up.</p>
 <h2 id="edit-checks-catch-the-error-while-everyone-still-remembers">Edit checks: catch the error while everyone still remembers</h2>
 <p>Edit checks are rules that fire at the moment of entry: an age of 214, an interview date in the future, more years in work than years alive. In clinical research they are written before the study begins, alongside the forms.</p>
@@ -152,18 +152,17 @@
 <p>For a sociologist, a lock is not a ban on changing your mind. A qualitative codebook lives and changes, and that is fine. A lock fixes a moment: “chapter 3 was written on this data and this version of the rules”. If something changes later, the chapter at least knows what it was based on.</p>
 <h2 id="what-is-not-worth-importing">What is not worth importing</h2>
 <p>Clinical data culture grew up in a world of regulators, insurers and enormous budgets. Standard operating procedures for every action, a signature on every page, software validation at great expense: sociology does not need any of this and could not afford it anyway. What it needs is the logic: the source stays intact, changes are visible, decisions are explained, and data is checked early.</p>
-<p class="aside">clinicians, forgive the simplifications.</p>
 <h2 id="how-it-works-in-corpus">How it works in corpus</h2>
-<p>In corpus, these practices are built in so that you don’t have to remember them: the hash-chained activity log keeps itself, correcting a text creates a new version, and cleaning survey data means applying rules, each with a reason, on top of the raw responses. Edit checks, queries, double entry and database lock are currently being brought together in the <a href="../../features/#quality">“checks and queries”</a> module.</p>
+<p>In corpus, these practices are built in so that you don’t have to remember them: the hash-chained activity log keeps itself, correcting a text creates a new version, and cleaning survey data means applying rules, each with a reason, on top of the raw responses. Edit checks, queries, double entry of paper questionnaires, source verification and data freeze before analysis are all part of the <a href="../../features/#quality">“checks and queries”</a> module.</p>
   </div>
 
   <footer class="post-foot">
     <nav class="prev-next" aria-label="Neighbouring notes">
       <a class="pn pn-prev" href="/en/blog/corpus/" rel="prev">
-        <span class="pn-label">← earlier</span><span class="pn-title">corpus, n.</span>
+        <span class="pn-label">← earlier</span><span class="pn-title">What corpus is and why it exists</span>
       </a>
       <a class="pn pn-next" href="/en/blog/networks-over-coffee/" rel="next">
-        <span class="pn-label">later →</span><span class="pn-title">Networks over coffee: how an “individual — tie type — individual 2” table becomes a picture</span>
+        <span class="pn-label">later →</span><span class="pn-title">Network analysis in corpus: from a tie table to a graph and its measures</span>
       </a>
     </nav>
     <p class="more"><a href="/en/blog/">all notes</a> · <a href="/en/feed.xml">rss</a> · <a href="/en/contacts/">write to the author</a></p>
@@ -174,7 +173,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p class="footer-word">corpus <span class="pos">n., of research</span></p>
-      <p class="footer-def"><span class="struck">twelve folders and one head.</span> <span class="hand">one place for the whole study. Paris, 2026 — work in progress.</span></p>
+      <p class="footer-def"><span class="struck">word processor, spreadsheets, surveys and a shared folder.</span> <span class="hand">one platform for the whole study. Paris, 2026.</span></p>
 
       <div class="footer-cols">
         <nav aria-label="Useful links">

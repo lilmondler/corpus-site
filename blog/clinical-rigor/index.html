@@ -136,7 +136,7 @@
 <p>Aucun de ces points n’exige une technique sophistiquée. Il faut seulement que la réponse à chaque question existe ailleurs que dans une tête : à côté des données.</p>
 <h2 id="lhistorique-des-modifications-une-mémoire-qui-ne-ment-pas">L’historique des modifications : une mémoire qui ne ment pas</h2>
 <p>Dans un essai clinique, toute modification d’une donnée laisse une trace : qui, quand, l’ancienne valeur, la nouvelle, le motif. C’est ce qu’on appelle l’audit trail. La trace ne peut pas être effacée ; on peut seulement ajouter une nouvelle modification par-dessus.</p>
-<p>Comparez avec le travail ordinaire sous Excel. Vous remplacez « Seine-St-Denis » par « Seine-Saint-Denis » dans deux cents cellules, et c’est tout : le tableau est propre, mais on a perdu l’information qu’il ne l’était pas. Pour un seul remplacement, ce n’est pas grave. Pour quarante remplacements faits par trois personnes en six mois, c’est déjà un autre tableau, dont personne ne pourra reconstituer l’origine.</p>
+<p>Comparez avec le travail ordinaire dans un tableur. Vous remplacez « Seine-St-Denis » par « Seine-Saint-Denis » dans deux cents cellules, et c’est tout : le tableau est propre, mais on a perdu l’information qu’il ne l’était pas. Pour un seul remplacement, ce n’est pas grave. Pour quarante remplacements faits par trois personnes en six mois, c’est déjà un autre tableau, dont personne ne pourra reconstituer l’origine.</p>
 <p>La bonne nouvelle, c’est que cet historique peut être tenu automatiquement. Et si chaque entrée contient en plus l’empreinte de la précédente (une chaîne de hachage), même une modification faite directement dans la base devient visible.</p>
 <h2 id="les-contrôles-de-saisie-attraper-lerreur-tant-que-tout-le-monde-sen-souvient">Les contrôles de saisie : attraper l’erreur tant que tout le monde s’en souvient</h2>
 <p>Les edit checks sont des règles qui se déclenchent au moment de la saisie : un âge de 214 ans, une date d’entretien dans le futur, une ancienneté professionnelle supérieure à l’âge. En recherche clinique, on les rédige avant le début de l’étude, en même temps que les formulaires.</p>
@@ -152,18 +152,17 @@
 <p>En sociologie, le gel n’est pas une interdiction de changer d’avis. Une grille de codes qualitative vit et évolue, et c’est normal. Le gel, c’est la fixation d’un moment : « le chapitre 3 a été écrit à partir de ces données et de cette version des règles ». Si quelque chose change ensuite, le chapitre sait au moins sur quoi il s’appuyait.</p>
 <h2 id="ce-quil-vaut-mieux-ne-pas-importer">Ce qu’il vaut mieux ne pas importer</h2>
 <p>La culture clinique des données s’est développée dans un univers de régulateurs, d’assurances et de budgets considérables. Des procédures opératoires standardisées pour chaque geste, une signature sur chaque page, une validation des logiciels à prix d’or : la sociologie n’en a pas besoin, et n’en a pas les moyens. Ce dont elle a besoin, c’est de la logique : la source reste intacte, les modifications sont visibles, les décisions sont justifiées, les données sont vérifiées tôt.</p>
-<p class="aside">que les cliniciens me pardonnent ces raccourcis.</p>
 <h2 id="comment-cest-fait-dans-corpus">Comment c’est fait dans corpus</h2>
-<p>Dans corpus, ces pratiques sont intégrées de façon à ce qu’on n’ait pas à y penser : le journal des actions, avec sa chaîne de hachage, se tient tout seul ; corriger un texte, c’est en créer une nouvelle version ; le nettoyage des questionnaires passe par des règles motivées, appliquées par-dessus les réponses brutes. Les contrôles de saisie, les requêtes, la double saisie et le gel sont en cours d’intégration dans le module <a href="../../features/#quality">« contrôles et requêtes »</a>.</p>
+<p>Dans corpus, ces pratiques sont intégrées de façon à ce qu’on n’ait pas à y penser : le journal des actions, avec sa chaîne de hachage, se tient tout seul ; corriger un texte, c’est en créer une nouvelle version ; le nettoyage des questionnaires passe par des règles motivées, appliquées par-dessus les réponses brutes. Les contrôles de saisie, les requêtes, la double saisie des questionnaires papier, la vérification par rapport à la source et le gel des données avant l’analyse sont réunis dans le module <a href="../../features/#quality">« contrôles et requêtes »</a>.</p>
   </div>
 
   <footer class="post-foot">
     <nav class="prev-next" aria-label="Notes voisines">
       <a class="pn pn-prev" href="/blog/corpus/" rel="prev">
-        <span class="pn-label">← plus ancienne</span><span class="pn-title">corpus, n. m.</span>
+        <span class="pn-label">← plus ancienne</span><span class="pn-title">Qu’est-ce que corpus, et à quoi sert-il ?</span>
       </a>
       <a class="pn pn-next" href="/blog/networks-over-coffee/" rel="next">
-        <span class="pn-label">plus récente →</span><span class="pn-title">Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image</span>
+        <span class="pn-label">plus récente →</span><span class="pn-title">L’analyse de réseaux dans corpus : du tableau de liens au graphe et aux indicateurs</span>
       </a>
     </nav>
     <p class="more"><a href="/blog/">toutes les notes</a> · <a href="/feed.xml">rss</a> · <a href="/contacts/">écrire à l’autrice</a></p>
@@ -174,7 +173,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p class="footer-word">corpus <span class="pos">n. m., de l’enquête</span></p>
-      <p class="footer-def"><span class="struck">douze dossiers et une seule tête.</span> <span class="hand">un seul lieu pour toute l’enquête. Paris, 2026 — en chantier.</span></p>
+      <p class="footer-def"><span class="struck">traitement de texte, tableur, questionnaires et dossier partagé.</span> <span class="hand">une seule plateforme pour toute l’enquête. Paris, 2026.</span></p>
 
       <div class="footer-cols">
         <nav aria-label="Liens utiles">

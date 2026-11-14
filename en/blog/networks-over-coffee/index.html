@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Networks over coffee: how an “individual — tie type — individual 2” table becomes a picture — corpus notebook</title>
-  <meta name="description" content="Step by step: how to record ties from interviews in a three-column table, upload it to corpus, lay it out, run the numbers, and not mistake a pretty picture for a finding.">
+  <title>Network analysis in corpus: from a tie table to a graph and its measures — corpus notebook</title>
+  <meta name="description" content="Step by step: how to record the ties mentioned in interviews in a three-column table, upload it to corpus, choose a layout, compute the measures and interpret them correctly.">
   <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
 <link rel="canonical" href="https://moncorpus.fr/en/blog/networks-over-coffee/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/blog/networks-over-coffee/">
@@ -19,8 +19,8 @@
   <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Networks over coffee: how an “individual — tie type — individual 2” table becomes a picture — corpus notebook">
-  <meta property="og:description" content="Step by step: how to record ties from interviews in a three-column table, upload it to corpus, lay it out, run the numbers, and not mistake a pretty picture for a finding.">
+  <meta property="og:title" content="Network analysis in corpus: from a tie table to a graph and its measures — corpus notebook">
+  <meta property="og:description" content="Step by step: how to record the ties mentioned in interviews in a three-column table, upload it to corpus, choose a layout, compute the measures and interpret them correctly.">
   <meta property="og:url" content="https://moncorpus.fr/en/blog/networks-over-coffee/">
   <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
@@ -63,8 +63,8 @@
 <article class="post wrap">
   <header class="post-head">
     <p class="kicker"><a href="/en/blog/">blog</a> / <a href="/en/blog/rubric/metody/"><span class="rubric">§ 03 · methods</span></a></p>
-    <h1>Networks over coffee: how an “individual — tie type — individual 2” table becomes a picture</h1>
-    <p class="post-summary">Step by step: how to record ties from interviews in a three-column table, upload it to corpus, lay it out, run the numbers, and not mistake a pretty picture for a finding.</p>
+    <h1>Network analysis in corpus: from a tie table to a graph and its measures</h1>
+    <p class="post-summary">Step by step: how to record the ties mentioned in interviews in a three-column table, upload it to corpus, choose a layout, compute the measures and interpret them correctly.</p>
     <dl class="post-meta">
       <div><dt>date</dt><dd><time datetime="2026-10-20">October 20, 2026</time></dd></div>
       <div><dt>reading</dt><dd>5 min read</dd></div>
@@ -73,9 +73,9 @@
   </header>
 
   <div class="prose">
-    <p>In interviews, people constantly mention other people. “A guy from my home town got me onto a building site.” “My brother helped me find a place to live.” “My flatmate found me my first job.” That is already a network; it’s just that nobody has written it down. You can write it down in the time it takes a coffee to go cold, if you know what form to put it in.</p>
+    <p>In interviews, people constantly mention other people. “A guy from my home town got me onto a building site.” “My brother helped me find a place to live.” “My flatmate found me my first job.” These mentions can be turned into a network if they are recorded in a consistent form. Here is how to do it in corpus, and what to keep in mind when interpreting the result.</p>
 <h2 id="step-1-a-three-column-table">Step 1. A three-column table</h2>
-<p>It all starts with the most boring table in the world. One row, one tie:</p>
+<p>The starting point is a three-column table. One row, one tie:</p>
 <table>
 <thead>
 <tr>
@@ -114,7 +114,7 @@
 <li><strong>Direction, on purpose.</strong> “Helped find work” is a directed tie: the first column is the person who helped. “Same home town” is undirected. If in doubt, record the direction: it is easier to drop it later than to reconstruct it.</li>
 </ul>
 <h2 id="step-2-upload">Step 2. Upload</h2>
-<p>In corpus, you can upload the table from Excel or CSV, or simply paste it from the clipboard. Headers are recognised in Russian, English and French, and a template with the right columns can be downloaded straight from the network page. If you have an adjacency matrix rather than a list of ties, that works too.</p>
+<p>In corpus, you can upload the table as an XLSX or CSV file, or simply paste it from the clipboard. Headers are recognised in Russian, English and French, and a template with the right columns can be downloaded straight from the network page. If you have an adjacency matrix rather than a list of ties, that works too.</p>
 <p>If the codes in the table match the codes of the study’s participants, the nodes automatically pick up their attributes: age, region, interview wave. That comes in handy when you want to colour the network by group.</p>
 <h2 id="step-3-lay-it-out">Step 3. Lay it out</h2>
 <p>A layout is a way of placing the points on a plane. There are several, and they answer different questions:</p>
@@ -138,12 +138,12 @@
 <p>And the main caveat. A network built from twenty interviews is not the network of a community; it is a network of what was told. It contains the people who were remembered and whom the interviewees chose to name. A missing node here is not a random gap but a sociological fact, and one worth noting in a memo.</p>
 <h2 id="step-5-save-it-so-you-can-find-it-in-a-year">Step 5. Save it so you can find it in a year</h2>
 <p>You can export the picture as PNG or SVG (SVG for print and editing), copy it to the clipboard for slides, or save it as a snapshot in the gallery or the study’s field archive. A snapshot remembers its date, so a year from now it will be clear which version of the network is in chapter 3.</p>
-<p>For further analysis, the network can be exported to GraphML and GEXF (Gephi), to a matrix and to an R script. For example:</p>
+<p>For further analysis, the network can be exported to GraphML and GEXF, to a matrix and to an R script. For example:</p>
 <pre><code class="language-r">library(igraph)
 g &lt;- read_graph(&quot;network.graphml&quot;, format = &quot;graphml&quot;)
 sort(betweenness(g), decreasing = TRUE)[1:5]
 </code></pre>
-<h2 id="a-one-cup-checklist">A one-cup checklist</h2>
+<h2 id="checklist">Checklist</h2>
 <ol>
 <li>Three columns: individual, tie type, individual 2.</li>
 <li>Codes instead of names, consistent spelling, a short list of types.</li>
@@ -153,7 +153,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
 <li>Write a memo: what is missing from this network and why.</li>
 <li>Save a snapshot to the archive.</li>
 </ol>
-<p>The coffee has probably gone cold. But the network now exists, and it has a provenance.</p>
+<p>Every step — table upload, layout, snapshot — is kept in the study, so a year later you can see which data the network in your chapter was built from.</p>
   </div>
 
   <footer class="post-foot">
@@ -170,7 +170,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
   <footer class="site-footer">
     <div class="wrap">
       <p class="footer-word">corpus <span class="pos">n., of research</span></p>
-      <p class="footer-def"><span class="struck">twelve folders and one head.</span> <span class="hand">one place for the whole study. Paris, 2026 — work in progress.</span></p>
+      <p class="footer-def"><span class="struck">word processor, spreadsheets, surveys and a shared folder.</span> <span class="hand">one platform for the whole study. Paris, 2026.</span></p>
 
       <div class="footer-cols">
         <nav aria-label="Useful links">

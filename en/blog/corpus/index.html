@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>corpus, n. — corpus notebook</title>
-  <meta name="description" content="Why the platform is called what it is called, and what the “body of a study” means when it lives in twelve different folders.">
+  <title>What corpus is and why it exists — corpus notebook</title>
+  <meta name="description" content="Which research tasks the platform covers, which programs it replaces, how it handles data and where the data is stored.">
   <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
 <link rel="canonical" href="https://moncorpus.fr/en/blog/corpus/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/blog/corpus/">
@@ -19,8 +19,8 @@
   <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="corpus, n. — corpus notebook">
-  <meta property="og:description" content="Why the platform is called what it is called, and what the “body of a study” means when it lives in twelve different folders.">
+  <meta property="og:title" content="What corpus is and why it exists — corpus notebook">
+  <meta property="og:description" content="Which research tasks the platform covers, which programs it replaces, how it handles data and where the data is stored.">
   <meta property="og:url" content="https://moncorpus.fr/en/blog/corpus/">
   <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
@@ -62,9 +62,9 @@
   <main id="main" tabindex="-1">
 <article class="post wrap">
   <header class="post-head">
-    <p class="kicker"><a href="/en/blog/">blog</a> / <a href="/en/blog/rubric/slovar/"><span class="rubric">§ 01 · vocabulary</span></a></p>
-    <h1>corpus, n.</h1>
-    <p class="post-summary">Why the platform is called what it is called, and what the “body of a study” means when it lives in twelve different folders.</p>
+    <p class="kicker"><a href="/en/blog/">blog</a> / <a href="/en/blog/rubric/novosti/"><span class="rubric">§ 04 · product news</span></a></p>
+    <h1>What corpus is and why it exists</h1>
+    <p class="post-summary">Which research tasks the platform covers, which programs it replaces, how it handles data and where the data is stored.</p>
     <dl class="post-meta">
       <div><dt>date</dt><dd><time datetime="2026-10-06">October 6, 2026</time></dd></div>
       <div><dt>reading</dt><dd>5 min read</dd></div>
@@ -73,32 +73,46 @@
   </header>
 
   <div class="prose">
-    <p><strong>corpus</strong> [ˈkɔːpəs] <em>n., pl.</em> corpora — Latin for “body”. In linguistics, it is a collection of texts against which hunches about language are tested. In law there is <em>habeas corpus</em>, “you shall have the body”: a demand to produce the person, not an account of them. I like the fact that one word holds both meanings: the collection, and the demand to produce it.</p>
-<h2 id="the-body-of-a-study">The body of a study</h2>
-<p>Every empirical study has a body. It is not the text of the thesis or the article; it is everything they are made of: interview recordings, transcripts, field notes, questionnaires, photographs, tables of relationships, scanned consent forms, notes from sources. The body is what remains once the conclusions have been written. And it is what people return to when someone challenges those conclusions.</p>
-<p>The problem is that the body of a study is almost never kept in one place. The audio is on the recorder and in the cloud. The transcript is in someone’s email, in three versions. The consent form is in a paper folder, and the folder is in a rucksack. The questionnaires are in Excel, cleaned by hand, and exactly how they were cleaned is remembered only by the person who did it, and only until their holiday. The codes are in a qualitative analysis package, the quotations are in a draft chapter, and the only link left between a quotation and its line in the transcript is memory.</p>
-<p class="aside">as long as you remember everything, it feels like order.</p>
-<p>This is not carelessness. It is how the work goes: fieldwork happens quickly, analysis slowly, and between them there are months, and sometimes other people. The researcher who conducted the interviews and the researcher who codes them are often different people, even when they share a name.</p>
-<h2 id="what-it-means-to-produce-the-body">What it means to “produce the body”</h2>
-<p>In sociology, verifiability is usually understood as transparency of method: describing the sample, the topic guide, the coding procedure. That matters, but it is an account of the body, not the body itself. Real verification is when you can walk back from a conclusion: from a sentence in the article to the quotation, from the quotation to a version of the transcript, from that version to the audio recording, from the recording to the participant’s consent. And when, behind the figure “38% of respondents”, you can see which questionnaires were included, which were excluded and why.</p>
-<p>In clinical trials this path back is mandatory and has long been formalised; there is <a href="../clinical-rigor/">a separate post</a> about that. In sociology it more often exists as a good intention. Not because sociologists are less careful, but because they have no tool in which carefulness is the default behaviour rather than extra work done in the evenings.</p>
-<h2 id="why-a-dedicated-platform">Why a dedicated platform</h2>
-<p>corpus is an attempt to build such a tool. Not yet another coding program, and not a cloud drive full of folders, but a place where the body of a study is kept whole and every part of it has a provenance.</p>
-<p>It all rests on a few rules:</p>
+    <p><strong>corpus</strong> is a web platform for running an empirical sociological study. It brings together tools that are usually spread across separate programs: a register of participants and consent, interviews and transcripts, field notes, surveys, network data, coding, quotes, a bibliography and data export for statistical analysis. Below: the problem it solves and how it works.</p>
+<h2 id="the-problem-one-study-many-programs">The problem: one study, many programs</h2>
+<p>A typical study with interviews and a survey looks like this. Recordings sit on a voice recorder or in a cloud service. Transcripts are in a word processor, often in several versions. Coding happens in qualitative analysis software. The survey runs in an online survey tool, and responses are cleaned by hand in a spreadsheet. Networks are drawn in separate graph software, references live in a reference manager, and signed consent forms sit in a paper binder.</p>
+<p>Each program does its own job well, but they are not connected. What links them is file names and the researcher’s memory. This creates practical problems:</p>
 <ul>
-<li><strong>The source is untouchable.</strong> An uploaded file is never overwritten. The first version of a transcript and the raw answer to a questionnaire never change.</li>
-<li><strong>Processing is a recipe.</strong> Cleaning a text or a questionnaire is not an edit on top, but a new version that remembers what it was made from and how. You can revise the recipe, and the result is rebuilt.</li>
-<li><strong>Every action is recorded.</strong> Who, what, when, what it was before and what it became. The entries are linked in a chain, so the past cannot be quietly rewritten.</li>
-<li><strong>The why is data too.</strong> A decision such as “exclude questionnaires completed in under a minute” is recorded together with its reason.</li>
-<li><strong>People are behind codes.</strong> Participants’ names and contact details are encrypted and never appear in any export.</li>
+<li>the same participant appears in different files under different labels, and matching their interview, survey answers and consent form is manual work;</li>
+<li>nobody knows which version of a transcript or spreadsheet is final, or what was changed in it;</li>
+<li>a few months later it is hard to say which questionnaires a percentage in a chapter was computed from, or where a quote came from;</li>
+<li>participant names and contact details end up in file names, emails and personal devices.</li>
 </ul>
-<p>That sounds strict, and it is meant to. But rigour should not feel like bureaucracy. A good notebook does not demand discipline from you; it simply won’t let a page be torn out unnoticed.</p>
+<h2 id="the-solution-one-platform-for-the-whole-study">The solution: one platform for the whole study</h2>
+<p>In corpus, a study is a single workspace. It contains:</p>
+<ul>
+<li><strong>the research path</strong>: topic, problem statement, research question, hypotheses and methodology; changes to the methodology are saved as versions with a reason;</li>
+<li><strong>participants and consent</strong>: each participant has a code (for example P-014); names and contact details are stored separately and encrypted;</li>
+<li><strong>interviews and transcripts</strong>, versioned: raw, cleaned, anonymised, translated;</li>
+<li><strong>field notes</strong>, with sections for observation, quotes, interpretation and reflexivity, plus a field archive;</li>
+<li><strong>surveys</strong>: a builder, collection by link, entry of paper questionnaires, cleaning rules and export to R;</li>
+<li><strong>coding and quotes</strong>: a codebook, coding of passages, codes × texts matrices, inter-coder agreement;</li>
+<li><strong>networks</strong>: an “individual — tie type — individual 2” table becomes a graph with its measures;</li>
+<li><strong>bibliography</strong>: RIS and CSL-JSON import from reference managers, ISO 690 or APA 7 formatting.</li>
+</ul>
+<p>All materials are linked through the participant code. A participant’s page opens their interviews, survey answers, quotes and consent.</p>
+<h2 id="how-data-is-handled">How data is handled</h2>
+<p>corpus takes its data rules from clinical trials, where they have long been fixed in the ALCOA+ standard (see <a href="../clinical-rigor/">the dedicated article</a>). In practice:</p>
+<ul>
+<li><strong>Raw data is never overwritten.</strong> The uploaded file, the first transcript version and the raw survey answers stay unchanged.</li>
+<li><strong>Every processing step creates a new version.</strong> Cleaning a text or a survey does not edit the data in place; it creates a version that records what it was made from and how.</li>
+<li><strong>Every action is logged</strong>: who, what, when, the value before and after. Entries are linked in a hash chain, so a past entry cannot be changed unnoticed.</li>
+<li><strong>Decisions are recorded with their reasons.</strong> For example: “we exclude questionnaires completed in under a minute — a sign of careless answering”.</li>
+<li><strong>Consent applies to every export.</strong> If a participant withdraws consent, their material is removed from exports, quotes, statistics and the API.</li>
+</ul>
+<h2 id="where-the-data-is-stored">Where the data is stored</h2>
+<p>The platform and study data are hosted by a French provider on servers in France and are not transferred outside the European Union. The university or lab remains the data controller under the GDPR; corpus acts as the processor, and the corresponding agreement is being prepared for the pilot. Sign-in uses a password and a one-time code sent by email.</p>
 <h2 id="what-corpus-is-not">What corpus is not</h2>
-<p>It is not a “smart” system that will analyse your interviews for you. Interpretation remains the researcher’s job, and it is the best part of the job. corpus is there to free up time for it: less searching for files, less comparing versions, less trying to remember where a figure came from.</p>
-<p>Nor is it a replacement for R, Python or Word. Data leaves corpus in open formats (CSV, JSON, DOCX, GraphML) and stays readable without it. The body of a study should not depend on the program it is stored in.</p>
-<h2 id="why-latin">Why Latin</h2>
-<p>We could have used an English word. But “body” in English is also a car body, a governing body, a body of water and the body of a letter. <em>corpus</em>, on the other hand, is at once a collection of texts, a body, and the demand to produce it. Three meanings: the three senses in the dictionary entry on the home page.</p>
-<p class="aside">pl. corpora. checked.</p>
+<p>corpus does not analyse interviews for the researcher: interpretation remains their work. It does not replace statistical packages, programming languages or a word processor: data exports to open formats — CSV, JSON, DOCX, GraphML, an R script — and stays readable without corpus.</p>
+<h2 id="why-the-name">Why the name</h2>
+<p><em>Corpus</em> is Latin for “body”. In sociology and linguistics the word means the collection of material an analysis is built on. That is exactly what the platform keeps: everything a study’s conclusions are made of.</p>
+<h2 id="how-to-try-it">How to try it</h2>
+<p>corpus is currently preparing a pilot with research teams. Access is by invitation. Write to the address on the <a href="../../contacts/">contact</a> page: we will open a demo study with fictional data and, for the pilot, a dedicated space for your lab.</p>
   </div>
 
   <footer class="post-foot">
@@ -115,7 +129,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p class="footer-word">corpus <span class="pos">n., of research</span></p>
-      <p class="footer-def"><span class="struck">twelve folders and one head.</span> <span class="hand">one place for the whole study. Paris, 2026 — work in progress.</span></p>
+      <p class="footer-def"><span class="struck">word processor, spreadsheets, surveys and a shared folder.</span> <span class="hand">one platform for the whole study. Paris, 2026.</span></p>
 
       <div class="footer-cols">
         <nav aria-label="Useful links">

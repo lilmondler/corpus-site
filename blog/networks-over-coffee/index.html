@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image — blog corpus</title>
-  <meta name="description" content="Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, le disposer, calculer, et ne pas prendre une belle image pour une conclusion.">
+  <title>L’analyse de réseaux dans corpus : du tableau de liens au graphe et aux indicateurs — blog corpus</title>
+  <meta name="description" content="Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, choisir une disposition, calculer les indicateurs et les interpréter correctement.">
   <meta name="author" content="Snezhana Galimova">
   <meta name="theme-color" content="#f5f1e9">
 <link rel="canonical" href="https://moncorpus.fr/blog/networks-over-coffee/">  <link rel="alternate" hreflang="fr" href="https://moncorpus.fr/blog/networks-over-coffee/">
@@ -19,8 +19,8 @@
   <link rel="stylesheet" href="/css/site.css?v=b808fa92">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image — blog corpus">
-  <meta property="og:description" content="Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, le disposer, calculer, et ne pas prendre une belle image pour une conclusion.">
+  <meta property="og:title" content="L’analyse de réseaux dans corpus : du tableau de liens au graphe et aux indicateurs — blog corpus">
+  <meta property="og:description" content="Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, choisir une disposition, calculer les indicateurs et les interpréter correctement.">
   <meta property="og:url" content="https://moncorpus.fr/blog/networks-over-coffee/">
   <meta property="og:image" content="https://moncorpus.fr/og.png">
   <meta property="og:image:width" content="1200">
@@ -63,8 +63,8 @@
 <article class="post wrap">
   <header class="post-head">
     <p class="kicker"><a href="/blog/">blog</a> / <a href="/blog/rubric/metody/"><span class="rubric">§ 03 · méthodes</span></a></p>
-    <h1>Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image</h1>
-    <p class="post-summary">Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, le disposer, calculer, et ne pas prendre une belle image pour une conclusion.</p>
+    <h1>L’analyse de réseaux dans corpus : du tableau de liens au graphe et aux indicateurs</h1>
+    <p class="post-summary">Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, choisir une disposition, calculer les indicateurs et les interpréter correctement.</p>
     <dl class="post-meta">
       <div><dt>date</dt><dd><time datetime="2026-10-20">20 octobre 2026</time></dd></div>
       <div><dt>lecture</dt><dd>6 min de lecture</dd></div>
@@ -73,9 +73,9 @@
   </header>
 
   <div class="prose">
-    <p>En entretien, les gens citent sans cesse d’autres gens. « Un gars de mon village m’a fait venir sur un chantier. » « Mon frère m’a aidé à trouver un logement. » « Ma colocataire m’a trouvé mon premier boulot. » C’est déjà un réseau ; simplement, personne ne l’a noté. On peut le noter le temps qu’un café refroidisse, à condition de savoir sous quelle forme.</p>
+    <p>En entretien, les gens citent sans cesse d’autres gens. « Un gars de mon village m’a fait venir sur un chantier. » « Mon frère m’a aidé à trouver un logement. » « Ma colocataire m’a trouvé mon premier boulot. » Ces mentions permettent de construire un réseau, à condition de les noter sous une forme homogène. Voici comment le faire dans corpus, et ce qu’il faut garder en tête pour l’interprétation.</p>
 <h2 id="étape-1-un-tableau-à-trois-colonnes">Étape 1. Un tableau à trois colonnes</h2>
-<p>Tout commence par le tableau le plus ennuyeux du monde. Une ligne, un lien :</p>
+<p>Les données de départ sont un tableau à trois colonnes. Une ligne, un lien :</p>
 <table>
 <thead>
 <tr>
@@ -114,7 +114,7 @@
 <li><strong>L’orientation, en connaissance de cause.</strong> « A aidé à trouver du travail » est un lien orienté : la première colonne, c’est la personne qui a aidé. « Même village » est un lien non orienté. En cas de doute, notez l’orientation : il est plus facile de la supprimer ensuite que de la reconstituer.</li>
 </ul>
 <h2 id="étape-2-importer">Étape 2. Importer</h2>
-<p>Dans corpus, le tableau peut être importé depuis Excel ou un fichier CSV, ou tout simplement collé depuis le presse-papiers. Les en-têtes sont reconnus en russe, en anglais et en français, et un modèle avec les bonnes colonnes se télécharge directement depuis la page du réseau. Si vous avez une matrice d’adjacence plutôt qu’une liste de liens, elle convient aussi.</p>
+<p>Dans corpus, le tableau peut être importé depuis un fichier XLSX ou CSV, ou tout simplement collé depuis le presse-papiers. Les en-têtes sont reconnus en russe, en anglais et en français, et un modèle avec les bonnes colonnes se télécharge directement depuis la page du réseau. Si vous avez une matrice d’adjacence plutôt qu’une liste de liens, elle convient aussi.</p>
 <p>Si les codes du tableau correspondent à ceux des enquêté·es de l’enquête, les nœuds récupèrent automatiquement leurs caractéristiques : âge, région, vague d’entretiens. Ce sera utile le jour où vous voudrez colorer le réseau par groupe.</p>
 <h2 id="étape-3-disposer">Étape 3. Disposer</h2>
 <p>Une disposition (layout), c’est une manière de placer les points sur le plan. Il en existe plusieurs, et elles répondent à des questions différentes :</p>
@@ -138,12 +138,12 @@
 <p>Et la principale réserve. Un réseau reconstitué à partir de vingt entretiens n’est pas le réseau d’une communauté : c’est le réseau de ce qui a été raconté. Y figurent celles et ceux dont on s’est souvenu et qu’on a choisi de nommer. Un nœud absent n’est pas ici une donnée manquante au hasard, mais un fait sociologique, qui mérite d’être noté dans un mémo.</p>
 <h2 id="étape-5-enregistrer-pour-retrouver-dans-un-an">Étape 5. Enregistrer pour retrouver dans un an</h2>
 <p>L’image peut être exportée en PNG ou en SVG (le SVG pour l’impression et la retouche), copiée dans le presse-papiers pour des diapositives, ou enregistrée sous forme d’instantané dans la galerie ou dans les archives de terrain de l’enquête. L’instantané garde sa date : dans un an, on saura quelle version du réseau figure dans le chapitre 3.</p>
-<p>Pour la suite de l’analyse, le réseau s’exporte en GraphML et en GEXF (Gephi), en matrice et en script R. Par exemple :</p>
+<p>Pour la suite de l’analyse, le réseau s’exporte en GraphML et en GEXF, en matrice et en script R. Par exemple :</p>
 <pre><code class="language-r">library(igraph)
 g &lt;- read_graph(&quot;network.graphml&quot;, format = &quot;graphml&quot;)
 sort(betweenness(g), decreasing = TRUE)[1:5]
 </code></pre>
-<h2 id="la-check-list-dun-café">La check-list d’un café</h2>
+<h2 id="check-list">Check-list</h2>
 <ol>
 <li>Trois colonnes : individu, type de lien, individu 2.</li>
 <li>Des codes au lieu des noms, une graphie uniforme, une liste courte de types.</li>
@@ -153,7 +153,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
 <li>Rédiger un mémo : ce qui manque dans ce réseau, et pourquoi.</li>
 <li>Enregistrer un instantané dans les archives.</li>
 </ol>
-<p>Le café a sans doute refroidi. Mais le réseau existe désormais, et il a une provenance.</p>
+<p>Chaque étape — import du tableau, disposition, capture — est conservée dans l’enquête : un an plus tard, on sait à partir de quelles données a été construit le réseau du chapitre.</p>
   </div>
 
   <footer class="post-foot">
@@ -170,7 +170,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
   <footer class="site-footer">
     <div class="wrap">
       <p class="footer-word">corpus <span class="pos">n. m., de l’enquête</span></p>
-      <p class="footer-def"><span class="struck">douze dossiers et une seule tête.</span> <span class="hand">un seul lieu pour toute l’enquête. Paris, 2026 — en chantier.</span></p>
+      <p class="footer-def"><span class="struck">traitement de texte, tableur, questionnaires et dossier partagé.</span> <span class="hand">une seule plateforme pour toute l’enquête. Paris, 2026.</span></p>
 
       <div class="footer-cols">
         <nav aria-label="Liens utiles">

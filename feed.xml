@@ -4,18 +4,18 @@
   <title>corpus — carnet</title>
   <link>https://moncorpus.fr/blog/</link>
   <atom:link href="https://moncorpus.fr/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>Un environnement unique pour les données d’une enquête sociologique : entretiens, notes de terrain, questionnaires, réseaux et verbatims en un seul lieu — avec l’historique de chaque modification.</description>
+  <description>corpus est une plateforme web pour conduire une enquête sociologique de bout en bout : enquêtés et consentements, entretiens, notes de terrain, questionnaires, réseaux, codage et exports vers R. Chaque modification est tracée ; les données sont hébergées en France.</description>
   <language>fr</language>
   <item>
-    <title>Des réseaux le temps d’un café : comment un tableau « individu – type de lien – individu 2 » devient une image</title>
+    <title>L’analyse de réseaux dans corpus : du tableau de liens au graphe et aux indicateurs</title>
     <link>https://moncorpus.fr/blog/networks-over-coffee/</link>
     <guid isPermaLink="true">https://moncorpus.fr/blog/networks-over-coffee/</guid>
     <pubDate>Tue, 20 Oct 2026 09:00:00 +0000</pubDate>
     <category>méthodes</category>
-    <description>Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, le disposer, calculer, et ne pas prendre une belle image pour une conclusion.</description>
-    <content:encoded><![CDATA[<p>En entretien, les gens citent sans cesse d’autres gens. « Un gars de mon village m’a fait venir sur un chantier. » « Mon frère m’a aidé à trouver un logement. » « Ma colocataire m’a trouvé mon premier boulot. » C’est déjà un réseau ; simplement, personne ne l’a noté. On peut le noter le temps qu’un café refroidisse, à condition de savoir sous quelle forme.</p>
+    <description>Pas à pas : noter les liens évoqués en entretien dans un tableau à trois colonnes, l’importer dans corpus, choisir une disposition, calculer les indicateurs et les interpréter correctement.</description>
+    <content:encoded><![CDATA[<p>En entretien, les gens citent sans cesse d’autres gens. « Un gars de mon village m’a fait venir sur un chantier. » « Mon frère m’a aidé à trouver un logement. » « Ma colocataire m’a trouvé mon premier boulot. » Ces mentions permettent de construire un réseau, à condition de les noter sous une forme homogène. Voici comment le faire dans corpus, et ce qu’il faut garder en tête pour l’interprétation.</p>
 <h2 id="étape-1-un-tableau-à-trois-colonnes">Étape 1. Un tableau à trois colonnes</h2>
-<p>Tout commence par le tableau le plus ennuyeux du monde. Une ligne, un lien :</p>
+<p>Les données de départ sont un tableau à trois colonnes. Une ligne, un lien :</p>
 <table>
 <thead>
 <tr>
@@ -54,7 +54,7 @@
 <li><strong>L’orientation, en connaissance de cause.</strong> « A aidé à trouver du travail » est un lien orienté : la première colonne, c’est la personne qui a aidé. « Même village » est un lien non orienté. En cas de doute, notez l’orientation : il est plus facile de la supprimer ensuite que de la reconstituer.</li>
 </ul>
 <h2 id="étape-2-importer">Étape 2. Importer</h2>
-<p>Dans corpus, le tableau peut être importé depuis Excel ou un fichier CSV, ou tout simplement collé depuis le presse-papiers. Les en-têtes sont reconnus en russe, en anglais et en français, et un modèle avec les bonnes colonnes se télécharge directement depuis la page du réseau. Si vous avez une matrice d’adjacence plutôt qu’une liste de liens, elle convient aussi.</p>
+<p>Dans corpus, le tableau peut être importé depuis un fichier XLSX ou CSV, ou tout simplement collé depuis le presse-papiers. Les en-têtes sont reconnus en russe, en anglais et en français, et un modèle avec les bonnes colonnes se télécharge directement depuis la page du réseau. Si vous avez une matrice d’adjacence plutôt qu’une liste de liens, elle convient aussi.</p>
 <p>Si les codes du tableau correspondent à ceux des enquêté·es de l’enquête, les nœuds récupèrent automatiquement leurs caractéristiques : âge, région, vague d’entretiens. Ce sera utile le jour où vous voudrez colorer le réseau par groupe.</p>
 <h2 id="étape-3-disposer">Étape 3. Disposer</h2>
 <p>Une disposition (layout), c’est une manière de placer les points sur le plan. Il en existe plusieurs, et elles répondent à des questions différentes :</p>
@@ -78,12 +78,12 @@
 <p>Et la principale réserve. Un réseau reconstitué à partir de vingt entretiens n’est pas le réseau d’une communauté : c’est le réseau de ce qui a été raconté. Y figurent celles et ceux dont on s’est souvenu et qu’on a choisi de nommer. Un nœud absent n’est pas ici une donnée manquante au hasard, mais un fait sociologique, qui mérite d’être noté dans un mémo.</p>
 <h2 id="étape-5-enregistrer-pour-retrouver-dans-un-an">Étape 5. Enregistrer pour retrouver dans un an</h2>
 <p>L’image peut être exportée en PNG ou en SVG (le SVG pour l’impression et la retouche), copiée dans le presse-papiers pour des diapositives, ou enregistrée sous forme d’instantané dans la galerie ou dans les archives de terrain de l’enquête. L’instantané garde sa date : dans un an, on saura quelle version du réseau figure dans le chapitre 3.</p>
-<p>Pour la suite de l’analyse, le réseau s’exporte en GraphML et en GEXF (Gephi), en matrice et en script R. Par exemple :</p>
+<p>Pour la suite de l’analyse, le réseau s’exporte en GraphML et en GEXF, en matrice et en script R. Par exemple :</p>
 <pre><code class="language-r">library(igraph)
 g &lt;- read_graph(&quot;network.graphml&quot;, format = &quot;graphml&quot;)
 sort(betweenness(g), decreasing = TRUE)[1:5]
 </code></pre>
-<h2 id="la-check-list-dun-café">La check-list d’un café</h2>
+<h2 id="check-list">Check-list</h2>
 <ol>
 <li>Trois colonnes : individu, type de lien, individu 2.</li>
 <li>Des codes au lieu des noms, une graphie uniforme, une liste courte de types.</li>
@@ -93,7 +93,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
 <li>Rédiger un mémo : ce qui manque dans ce réseau, et pourquoi.</li>
 <li>Enregistrer un instantané dans les archives.</li>
 </ol>
-<p>Le café a sans doute refroidi. Mais le réseau existe désormais, et il a une provenance.</p>]]></content:encoded>
+<p>Chaque étape — import du tableau, disposition, capture — est conservée dans l’enquête : un an plus tard, on sait à partir de quelles données a été construit le réseau du chapitre.</p>]]></content:encoded>
   </item>
   <item>
     <title>Ce que la sociologie peut apprendre des essais cliniques</title>
@@ -165,7 +165,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
 <p>Aucun de ces points n’exige une technique sophistiquée. Il faut seulement que la réponse à chaque question existe ailleurs que dans une tête : à côté des données.</p>
 <h2 id="lhistorique-des-modifications-une-mémoire-qui-ne-ment-pas">L’historique des modifications : une mémoire qui ne ment pas</h2>
 <p>Dans un essai clinique, toute modification d’une donnée laisse une trace : qui, quand, l’ancienne valeur, la nouvelle, le motif. C’est ce qu’on appelle l’audit trail. La trace ne peut pas être effacée ; on peut seulement ajouter une nouvelle modification par-dessus.</p>
-<p>Comparez avec le travail ordinaire sous Excel. Vous remplacez « Seine-St-Denis » par « Seine-Saint-Denis » dans deux cents cellules, et c’est tout : le tableau est propre, mais on a perdu l’information qu’il ne l’était pas. Pour un seul remplacement, ce n’est pas grave. Pour quarante remplacements faits par trois personnes en six mois, c’est déjà un autre tableau, dont personne ne pourra reconstituer l’origine.</p>
+<p>Comparez avec le travail ordinaire dans un tableur. Vous remplacez « Seine-St-Denis » par « Seine-Saint-Denis » dans deux cents cellules, et c’est tout : le tableau est propre, mais on a perdu l’information qu’il ne l’était pas. Pour un seul remplacement, ce n’est pas grave. Pour quarante remplacements faits par trois personnes en six mois, c’est déjà un autre tableau, dont personne ne pourra reconstituer l’origine.</p>
 <p>La bonne nouvelle, c’est que cet historique peut être tenu automatiquement. Et si chaque entrée contient en plus l’empreinte de la précédente (une chaîne de hachage), même une modification faite directement dans la base devient visible.</p>
 <h2 id="les-contrôles-de-saisie-attraper-lerreur-tant-que-tout-le-monde-sen-souvient">Les contrôles de saisie : attraper l’erreur tant que tout le monde s’en souvient</h2>
 <p>Les edit checks sont des règles qui se déclenchent au moment de la saisie : un âge de 214 ans, une date d’entretien dans le futur, une ancienneté professionnelle supérieure à l’âge. En recherche clinique, on les rédige avant le début de l’étude, en même temps que les formulaires.</p>
@@ -181,43 +181,56 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
 <p>En sociologie, le gel n’est pas une interdiction de changer d’avis. Une grille de codes qualitative vit et évolue, et c’est normal. Le gel, c’est la fixation d’un moment : « le chapitre 3 a été écrit à partir de ces données et de cette version des règles ». Si quelque chose change ensuite, le chapitre sait au moins sur quoi il s’appuyait.</p>
 <h2 id="ce-quil-vaut-mieux-ne-pas-importer">Ce qu’il vaut mieux ne pas importer</h2>
 <p>La culture clinique des données s’est développée dans un univers de régulateurs, d’assurances et de budgets considérables. Des procédures opératoires standardisées pour chaque geste, une signature sur chaque page, une validation des logiciels à prix d’or : la sociologie n’en a pas besoin, et n’en a pas les moyens. Ce dont elle a besoin, c’est de la logique : la source reste intacte, les modifications sont visibles, les décisions sont justifiées, les données sont vérifiées tôt.</p>
-<p class="aside">que les cliniciens me pardonnent ces raccourcis.</p>
 <h2 id="comment-cest-fait-dans-corpus">Comment c’est fait dans corpus</h2>
-<p>Dans corpus, ces pratiques sont intégrées de façon à ce qu’on n’ait pas à y penser : le journal des actions, avec sa chaîne de hachage, se tient tout seul ; corriger un texte, c’est en créer une nouvelle version ; le nettoyage des questionnaires passe par des règles motivées, appliquées par-dessus les réponses brutes. Les contrôles de saisie, les requêtes, la double saisie et le gel sont en cours d’intégration dans le module <a href="../../features/#quality">« contrôles et requêtes »</a>.</p>]]></content:encoded>
+<p>Dans corpus, ces pratiques sont intégrées de façon à ce qu’on n’ait pas à y penser : le journal des actions, avec sa chaîne de hachage, se tient tout seul ; corriger un texte, c’est en créer une nouvelle version ; le nettoyage des questionnaires passe par des règles motivées, appliquées par-dessus les réponses brutes. Les contrôles de saisie, les requêtes, la double saisie des questionnaires papier, la vérification par rapport à la source et le gel des données avant l’analyse sont réunis dans le module <a href="../../features/#quality">« contrôles et requêtes »</a>.</p>]]></content:encoded>
   </item>
   <item>
-    <title>corpus, n. m.</title>
+    <title>Qu’est-ce que corpus, et à quoi sert-il ?</title>
     <link>https://moncorpus.fr/blog/corpus/</link>
     <guid isPermaLink="true">https://moncorpus.fr/blog/corpus/</guid>
     <pubDate>Tue, 06 Oct 2026 09:00:00 +0000</pubDate>
-    <category>vocabulaire</category>
-    <description>Pourquoi la plateforme s’appelle ainsi, et ce qu’est le « corps de l’enquête » quand il est éparpillé dans douze dossiers.</description>
-    <content:encoded><![CDATA[<p><strong>corpus</strong> [kɔʁpys] <em>n. m.</em>, pl. lat. corpora — « corps » en latin. En linguistique, on appelle ainsi un ensemble de textes sur lequel on met à l’épreuve des hypothèses sur la langue. En droit, il y a l’<em>habeas corpus</em>, « que tu aies le corps » : l’obligation de présenter la personne elle-même, et non un récit à son sujet. J’aime que les deux sens cohabitent dans un seul mot : l’ensemble, et l’exigence de le présenter.</p>
-<h2 id="le-corps-de-lenquête">Le corps de l’enquête</h2>
-<p>Toute enquête empirique a un corps. Ce n’est ni le texte de la thèse ni l’article : c’est tout ce dont ils sont faits. Les enregistrements d’entretiens, les transcriptions, les notes de terrain, les questionnaires, les photos, les tableaux de relations, les scans des formulaires de consentement, les extraits de sources. Le corps, c’est ce qui reste une fois les conclusions écrites. Et c’est ce à quoi l’on revient quand quelqu’un les conteste.</p>
-<p>Le problème, c’est que le corps d’une enquête n’est presque jamais rangé au même endroit. L’audio est sur l’enregistreur et dans le cloud. La transcription est dans la messagerie, en trois versions. Le consentement est dans une chemise cartonnée, la chemise dans un sac à dos. Les questionnaires sont dans Excel, nettoyés à la main, et la façon dont ils ont été nettoyés, seule la personne qui l’a fait s’en souvient, et encore, jusqu’aux vacances. Les codes sont dans un logiciel d’analyse qualitative, les verbatim dans le brouillon d’un chapitre, et entre la citation et la ligne de la transcription il n’y a plus d’autre lien que la mémoire.</p>
-<p class="aside">tant qu’on se souvient de tout, on croit que c’est ça, l’ordre.</p>
-<p>Ce n’est pas de la négligence. C’est la nature du travail : le terrain va vite, l’analyse lentement, et entre les deux il y a des mois, parfois d’autres personnes. La chercheuse qui a mené les entretiens et celle qui les code sont souvent deux personnes différentes, même quand elles portent le même nom.</p>
-<h2 id="ce-que-veut-dire-présenter-le-corps">Ce que veut dire « présenter le corps »</h2>
-<p>En sociologie, on entend généralement la vérifiabilité comme la transparence de la méthode : décrire l’échantillon, la grille d’entretien, la procédure de codage. C’est important, mais c’est un récit sur le corps, pas le corps lui-même. La vraie vérification, c’est quand on peut remonter depuis la conclusion : de la phrase de l’article au verbatim, du verbatim à une version de la transcription, de cette version à l’enregistrement, de l’enregistrement au consentement de la personne enquêtée. Et quand, derrière le chiffre « 38 % des répondants », on voit quels questionnaires ont été retenus, lesquels ont été exclus, et pourquoi.</p>
-<p>Dans les essais cliniques, ce chemin à rebours est obligatoire et formalisé depuis longtemps ; j’y consacre <a href="../clinical-rigor/">un billet à part</a>. En sociologie, il relève le plus souvent de la bonne intention. Non que les sociologues soient moins rigoureux, mais parce qu’ils n’ont pas d’outil où la rigueur est le comportement par défaut, et non un travail supplémentaire à faire le soir.</p>
-<h2 id="pourquoi-une-plateforme-à-part">Pourquoi une plateforme à part</h2>
-<p>corpus est une tentative de construire cet outil. Pas un logiciel de codage de plus, ni un espace de stockage en ligne avec des dossiers, mais un lieu où le corps de l’enquête est réuni en entier, et où chacune de ses parties a une provenance.</p>
-<p>Tout repose sur quelques règles :</p>
+    <category>nouvelles du produit</category>
+    <description>Les tâches de l’enquête sociologique que la plateforme prend en charge, les logiciels qu’elle remplace, la gestion des données et leur hébergement.</description>
+    <content:encoded><![CDATA[<p><strong>corpus</strong> est une plateforme web pour conduire une enquête sociologique empirique. Elle réunit des outils que l’on trouve d’ordinaire dans des logiciels séparés : registre des enquêtés et des consentements, entretiens et transcriptions, notes de terrain, questionnaires, données de réseau, codage, verbatims, bibliographie et export des données pour l’analyse statistique. Voici le problème qu’elle résout et comment elle fonctionne.</p>
+<h2 id="le-problème-une-enquête-de-nombreux-logiciels">Le problème : une enquête, de nombreux logiciels</h2>
+<p>Une enquête classique par entretiens et questionnaire se présente ainsi. Les enregistrements sont sur un dictaphone ou dans un service en ligne. Les transcriptions sont dans un traitement de texte, souvent en plusieurs versions. Le codage se fait dans un logiciel d’analyse qualitative. Le questionnaire passe par un service en ligne, et les réponses sont nettoyées à la main dans un tableur. Les réseaux sont dessinés dans un logiciel de graphes, la bibliographie est dans un gestionnaire de références, et les consentements signés dans un classeur papier.</p>
+<p>Chaque logiciel remplit bien sa fonction, mais ils ne sont pas reliés entre eux. Le lien tient aux noms de fichiers et à la mémoire de l’enquêteur. Il en découle des difficultés concrètes :</p>
 <ul>
-<li><strong>La source est intouchable.</strong> Un fichier importé n’est jamais écrasé. La première version d’une transcription et la réponse brute à un questionnaire ne changent jamais.</li>
-<li><strong>Un traitement est une recette.</strong> Nettoyer un texte ou un questionnaire, ce n’est pas corriger par-dessus : c’est créer une nouvelle version qui garde la trace de ce dont elle provient et de la manière dont elle a été obtenue. On peut revoir la recette : le résultat se recalcule.</li>
-<li><strong>Chaque action est consignée.</strong> Qui, quoi, quand, ce qu’il y avait avant et ce qu’il y a après. Les entrées sont chaînées entre elles : impossible de retoucher le passé en douce.</li>
-<li><strong>Le pourquoi est aussi une donnée.</strong> La décision « on exclut les questionnaires remplis en moins d’une minute » est enregistrée avec son motif.</li>
-<li><strong>Les personnes sont désignées par des codes.</strong> Les noms et coordonnées des enquêté·es sont chiffrés et n’apparaissent dans aucun export.</li>
+<li>un même enquêté apparaît dans plusieurs fichiers sous des désignations différentes, et rapprocher son entretien, ses réponses et son consentement se fait à la main ;</li>
+<li>on ne sait plus quelle version de la transcription ou du tableau est la bonne, ni ce qui y a été modifié ;</li>
+<li>quelques mois plus tard, il est difficile de dire sur quels questionnaires a été calculé un pourcentage du chapitre, ou d’où vient un verbatim ;</li>
+<li>les noms et coordonnées des enquêtés se retrouvent dans des noms de fichiers, des mails et sur des appareils personnels.</li>
 </ul>
-<p>Cela paraît strict, et c’est voulu. Mais la rigueur ne doit pas se vivre comme de la bureaucratie. Un bon carnet n’exige pas de discipline de votre part : il empêche simplement d’en arracher une page sans que cela se voie.</p>
+<h2 id="la-solution-une-seule-plateforme-pour-toute-lenquête">La solution : une seule plateforme pour toute l’enquête</h2>
+<p>Dans corpus, une enquête est un espace de travail unique. On y trouve :</p>
+<ul>
+<li><strong>le parcours de recherche</strong> : thème, problématique, question de recherche, hypothèses et méthodologie ; les modifications de la méthodologie sont enregistrées par versions justifiées ;</li>
+<li><strong>les enquêtés et les consentements</strong> : chaque enquêté est désigné par un code (par exemple P-014), son nom et ses coordonnées sont conservés à part, chiffrés ;</li>
+<li><strong>les entretiens et transcriptions</strong>, par versions : brute, nettoyée, anonymisée, traduite ;</li>
+<li><strong>les notes de terrain</strong>, avec les rubriques observation, propos, interprétation, réflexivité, et les archives de terrain ;</li>
+<li><strong>les questionnaires</strong> : éditeur, collecte par lien, saisie des questionnaires papier, règles de nettoyage et export vers R ;</li>
+<li><strong>le codage et les verbatims</strong> : grille de codage, codage des extraits, matrices codes × textes, accord inter-codeurs ;</li>
+<li><strong>les réseaux</strong> : un tableau « individu — type de lien — individu 2 » devient un graphe, avec ses indicateurs ;</li>
+<li><strong>la bibliographie</strong> : import RIS et CSL-JSON depuis un gestionnaire de références, mise en forme ISO 690 ou APA 7.</li>
+</ul>
+<p>Tous les matériaux sont reliés par le code de l’enquêté. Sa fiche donne accès à ses entretiens, ses réponses au questionnaire, ses verbatims et son consentement.</p>
+<h2 id="la-gestion-des-données">La gestion des données</h2>
+<p>Les règles de gestion des données de corpus viennent des essais cliniques, où elles sont fixées depuis longtemps par la norme ALCOA+ (voir <a href="../clinical-rigor/">l’article dédié</a>). Concrètement :</p>
+<ul>
+<li><strong>Les données brutes ne sont jamais écrasées.</strong> Le fichier déposé, la première version de la transcription et les réponses brutes au questionnaire restent inchangés.</li>
+<li><strong>Chaque traitement crée une nouvelle version.</strong> Nettoyer un texte ou un questionnaire ne modifie pas les données par-dessus : une version est créée, qui indique à partir de quoi et comment elle a été obtenue.</li>
+<li><strong>Chaque action est inscrite au journal</strong> : qui, quoi, quand, la valeur avant et après. Les entrées sont liées par une chaîne de hachage ; une entrée passée ne peut pas être modifiée sans que cela se voie.</li>
+<li><strong>Les décisions sont consignées avec leur justification.</strong> Par exemple : « on exclut les questionnaires remplis en moins d’une minute — signe d’un remplissage inattentif ».</li>
+<li><strong>Le consentement s’applique à tous les exports.</strong> Si un enquêté retire son consentement, ses matériaux sont exclus des exports, des verbatims, des statistiques et de l’API.</li>
+</ul>
+<h2 id="lhébergement-des-données">L’hébergement des données</h2>
+<p>La plateforme et les données d’enquête sont hébergées chez un prestataire français, sur des serveurs situés en France, et ne sont pas transférées hors de l’Union européenne. L’université ou le laboratoire reste responsable du traitement des données personnelles au sens du RGPD ; corpus intervient comme sous-traitant, et le contrat de sous-traitance est en préparation pour le pilote. La connexion se fait par mot de passe et code à usage unique reçu par e-mail.</p>
 <h2 id="ce-que-corpus-nest-pas">Ce que corpus n’est pas</h2>
-<p>Ce n’est pas un système « intelligent » qui analysera vos entretiens à votre place. L’interprétation reste le travail du chercheur ou de la chercheuse, et c’en est la meilleure part. corpus sert à lui libérer du temps : moins de fichiers à chercher, moins de versions à comparer, moins d’efforts pour se rappeler d’où vient un chiffre.</p>
-<p>Ce n’est pas non plus un substitut à R, Python ou Word. Les données sortent de corpus dans des formats ouverts (CSV, JSON, DOCX, GraphML) et restent lisibles sans lui. Le corps d’une enquête ne doit pas dépendre du logiciel où il est conservé.</p>
-<h2 id="pourquoi-en-latin">Pourquoi en latin</h2>
-<p>On aurait pu choisir un mot français. Mais « corps », en français, c’est aussi le corps d’armée, le corps enseignant, le corps de métier, le corps d’un texte de loi. <em>corpus</em>, lui, désigne à la fois l’ensemble de textes, le corps et l’exigence de le présenter. Trois sens, trois entrées de l’article de dictionnaire sur la page d’accueil.</p>
-<p class="aside">pl. lat. corpora. vérifié.</p>]]></content:encoded>
+<p>corpus n’analyse pas les entretiens à la place du chercheur : l’interprétation reste son travail. La plateforme ne remplace ni les logiciels statistiques, ni les langages de programmation, ni le traitement de texte : les données s’exportent dans des formats ouverts — CSV, JSON, DOCX, GraphML, script R — et restent lisibles sans corpus.</p>
+<h2 id="pourquoi-ce-nom">Pourquoi ce nom</h2>
+<p><em>Corpus</em> signifie « corps » en latin. En sociologie comme en linguistique, le mot désigne l’ensemble des matériaux sur lesquels repose l’analyse. C’est précisément ce que la plateforme conserve : tout ce dont sont faites les conclusions de l’enquête.</p>
+<h2 id="comment-essayer">Comment essayer</h2>
+<p>corpus se prépare actuellement à un pilote avec des équipes de recherche. L’accès se fait sur invitation. Écrivez à l’adresse indiquée sur la page <a href="../../contacts/">contact</a> : nous vous ouvrirons une enquête de démonstration aux données fictives et, pour le pilote, un espace dédié à votre laboratoire.</p>]]></content:encoded>
   </item>
 </channel>
 </rss>
