@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/literata-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/caveat-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css?v=b808fa92">
-  <link rel="stylesheet" href="/css/site.css?v=b808fa92">
+  <link rel="stylesheet" href="/css/fonts.css?v=7066d4c2">
+  <link rel="stylesheet" href="/css/site.css?v=7066d4c2">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
   <meta property="og:title" content="corpus — платформа для социологического исследования: поле, данные и анализ в одном месте">
@@ -29,7 +29,7 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/js/site.js?v=b808fa92"></script>
+  <script src="/js/site.js?v=7066d4c2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">к содержанию</a>
@@ -270,12 +270,47 @@
   </ul>
 </section>
 
+<section class="band wrap" id="questions" aria-labelledby="faq-title">
+  <header class="sec-head reveal">
+    <span class="sec-no">§ 06 — вопросы</span>
+    <h2 id="faq-title">вопросы <span class="pos">сущ., мн.</span></h2>
+  </header>
+  <div class="faq reveal">
+    <details open id="no-ai">
+      <summary>Использует ли corpus искусственный интеллект?</summary>
+      <p>Нет. corpus — не очередной ИИ-сервис и не надстройка над ChatGPT, а самостоятельная система со своей инфраструктурой и своей логикой. Интерпретация всегда остаётся за социологом.</p>
+      <ul>
+        <li><b>Без встроенного ИИ.</b> Платформа хранит, упорядочивает, связывает и проверяет данные. Она не кодирует интервью, не пишет резюме и не делает выводов за исследователя.</li>
+        <li><b>Ничего не уходит в нейросети.</b> Интервью, расшифровки, анкеты и полевые заметки не передаются никаким сервисам искусственного интеллекта — ни ChatGPT, ни другим.</li>
+        <li><b>Без обучения моделей.</b> Данные исследований не используются для обучения моделей. Этот запрет войдёт в соглашение об обработке данных и в договор с каждым нашим подрядчиком.</li>
+        <li><b>В будущем — только локально.</b> Если когда-нибудь появятся вспомогательные функции, они будут работать на локальных моделях, без передачи данных наружу: выключены по умолчанию, видно помечены и никогда не меняют исходные данные.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Где хранятся данные?</summary>
+      <p>У французского провайдера, на серверах во Франции. Данные не передаются за пределы Европейского союза.</p>
+    </details>
+    <details>
+      <summary>Кто отвечает за данные исследования?</summary>
+      <p>Университет или лаборатория остаются ответственными за обработку данных; corpus — обработчик. Для пилота готовится соглашение об обработке данных (ст. 28 GDPR).</p>
+    </details>
+    <details>
+      <summary>Можно ли забрать свои данные?</summary>
+      <p>Да. Всё выгружается в открытых форматах — CSV, JSON, DOCX, R, GraphML — и читается без corpus.</p>
+    </details>
+    <details>
+      <summary>Как получить доступ?</summary>
+      <p>Доступ — по приглашению. Напишите нам: мы откроем демо-исследование с вымышленными данными, а для пилота — отдельное пространство вашей лаборатории.</p>
+    </details>
+  </div>
+</section>
+
 <section class="band band-cool" aria-labelledby="pilot-title">
   <div class="wrap status-block">
     <div class="reveal">
-      <span class="sec-no">§ 06 — где мы сейчас</span>
+      <span class="sec-no">§ 07 — где мы сейчас</span>
       <h2 class="big-title" id="pilot-title">пилот <span class="pos">сущ., м.</span></h2>
-      <p class="lede">corpus — независимый проект, который в Париже разрабатывает Снежана Галимова, студентка второго курса магистратуры по социологии. Версия 0.6 готовится к пилоту с исследовательскими группами. Доступ — по приглашению: напишите нам, и мы откроем демо-исследование с вымышленными данными, а для пилота — отдельное пространство вашей лаборатории.</p>
+      <p class="lede">corpus создаёт в Париже Снежана Галимова — социолог по образованию (бакалавриат Университета Версаль — Сен-Кантен-ан-Ивелин, магистратура M2 в Университете Сорбонны) с несколькими годами опыта работы с данными клинических исследований. Corpus — независимый проект, который соединяет эти две практики: логику социологического исследования и строгость клинических данных. Версия 0.6 готовится к пилоту с лабораториями и исследовательскими группами. По запросу мы откроем демо-исследование с вымышленными данными, а для пилота — отдельное пространство вашей лаборатории.</p>
       <div class="actions"><a class="btn btn-primary" href="mailto:contact@moncorpus.fr?subject=%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B4%D0%B5%D0%BC%D0%BE-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0%20%D0%BA%20corpus">запросить демо <span aria-hidden="true">→</span></a></div>
     </div>
     <div class="receipt-wrap tilt-back reveal">
@@ -288,6 +323,7 @@
           <div><dt>доступ</dt><dd>по приглашению</dd></div>
           <div><dt>вход</dt><dd>пароль + код</dd></div>
           <div><dt>данные</dt><dd>во Франции</dd></div>
+          <div><dt>искусственный интеллект</dt><dd>нет</dd></div>
           <div><dt>трекеры</dt><dd>0</dd></div>
           <div><dt>cookies на сайте</dt><dd>0</dd></div>
         </dl>
@@ -302,7 +338,7 @@
   <div class="wrap" data-strip data-auto>
     <div class="sec-row">
       <header class="sec-head">
-        <span class="sec-no">§ 07 — блог</span>
+        <span class="sec-no">§ 08 — блог</span>
         <h2 id="blog-title">тетрадь <span class="pos">сущ., ж.</span></h2>
         <p class="sec-lead">Статьи о методах работы с данными, об устройстве платформы и о терминах, которыми мы пользуемся.</p>
       </header>
@@ -383,7 +419,7 @@
 
       <div class="footer-base">
         <p>© 2026 Снежана Галимова · <a href="/ru/mentions-legales/">правовая информация</a> · <a href="/ru/privacy/">конфиденциальность</a></p>
-        <p>на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе.</p>
+        <p>на этом сайте нет трекеров, cookies и чужих серверов. журнал действий ведётся только в платформе. в самой платформе нет ИИ: данные не уходят в нейросети и не используются для обучения моделей.</p>
         <a class="to-top" href="#main">↑ наверх</a>
       </div>
     </div>

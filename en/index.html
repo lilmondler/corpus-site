@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css?v=b808fa92">
-  <link rel="stylesheet" href="/css/site.css?v=b808fa92">
+  <link rel="stylesheet" href="/css/fonts.css?v=7066d4c2">
+  <link rel="stylesheet" href="/css/site.css?v=7066d4c2">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
   <meta property="og:title" content="corpus — a platform for sociological research: fieldwork, data and analysis in one place">
@@ -29,7 +29,7 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/js/site.js?v=b808fa92"></script>
+  <script src="/js/site.js?v=7066d4c2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">skip to content</a>
@@ -270,12 +270,47 @@
   </ul>
 </section>
 
+<section class="band wrap" id="questions" aria-labelledby="faq-title">
+  <header class="sec-head reveal">
+    <span class="sec-no">§ 06 — questions</span>
+    <h2 id="faq-title">questions <span class="pos">n. pl.</span></h2>
+  </header>
+  <div class="faq reveal">
+    <details open id="no-ai">
+      <summary>Does corpus use artificial intelligence?</summary>
+      <p>No. corpus is not another AI service or a layer on top of ChatGPT: it is a standalone system with its own infrastructure and its own logic. Interpretation always stays with the sociologist.</p>
+      <ul>
+        <li><b>No built-in AI.</b> The platform stores, organises, links and verifies data. It does not code interviews, summarise them or draw conclusions on the researcher’s behalf.</li>
+        <li><b>Nothing sent to AI services.</b> Interviews, transcripts, surveys and field notes are never sent to any artificial-intelligence service, ChatGPT or otherwise.</li>
+        <li><b>No model training.</b> Research data is never used to train models. This ban will be written into the data processing agreement and imposed on each of our subprocessors.</li>
+        <li><b>In the future: local only.</b> Should assistive features ever be added, they will run on local models, with no data leaving the system. Switched off by default and clearly marked in the interface, they will never alter raw data.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Where is the data hosted?</summary>
+      <p>With a French provider, on servers located in France. No data is transferred outside the European Union.</p>
+    </details>
+    <details>
+      <summary>Who is responsible for research data?</summary>
+      <p>The university or laboratory remains the data controller; corpus acts as a processor. For the pilot, a data processing agreement (Article 28 GDPR) is being prepared.</p>
+    </details>
+    <details>
+      <summary>Can I get my data back?</summary>
+      <p>Yes. Everything exports to open formats — CSV, JSON, DOCX, R, GraphML — readable without corpus.</p>
+    </details>
+    <details>
+      <summary>How do I get access?</summary>
+      <p>Access is by invitation. Write to us: we will open a demo study with fictional data and, for the pilot, a dedicated space for your lab.</p>
+    </details>
+  </div>
+</section>
+
 <section class="band band-cool" aria-labelledby="pilot-title">
   <div class="wrap status-block">
     <div class="reveal">
-      <span class="sec-no">§ 06 — where we are</span>
+      <span class="sec-no">§ 07 — where we are</span>
       <h2 class="big-title" id="pilot-title">pilot <span class="pos">n.</span></h2>
-      <p class="lede">corpus is an independent project developed in Paris by Snezhana Galimova, a second-year master’s student in sociology. Version 0.6 is being prepared for a pilot with research teams. Access is by invitation: write to us and we will open a demo study with fictional data and, for the pilot, a dedicated space for your lab.</p>
+      <p class="lede">corpus is designed and developed in Paris by Snezhana Galimova, trained in sociology (bachelor’s degree from Université de Versailles Saint-Quentin-en-Yvelines, master’s at Sorbonne Université) and with several years’ experience handling clinical-trial data. An independent project, corpus brings these two practices together: the logic of sociological fieldwork and the rigour of clinical data. Version 0.6 is being prepared for a pilot with laboratories and research teams. On request, we open a demo study with fictional data and, for the pilot, a dedicated space for your lab.</p>
       <div class="actions"><a class="btn btn-primary" href="mailto:contact@moncorpus.fr?subject=corpus%20demo%20access%20request">request a demo <span aria-hidden="true">→</span></a></div>
     </div>
     <div class="receipt-wrap tilt-back reveal">
@@ -288,6 +323,7 @@
           <div><dt>access</dt><dd>by invitation</dd></div>
           <div><dt>sign-in</dt><dd>password + code</dd></div>
           <div><dt>data</dt><dd>in France</dd></div>
+          <div><dt>artificial intelligence</dt><dd>none</dd></div>
           <div><dt>trackers</dt><dd>0</dd></div>
           <div><dt>cookies on this site</dt><dd>0</dd></div>
         </dl>
@@ -302,7 +338,7 @@
   <div class="wrap" data-strip data-auto>
     <div class="sec-row">
       <header class="sec-head">
-        <span class="sec-no">§ 07 — notebook</span>
+        <span class="sec-no">§ 08 — notebook</span>
         <h2 id="blog-title">notebook <span class="pos">n.</span></h2>
         <p class="sec-lead">Articles on working with research data, on how the platform works and on the terms we use.</p>
       </header>
@@ -383,7 +419,7 @@
 
       <div class="footer-base">
         <p>© 2026 Snezhana Galimova · <a href="/en/mentions-legales/">legal notice</a> · <a href="/en/privacy/">privacy</a></p>
-        <p>this site uses no trackers, no cookies and no third-party servers. the audit trail lives only inside the platform.</p>
+        <p>this site uses no trackers, no cookies and no third-party servers. the audit trail lives only inside the platform. the platform has no built-in AI: data is never sent to AI services or used to train models.</p>
         <a class="to-top" href="#main">↑ top</a>
       </div>
     </div>
