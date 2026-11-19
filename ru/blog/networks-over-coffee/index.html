@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/literata-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/caveat-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css?v=7066d4c2">
-  <link rel="stylesheet" href="/css/site.css?v=7066d4c2">
+  <link rel="stylesheet" href="/css/fonts.css?v=799a11dd">
+  <link rel="stylesheet" href="/css/site.css?v=799a11dd">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Сетевой анализ в corpus: от таблицы связей к графу и показателям — блог corpus">
@@ -29,7 +29,8 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/js/site.js?v=7066d4c2"></script>
+  <script src="/js/site.js?v=799a11dd"></script>
+  <script src="/js/gallery.js?v=799a11dd" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">к содержанию</a>
@@ -44,6 +45,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Разделы сайта">
         <ul>
           <li><a href="/ru/features/">возможности</a></li>
+          <li><a href="/ru/gallery/">галерея</a></li>
           <li><a href="/ru/blog/" aria-current="page">блог</a></li>
           <li><a href="/ru/about/">обо мне</a></li>
           <li><a href="/ru/team/">команда</a></li>
@@ -116,6 +118,10 @@
 <h2 id="шаг-2-загрузить">Шаг 2. Загрузить</h2>
 <p>В corpus таблицу можно загрузить из файла XLSX или CSV или просто вставить из буфера. Заголовки понимаются на русском, английском и французском, а шаблон с правильными столбцами можно скачать прямо на странице сети. Если у вас вместо списка связей матрица смежности — подойдёт и она.</p>
 <p>Если коды в таблице совпадают с кодами участников исследования, узлы сами получат их признаки: возраст, регион, волну интервью. Это пригодится, когда захочется раскрасить сеть по группам.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/ru/net-import.webp" alt="снимок экрана платформы" loading="lazy" decoding="async">
+<figcaption>загруженная таблица: corpus сначала показывает, как понял столбцы</figcaption>
+</figure>
 <h2 id="шаг-3-разложить">Шаг 3. Разложить</h2>
 <p>Раскладка — это способ расставить точки на плоскости. Их несколько, и они отвечают на разные вопросы:</p>
 <ul>
@@ -127,6 +133,10 @@
 <p>Узлы можно перетаскивать руками — положение сохраняется. Это удобно для иллюстрации в главе, но здесь стоит остановиться и сказать важное.</p>
 <p class="aside">картинка — не вывод, а повод посмотреть в таблицу.</p>
 <p>Раскладка может нарисовать «кластер» там, где его нет, и спрятать связь за другим узлом. Всё, что вы увидели на картинке, проверьте числами.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/ru/network.webp" alt="снимок экрана платформы" loading="lazy" decoding="async">
+<figcaption>«кто помог по приезде»: 17 узлов, раскладка по силам</figcaption>
+</figure>
 <h2 id="шаг-4-посчитать">Шаг 4. Посчитать</h2>
 <p>Несколько показателей, которые стоит знать в лицо:</p>
 <ul>
@@ -136,6 +146,10 @@
 <li><strong>Сообщества</strong> — группы, связанные внутри сильнее, чем с остальными.</li>
 </ul>
 <p>И главная оговорка. Сеть, собранная из двадцати интервью, — это не сеть сообщества, а сеть рассказанного. В неё попали те, кого вспомнили и кого решили назвать. Пропущенный узел здесь не случайный пропуск, а социологический факт, который стоит отметить в мемо.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/ru/net-metrics.webp" alt="снимок экрана платформы" loading="lazy" decoding="async">
+<figcaption>показатели той же сети и подсказка, как их читать</figcaption>
+</figure>
 <h2 id="шаг-5-сохранить-так-чтобы-найти-через-год">Шаг 5. Сохранить так, чтобы найти через год</h2>
 <p>Картинку можно выгрузить в PNG или SVG (SVG — для печати и правки), скопировать в буфер для слайдов или сохранить снимком в галерею или полевой архив исследования. Снимок помнит дату, поэтому через год будет понятно, какая версия сети стоит в главе 3.</p>
 <p>Для дальнейшего анализа сеть выгружается в GraphML и GEXF, в матрицу и в скрипт для R. Например, так:</p>
@@ -177,6 +191,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
           <h2>сайт</h2>
           <ul class="footer-links">
 <li><a href="/ru/features/">возможности</a></li>
+<li><a href="/ru/gallery/">галерея</a></li>
 <li><a href="/ru/blog/">блог</a></li>
 <li><a href="/ru/about/">обо мне</a></li>
 <li><a href="/ru/team/">команда</a></li>

@@ -646,6 +646,11 @@ ol.senses:not(.plain) > li::before { content: counter(sense) "."; position: abso
 /* --- Печать ---------------------------------------------------------------------------------------- */
 
 @media print {
+  .js .polaroid-photo.undeveloped { filter: none !important; opacity: 1 !important; }
+  .js [data-draw] .prov-line path { stroke-dashoffset: 0 !important; }
+  .js [data-draw] .prov-stops li { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .js .polaroid-photo, .js [data-draw] .prov-line path { transition: none !important; }
+  .lb { display: none !important; }
   .masthead, .site-footer, .cta, .prev-next, .ticker, .reel-controls, .carousel-controls { display: none !important; }
   body { background: #fff; }
   .js .reveal { opacity: 1 !important; transform: none !important; }
@@ -664,3 +669,98 @@ ol.senses:not(.plain) > li::before { content: counter(sense) "."; position: abso
 .sec-row.flush { margin: 0; align-items: center; }
 .entry-title .pos { font-size: .3em; letter-spacing: 0; margin-left: .2em; white-space: nowrap; }
 .about-text p.margin-note { font-family: var(--hand); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; }
+
+/* ---------- Галерея: картинка во весь экран, листание, карточка для скачивания ---------- */
+.zoomable { cursor: zoom-in; }
+.zoomable:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+html.lb-open { overflow: hidden; }
+.lb { position: fixed; inset: 0; z-index: 2147483000; display: grid; grid-template-rows: auto 1fr auto;
+  background: var(--paper); animation: lb-fade .25s ease-out; touch-action: pan-y pinch-zoom; isolation: isolate; }
+.lb[hidden] { display: none; }
+.lb-top { display: flex; align-items: center; gap: 1rem; padding: .8rem clamp(1rem, 3vw, 2rem); }
+.lb-mark { font-family: var(--hand); font-weight: 700; font-size: 2rem; color: var(--blue); line-height: 1; }
+.lb-count { font-family: var(--type); font-size: .85rem; color: var(--grey); margin-left: auto; }
+.lb-stage { display: grid; place-items: center; min-height: 0; padding: 0 clamp(.75rem, 6vw, 5.5rem); overflow: hidden; user-select: none; }
+.lb-card { margin: 0; background: var(--card); padding: clamp(.6rem, 1.5vw, 1.1rem) clamp(.6rem, 1.5vw, 1.1rem) .9rem;
+  box-shadow: var(--shadow-lift); max-width: min(1200px, 100%); transition: transform .2s ease-out; }
+.lb-img { display: block; max-width: 100%; max-height: calc(100dvh - 12rem); width: auto; height: auto; margin: 0 auto; pointer-events: none; }
+.lb-cap { font-family: var(--hand); font-size: 1.35rem; color: var(--ink-2); text-align: center; margin-top: .5rem; line-height: 1.2; }
+.lb-btn { border: 0; background: transparent; color: var(--ink); font-family: var(--type); font-size: 1.6rem; cursor: pointer;
+  width: 2.75rem; height: 2.75rem; border-radius: 50%; display: grid; place-items: center; }
+.lb-btn:hover, .lb-btn:focus-visible { background: var(--paper-2); }
+.lb-btn:focus-visible, .lb-dl:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: var(--card); box-shadow: var(--shadow); }
+.lb-prev { left: clamp(.25rem, 1.5vw, 1.5rem); } .lb-next { right: clamp(.25rem, 1.5vw, 1.5rem); }
+.lb-prev[hidden], .lb-next[hidden] { display: none; }
+.lb-bottom { display: flex; justify-content: center; padding: .8rem 1rem calc(.8rem + env(safe-area-inset-bottom)); }
+.lb-dl { font-family: var(--type); font-weight: 700; font-size: .9rem; color: var(--card); background: var(--ink);
+  border: 0; padding: .7rem 1.2rem; cursor: pointer; box-shadow: 4px 4px 0 var(--red); }
+.lb-dl:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--red); }
+.lb-in { animation: lb-pop .3s cubic-bezier(.2, .8, .2, 1); }
+.lb-in-r { animation: lb-from-r .3s cubic-bezier(.2, .8, .2, 1); }
+.lb-in-l { animation: lb-from-l .3s cubic-bezier(.2, .8, .2, 1); }
+@keyframes lb-fade { from { opacity: 0; } }
+@keyframes lb-pop { from { opacity: 0; transform: scale(.94) rotate(-1deg); } }
+@keyframes lb-from-r { from { opacity: 0; transform: translateX(40px) rotate(1deg); } }
+@keyframes lb-from-l { from { opacity: 0; transform: translateX(-40px) rotate(-1deg); } }
+@media (max-width: 640px) {
+  .lb-prev, .lb-next { top: auto; bottom: .7rem; transform: none; }
+  .lb-img { max-height: calc(100dvh - 13rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lb, .lb-in, .lb-in-r, .lb-in-l { animation: none; }
+  .lb-card { transition: none; }
+}
+
+/* Скриншот в статье блога: поляроид во всю ширину текста */
+.prose .post-shot { margin: 2.2rem auto 2.4rem; max-width: 100%; transform: rotate(-.6deg); }
+.prose .post-shot:nth-of-type(even) { transform: rotate(.5deg); }
+.prose .post-shot img { width: 100%; height: auto; display: block; }
+.prose .post-shot figcaption { font-family: var(--hand); font-size: 1.3rem; text-align: center; color: var(--ink-2); }
+
+/* ---------- Галерея-страница: сетка поляроидов ---------- */
+.gallery-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
+.gallery-grid .polaroid { max-width: none; }
+.gallery-grid .polaroid:hover { --tilt: 0deg; box-shadow: var(--shadow-lift); }
+
+/* ---------- «Проявка»: снимок проступает, как поляроид ---------- */
+.js .polaroid-photo:not(.polaroid-empty) { transition: filter 1.8s var(--ease-out), opacity 1.2s var(--ease-out); }
+.js .polaroid-photo.undeveloped { filter: sepia(.7) brightness(1.55) contrast(.55) blur(1.5px); opacity: .55; }
+
+/* ---------- Линия происхождения на главной ---------- */
+.provenance { padding-block: clamp(2rem, 5vw, 3.5rem); }
+.prov-title { font-family: var(--hand); font-weight: 700; font-size: clamp(2rem, 4.5vw, 3rem); color: var(--blue); margin: .2rem 0 1.4rem; line-height: 1; }
+.prov-track { position: relative; }
+.prov-line { position: absolute; pointer-events: none; overflow: visible; }
+.prov-line path { fill: none; stroke: var(--red); stroke-width: 3; stroke-linecap: round; vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1; stroke-dashoffset: 0; }
+.prov-line-h { left: 0; right: 0; top: .1rem; width: 100%; height: 2.2rem; }
+.prov-line-v { display: none; }
+.prov-stops { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; position: relative; }
+.prov-stops li { display: grid; gap: .2rem; padding-top: 2.8rem; position: relative; }
+.prov-dot { position: absolute; top: .7rem; left: 0; width: 1rem; height: 1rem; border-radius: 50%; background: var(--card);
+  border: 3px solid var(--red); }
+.prov-stops b { font-family: var(--type); font-size: .95rem; letter-spacing: .02em; }
+.prov-stops span:not(.prov-dot) { font-family: var(--hand); font-size: 1.25rem; color: var(--ink-2); line-height: 1.15; }
+.prov-note { margin: 1.6rem 0 0; max-width: 40rem; color: var(--ink-2); }
+/* до прокрутки: линия не нарисована, остановки ждут */
+.js [data-draw]:not(.drawn) .prov-line path { stroke-dashoffset: 1; }
+.js [data-draw]:not(.drawn) .prov-stops li { opacity: 0; transform: translateY(8px); }
+.js [data-draw] .prov-line path { transition: stroke-dashoffset 2.4s cubic-bezier(.45, .05, .25, 1); }
+.js [data-draw] .prov-stops li { transition: opacity .5s ease-out, transform .5s ease-out; transition-delay: .35s; }
+.js [data-draw] .prov-stops li:nth-child(2) { transition-delay: .8s; }
+.js [data-draw] .prov-stops li:nth-child(3) { transition-delay: 1.25s; }
+.js [data-draw] .prov-stops li:nth-child(4) { transition-delay: 1.7s; }
+.js [data-draw] .prov-stops li:nth-child(5) { transition-delay: 2.15s; }
+@media (max-width: 760px) {
+  .prov-line-h { display: none; }
+  .prov-line-v { display: block; left: 0; top: .6rem; bottom: .6rem; width: 1rem; height: calc(100% - 1.2rem); }
+  .prov-stops { grid-template-columns: 1fr; gap: 1.2rem; }
+  .prov-stops li { padding: 0 0 0 2rem; }
+  .prov-dot { top: .15rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .polaroid-photo.undeveloped { filter: none; opacity: 1; }
+  .js [data-draw] .prov-line path, .js [data-draw] .prov-stops li { transition: none; }
+}

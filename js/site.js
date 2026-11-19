@@ -15,6 +15,33 @@
 function init() {
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* --- «Проявка» снимков и линия происхождения: при появлении на экране --- */
+  (function () {
+    var photos = document.querySelectorAll("img.polaroid-photo");
+    var lines = document.querySelectorAll("[data-draw]");
+    if (reduce || !("IntersectionObserver" in window)) {
+      Array.prototype.forEach.call(lines, function (el) { el.classList.add("drawn"); });
+      return;
+    }
+    Array.prototype.forEach.call(photos, function (img) { img.classList.add("undeveloped"); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var go = function () { el.classList.remove("undeveloped"); el.classList.add("drawn"); };
+        if (el.tagName === "IMG" && !el.complete) el.addEventListener("load", go, { once: true });
+        else go();
+        io.unobserve(el);
+      });
+    }, { threshold: 0.35 });
+    Array.prototype.forEach.call(photos, function (el) { io.observe(el); });
+    Array.prototype.forEach.call(lines, function (el) { io.observe(el); });
+    window.addEventListener("beforeprint", function () {
+      Array.prototype.forEach.call(photos, function (el) { el.classList.remove("undeveloped"); });
+      Array.prototype.forEach.call(lines, function (el) { el.classList.add("drawn"); });
+    });
+  })();
+
   /* --- Меню на узком экране --- */
   var header = document.querySelector("[data-masthead]");
   if (header) {

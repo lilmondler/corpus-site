@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css?v=7066d4c2">
-  <link rel="stylesheet" href="/css/site.css?v=7066d4c2">
+  <link rel="stylesheet" href="/css/fonts.css?v=799a11dd">
+  <link rel="stylesheet" href="/css/site.css?v=799a11dd">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Fonctionnalités — corpus">
@@ -29,7 +29,8 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/js/site.js?v=7066d4c2"></script>
+  <script src="/js/site.js?v=799a11dd"></script>
+  <script src="/js/gallery.js?v=799a11dd" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">aller au contenu</a>
@@ -44,6 +45,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Rubriques du site">
         <ul>
           <li><a href="/features/" aria-current="page">fonctionnalités</a></li>
+          <li><a href="/gallery/">galerie</a></li>
           <li><a href="/blog/">blog</a></li>
           <li><a href="/about/">à propos</a></li>
           <li><a href="/team/">équipe</a></li>
@@ -66,7 +68,7 @@
   <p class="grammar"><i>n. f.,</i> pl. <b>fonctionnalités</b></p>
   <ol class="senses senses-small">
     <li>Un module de la plateforme et les tâches de l’enquête qu’il prend en charge.</li>
-    <li>Statut&nbsp;: <span class="status status-ready">disponible</span> — fonctionne dans la version actuelle, <span class="status status-partly">en partie</span> — la base existe, le reste est en cours, <span class="status status-building">en développement</span> — arrivera dans une prochaine version.</li>
+    <li>Ensemble, treize modules&nbsp;: toute une enquête, du sujet et des hypothèses jusqu’aux exports, au même endroit.</li>
   </ol>
 </header>
 
@@ -78,67 +80,54 @@
         <li>
           <span class="inv-no">01</span>
           <a class="inv-title" href="#path">parcours de recherche</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">02</span>
           <a class="inv-title" href="#participants">enquêtés et consentements</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">03</span>
           <a class="inv-title" href="#interviews">entretiens et transcriptions</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">04</span>
           <a class="inv-title" href="#fieldnotes">notes de terrain et archives</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">05</span>
           <a class="inv-title" href="#coding">codage et verbatims</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">06</span>
           <a class="inv-title" href="#networks">réseaux</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">07</span>
           <a class="inv-title" href="#surveys">questionnaires et nettoyage pour R</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">08</span>
           <a class="inv-title" href="#stats">statistiques</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">09</span>
           <a class="inv-title" href="#dictionaries">dictionnaires</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">10</span>
           <a class="inv-title" href="#quality">contrôles et requêtes</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">11</span>
           <a class="inv-title" href="#bibliography">bibliographie</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">12</span>
           <a class="inv-title" href="#audit">journal d’audit</a>
-          <span class="status status-ready">disponible</span>
         </li>
         <li>
           <span class="inv-no">13</span>
           <a class="inv-title" href="#team">travail en équipe</a>
-          <span class="status status-ready">disponible</span>
         </li>
       </ol>
     </div>
@@ -147,7 +136,7 @@
 
 <section class="module wrap" id="path" aria-labelledby="path-title">
   <div class="module-text">
-    <p class="sec-no">§ 01 <span class="sticker sticker-project">enquête</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 01 <span class="sticker sticker-project">enquête</span></p>
     <h2 id="path-title">Parcours de recherche</h2>
     <p class="module-lead">L’enquête est organisée en étapes : thème, problématique, question de recherche, hypothèses, méthodologie, terrain, traitement et analyse, conclusions. L’état de chaque étape est calculé à partir des données, et la méthodologie est tenue comme un protocole : chaque modification est enregistrée comme une nouvelle version, avec sa justification.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -166,7 +155,7 @@
 </section>
 <section class="module wrap module-flip" id="participants" aria-labelledby="participants-title">
   <div class="module-text">
-    <p class="sec-no">§ 02 <span class="sticker sticker-field">terrain</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 02 <span class="sticker sticker-field">terrain</span></p>
     <h2 id="participants-title">Enquêtés et consentements</h2>
     <p class="module-lead">Le registre des personnes avec qui l’enquête travaille. Dans tous les matériaux, une personne est désignée par un code (P-001) et, si besoin, un pseudonyme ; son nom et ses coordonnées sont conservés à part, chiffrés. Les consentements et leurs retraits sont suivis ici.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -178,14 +167,14 @@
     <p class="shot-label">à quoi ça ressemble</p>
     <figure class="polaroid tilt-r">
   <img class="polaroid-photo" src="/shots/fr/participants.webp" alt="Registre des enquêtés : codes, rôles, variables et statut du consentement." loading="lazy" decoding="async">
-  <figcaption>registre des enquêtés, 24 personnes</figcaption>
+  <figcaption>registre des personnes enquêtées</figcaption>
 </figure>
 
   </div>
 </section>
 <section class="module wrap" id="interviews" aria-labelledby="interviews-title">
   <div class="module-text">
-    <p class="sec-no">§ 03 <span class="sticker sticker-field">terrain</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 03 <span class="sticker sticker-field">terrain</span></p>
     <h2 id="interviews-title">Entretiens et transcriptions</h2>
     <p class="module-lead">L’entretien est conservé avec tout ce qu’on en sait : quand, où, avec qui, qui l’a mené, quel consentement a été signé. La transcription n’est pas un fichier unique mais une chaîne de versions : de la transcription brute au texte anonymisé et traduit.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -204,7 +193,7 @@
 </section>
 <section class="module wrap module-flip" id="fieldnotes" aria-labelledby="fieldnotes-title">
   <div class="module-text">
-    <p class="sec-no">§ 04 <span class="sticker sticker-field">terrain</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 04 <span class="sticker sticker-field">terrain</span></p>
     <h2 id="fieldnotes-title">Notes de terrain et archives</h2>
     <p class="module-lead">La note de terrain est découpée comme on l’enseigne en cours de méthodes et comme on le fait rarement dans l’urgence : l’observation d’un côté, les propos de l’autre, l’interprétation et la réflexivité à part. Les documents du terrain sont rangés dans des dossiers numérotés, comme dans un essai clinique.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -223,7 +212,7 @@
 </section>
 <section class="module wrap" id="coding" aria-labelledby="coding-title">
   <div class="module-text">
-    <p class="sec-no">§ 05 <span class="sticker sticker-analysis">analyse</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 05 <span class="sticker sticker-analysis">analyse</span></p>
     <h2 id="coding-title">Codage et verbatims</h2>
     <p class="module-lead">Vous sélectionnez un passage : vous le codez ou vous le gardez comme verbatim. Le codage est attaché à une version du texte et est reporté sur la version suivante ; le verbatim garde son adresse complète : entretien, enquêté, version, ligne.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -242,7 +231,7 @@
 </section>
 <section class="module wrap module-flip" id="networks" aria-labelledby="networks-title">
   <div class="module-text">
-    <p class="sec-no">§ 06 <span class="sticker sticker-networks">réseaux</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 06 <span class="sticker sticker-networks">réseaux</span></p>
     <h2 id="networks-title">Réseaux</h2>
     <p class="module-lead">Une table « individu — type de lien — individu 2 », venue d’un fichier XLSX ou CSV ou simplement collée, devient un réseau qu’on peut déplacer à la main, disposer, mesurer et enregistrer comme image directement dans les archives de terrain.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -261,7 +250,7 @@
 </section>
 <section class="module wrap" id="surveys" aria-labelledby="surveys-title">
   <div class="module-text">
-    <p class="sec-no">§ 07 <span class="sticker sticker-surveys">questionnaires et sources</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 07 <span class="sticker sticker-surveys">questionnaires et sources</span></p>
     <h2 id="surveys-title">Questionnaires et nettoyage pour R</h2>
     <p class="module-lead">Le questionnaire peut être construit ici ou saisi à la main à partir des réponses papier. Les réponses brutes ne sont jamais modifiées : le nettoyage est une liste de règles motivées, rejouée à chaque export.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -280,7 +269,7 @@
 </section>
 <section class="module wrap module-flip" id="stats" aria-labelledby="stats-title">
   <div class="module-text">
-    <p class="sec-no">§ 08 <span class="sticker sticker-analysis">analyse</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 08 <span class="sticker sticker-analysis">analyse</span></p>
     <h2 id="stats-title">Statistiques</h2>
     <p class="module-lead">Les premières questions aux données — « combien ? », « chez qui plus souvent ? » — ne devraient pas exiger d’exporter vers un autre logiciel. Les tableaux sont calculés sur les réponses nettoyées et savent sur quelle version des règles ils reposent. Pour un vrai modèle, R reste le meilleur choix — et l’export existe déjà.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -299,7 +288,7 @@
 </section>
 <section class="module wrap" id="dictionaries" aria-labelledby="dictionaries-title">
   <div class="module-text">
-    <p class="sec-no">§ 09 <span class="sticker sticker-project">enquête</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 09 <span class="sticker sticker-project">enquête</span></p>
     <h2 id="dictionaries-title">Dictionnaires</h2>
     <p class="module-lead">« Paris », « Paris 11e » et « PARIS » sont trois villes différentes pour n’importe quel logiciel. Les dictionnaires de l’enquête conservent les valeurs admises et les règles de remplacement, pour que régions, professions et types de lieux soient écrits de la même façon dans tous les entretiens et questionnaires.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -318,7 +307,7 @@
 </section>
 <section class="module wrap module-flip" id="quality" aria-labelledby="quality-title">
   <div class="module-text">
-    <p class="sec-no">§ 10 <span class="sticker sticker-quality">qualité des données</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 10 <span class="sticker sticker-quality">qualité des données</span></p>
     <h2 id="quality-title">Contrôles et requêtes</h2>
     <p class="module-lead">Une pratique des essais cliniques : les données sont vérifiées par des règles dès la saisie, une valeur douteuse devient une question à son auteur, et la base est gelée avant l’analyse. Un an plus tard, plus besoin de deviner s’il s’agit d’une coquille ou d’une découverte.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -337,7 +326,7 @@
 </section>
 <section class="module wrap" id="bibliography" aria-labelledby="bibliography-title">
   <div class="module-text">
-    <p class="sec-no">§ 11 <span class="sticker sticker-surveys">questionnaires et sources</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 11 <span class="sticker sticker-surveys">questionnaires et sources</span></p>
     <h2 id="bibliography-title">Bibliographie</h2>
     <p class="module-lead">Les sources vivent à côté des données : un livre, un article ou une page web peut être rattaché à un verbatim ou à un mémo. Saisie manuelle dans les champs CSL-JSON, import depuis un gestionnaire de références, copie de la page web au cas où elle disparaîtrait.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -356,7 +345,7 @@
 </section>
 <section class="module wrap module-flip" id="audit" aria-labelledby="audit-title">
   <div class="module-text">
-    <p class="sec-no">§ 12 <span class="sticker sticker-quality">qualité des données</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 12 <span class="sticker sticker-quality">qualité des données</span></p>
     <h2 id="audit-title">Journal d’audit</h2>
     <p class="module-lead">Chaque création, modification, suppression, dépôt, export et consultation du nom d’un enquêté est consigné automatiquement. Les entrées sont liées par une chaîne de hachage : si quelqu’un corrige discrètement une entrée directement dans la base, la vérification montre l’endroit de la rupture. À côté, un journal des décisions où le chercheur écrit pourquoi.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -375,7 +364,7 @@
 </section>
 <section class="module wrap" id="team" aria-labelledby="team-title">
   <div class="module-text">
-    <p class="sec-no">§ 13 <span class="sticker sticker-project">enquête</span> <span class="status status-ready">disponible</span></p>
+    <p class="sec-no">§ 13 <span class="sticker sticker-project">enquête</span></p>
     <h2 id="team-title">Travail en équipe</h2>
     <p class="module-lead">Une enquête se fait rarement seul. Chacun dans l’équipe a son rôle et ses droits : la personne qui code ne voit pas les noms des enquêtés, l’observateur ne peut rien abîmer, et la responsable voit qui a fait quoi.</p>
     <h3 class="small-head">ce qu’il fait</h3>
@@ -387,7 +376,7 @@
     <p class="shot-label">à quoi ça ressemble</p>
     <figure class="polaroid tilt-l">
   <img class="polaroid-photo" src="/shots/fr/team.webp" alt="Page de l’équipe d’une enquête avec les rôles de chacun." loading="lazy" decoding="async">
-  <figcaption>équipe d’une enquête, 4 personnes</figcaption>
+  <figcaption>équipe d’une enquête</figcaption>
 </figure>
 
   </div>
@@ -436,6 +425,7 @@
           <h2>le site</h2>
           <ul class="footer-links">
 <li><a href="/features/">fonctionnalités</a></li>
+<li><a href="/gallery/">galerie</a></li>
 <li><a href="/blog/">blog</a></li>
 <li><a href="/about/">à propos</a></li>
 <li><a href="/team/">équipe</a></li>

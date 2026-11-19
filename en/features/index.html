@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css?v=7066d4c2">
-  <link rel="stylesheet" href="/css/site.css?v=7066d4c2">
+  <link rel="stylesheet" href="/css/fonts.css?v=799a11dd">
+  <link rel="stylesheet" href="/css/site.css?v=799a11dd">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Features — corpus">
@@ -29,7 +29,8 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/js/site.js?v=7066d4c2"></script>
+  <script src="/js/site.js?v=799a11dd"></script>
+  <script src="/js/gallery.js?v=799a11dd" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">skip to content</a>
@@ -44,6 +45,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Site sections">
         <ul>
           <li><a href="/en/features/" aria-current="page">features</a></li>
+          <li><a href="/en/gallery/">gallery</a></li>
           <li><a href="/en/blog/">blog</a></li>
           <li><a href="/en/about/">about</a></li>
           <li><a href="/en/team/">team</a></li>
@@ -66,7 +68,7 @@
   <p class="grammar"><i>n.,</i> pl. <b>features</b></p>
   <ol class="senses senses-small">
     <li>A module of the platform and the research tasks it handles.</li>
-    <li>Status: <span class="status status-ready">available</span> — works in the current version, <span class="status status-partly">partly</span> — the core exists, the rest is in progress, <span class="status status-building">in progress</span> — coming in a later version.</li>
+    <li>Together, thirteen modules: a whole study, from topic and hypotheses to exports, in one place.</li>
   </ol>
 </header>
 
@@ -78,67 +80,54 @@
         <li>
           <span class="inv-no">01</span>
           <a class="inv-title" href="#path">research path</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">02</span>
           <a class="inv-title" href="#participants">participants and consent</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">03</span>
           <a class="inv-title" href="#interviews">interviews and transcripts</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">04</span>
           <a class="inv-title" href="#fieldnotes">field notes and archive</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">05</span>
           <a class="inv-title" href="#coding">coding and quotes</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">06</span>
           <a class="inv-title" href="#networks">networks</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">07</span>
           <a class="inv-title" href="#surveys">surveys and cleaning for R</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">08</span>
           <a class="inv-title" href="#stats">statistics</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">09</span>
           <a class="inv-title" href="#dictionaries">dictionaries</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">10</span>
           <a class="inv-title" href="#quality">checks and queries</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">11</span>
           <a class="inv-title" href="#bibliography">bibliography</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">12</span>
           <a class="inv-title" href="#audit">audit trail</a>
-          <span class="status status-ready">available</span>
         </li>
         <li>
           <span class="inv-no">13</span>
           <a class="inv-title" href="#team">teamwork</a>
-          <span class="status status-ready">available</span>
         </li>
       </ol>
     </div>
@@ -147,7 +136,7 @@
 
 <section class="module wrap" id="path" aria-labelledby="path-title">
   <div class="module-text">
-    <p class="sec-no">§ 01 <span class="sticker sticker-project">study</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 01 <span class="sticker sticker-project">study</span></p>
     <h2 id="path-title">Research path</h2>
     <p class="module-lead">A study is organised in steps: topic, problem statement, research question, hypotheses, methodology, fieldwork, processing and analysis, conclusions. The state of each step is computed from the data, and the methodology is kept like a protocol: every change is saved as a new version with its reason.</p>
     <h3 class="small-head">what it does</h3>
@@ -166,7 +155,7 @@
 </section>
 <section class="module wrap module-flip" id="participants" aria-labelledby="participants-title">
   <div class="module-text">
-    <p class="sec-no">§ 02 <span class="sticker sticker-field">fieldwork</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 02 <span class="sticker sticker-field">fieldwork</span></p>
     <h2 id="participants-title">Participants and consent</h2>
     <p class="module-lead">The register of people the study works with. In all materials a person appears under a code (P-001) and, optionally, a pseudonym; the name and contact details are stored separately and encrypted. Consent and its withdrawal are tracked here.</p>
     <h3 class="small-head">what it does</h3>
@@ -178,14 +167,14 @@
     <p class="shot-label">what it looks like</p>
     <figure class="polaroid tilt-r">
   <img class="polaroid-photo" src="/shots/en/participants.webp" alt="Participant register: codes, roles, variables and consent status." loading="lazy" decoding="async">
-  <figcaption>participant register, 24 people</figcaption>
+  <figcaption>participant register</figcaption>
 </figure>
 
   </div>
 </section>
 <section class="module wrap" id="interviews" aria-labelledby="interviews-title">
   <div class="module-text">
-    <p class="sec-no">§ 03 <span class="sticker sticker-field">fieldwork</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 03 <span class="sticker sticker-field">fieldwork</span></p>
     <h2 id="interviews-title">Interviews and transcripts</h2>
     <p class="module-lead">An interview is stored with everything known about it: when, where, with whom, who conducted it, which consent was signed. A transcript is not one file but a chain of versions: from the raw transcription to the anonymised and translated text.</p>
     <h3 class="small-head">what it does</h3>
@@ -204,7 +193,7 @@
 </section>
 <section class="module wrap module-flip" id="fieldnotes" aria-labelledby="fieldnotes-title">
   <div class="module-text">
-    <p class="sec-no">§ 04 <span class="sticker sticker-field">fieldwork</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 04 <span class="sticker sticker-field">fieldwork</span></p>
     <h2 id="fieldnotes-title">Field notes and archive</h2>
     <p class="module-lead">A field note is split the way methods courses teach and hurried fieldwork rarely does: observation in one place, what people said in another, interpretation and reflexivity apart. Field documents live in numbered folders, like the master file of a clinical trial.</p>
     <h3 class="small-head">what it does</h3>
@@ -223,7 +212,7 @@
 </section>
 <section class="module wrap" id="coding" aria-labelledby="coding-title">
   <div class="module-text">
-    <p class="sec-no">§ 05 <span class="sticker sticker-analysis">analysis</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 05 <span class="sticker sticker-analysis">analysis</span></p>
     <h2 id="coding-title">Coding and quotes</h2>
     <p class="module-lead">Select a passage — code it or keep it as a quote. Coding is attached to a version of the text and carries over to the next one; a quote remembers its full address: interview, participant, version, line.</p>
     <h3 class="small-head">what it does</h3>
@@ -242,7 +231,7 @@
 </section>
 <section class="module wrap module-flip" id="networks" aria-labelledby="networks-title">
   <div class="module-text">
-    <p class="sec-no">§ 06 <span class="sticker sticker-networks">networks</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 06 <span class="sticker sticker-networks">networks</span></p>
     <h2 id="networks-title">Networks</h2>
     <p class="module-lead">A “person — tie type — person 2” table from XLSX, CSV or simply pasted in becomes a network you can drag by hand, lay out, measure and save as an image straight into the field archive.</p>
     <h3 class="small-head">what it does</h3>
@@ -261,7 +250,7 @@
 </section>
 <section class="module wrap" id="surveys" aria-labelledby="surveys-title">
   <div class="module-text">
-    <p class="sec-no">§ 07 <span class="sticker sticker-surveys">surveys and sources</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 07 <span class="sticker sticker-surveys">surveys and sources</span></p>
     <h2 id="surveys-title">Surveys and cleaning for R</h2>
     <p class="module-lead">Build a survey right here or enter paper responses by hand. Raw answers are never touched: cleaning is a list of rules with reasons, replayed on every export.</p>
     <h3 class="small-head">what it does</h3>
@@ -280,7 +269,7 @@
 </section>
 <section class="module wrap module-flip" id="stats" aria-labelledby="stats-title">
   <div class="module-text">
-    <p class="sec-no">§ 08 <span class="sticker sticker-analysis">analysis</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 08 <span class="sticker sticker-analysis">analysis</span></p>
     <h2 id="stats-title">Statistics</h2>
     <p class="module-lead">The first questions you ask your data — “how many?”, “who more often?” — shouldn’t require exporting to another program. Tables are computed on cleaned answers and remember which version of the rules they used. For a serious model R is still better — and the export is already there.</p>
     <h3 class="small-head">what it does</h3>
@@ -299,7 +288,7 @@
 </section>
 <section class="module wrap" id="dictionaries" aria-labelledby="dictionaries-title">
   <div class="module-text">
-    <p class="sec-no">§ 09 <span class="sticker sticker-project">study</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 09 <span class="sticker sticker-project">study</span></p>
     <h2 id="dictionaries-title">Dictionaries</h2>
     <p class="module-lead">“NYC”, “New York” and “New York City” are three different cities to any program. Study dictionaries keep lists of allowed values and replacement rules, so regions, occupations and place types are written the same way in every interview and survey.</p>
     <h3 class="small-head">what it does</h3>
@@ -318,7 +307,7 @@
 </section>
 <section class="module wrap module-flip" id="quality" aria-labelledby="quality-title">
   <div class="module-text">
-    <p class="sec-no">§ 10 <span class="sticker sticker-quality">data quality</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 10 <span class="sticker sticker-quality">data quality</span></p>
     <h2 id="quality-title">Checks and queries</h2>
     <p class="module-lead">A practice borrowed from clinical trials: data is checked by rules at entry, a doubtful value becomes a question to its author, and the database is locked before analysis. A year later, nobody has to guess whether it was a typo or a finding.</p>
     <h3 class="small-head">what it does</h3>
@@ -337,7 +326,7 @@
 </section>
 <section class="module wrap" id="bibliography" aria-labelledby="bibliography-title">
   <div class="module-text">
-    <p class="sec-no">§ 11 <span class="sticker sticker-surveys">surveys and sources</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 11 <span class="sticker sticker-surveys">surveys and sources</span></p>
     <h2 id="bibliography-title">Bibliography</h2>
     <p class="module-lead">Sources live next to the data: a book, an article or a web page can be linked to a quote or a memo. Manual entry in CSL-JSON fields, import from a reference manager, a saved copy of a web page in case it disappears.</p>
     <h3 class="small-head">what it does</h3>
@@ -356,7 +345,7 @@
 </section>
 <section class="module wrap module-flip" id="audit" aria-labelledby="audit-title">
   <div class="module-text">
-    <p class="sec-no">§ 12 <span class="sticker sticker-quality">data quality</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 12 <span class="sticker sticker-quality">data quality</span></p>
     <h2 id="audit-title">Audit trail</h2>
     <p class="module-lead">Every creation, edit, deletion, upload, export and view of a participant’s name is recorded automatically. Entries are linked by a hash chain: if someone quietly edits an entry directly in the database, verification shows where the chain breaks. Next to it is a decision log, where the researcher writes down why.</p>
     <h3 class="small-head">what it does</h3>
@@ -375,7 +364,7 @@
 </section>
 <section class="module wrap" id="team" aria-labelledby="team-title">
   <div class="module-text">
-    <p class="sec-no">§ 13 <span class="sticker sticker-project">study</span> <span class="status status-ready">available</span></p>
+    <p class="sec-no">§ 13 <span class="sticker sticker-project">study</span></p>
     <h2 id="team-title">Teamwork</h2>
     <p class="module-lead">Research is rarely done alone. Everyone on the team has a role and permissions: a coder doesn’t see participants’ names, an observer can’t break anything, and the lead sees who did what.</p>
     <h3 class="small-head">what it does</h3>
@@ -387,7 +376,7 @@
     <p class="shot-label">what it looks like</p>
     <figure class="polaroid tilt-l">
   <img class="polaroid-photo" src="/shots/en/team.webp" alt="Study team page with each member’s role." loading="lazy" decoding="async">
-  <figcaption>study team, 4 people</figcaption>
+  <figcaption>study team</figcaption>
 </figure>
 
   </div>
@@ -436,6 +425,7 @@
           <h2>site</h2>
           <ul class="footer-links">
 <li><a href="/en/features/">features</a></li>
+<li><a href="/en/gallery/">gallery</a></li>
 <li><a href="/en/blog/">blog</a></li>
 <li><a href="/en/about/">about</a></li>
 <li><a href="/en/team/">team</a></li>

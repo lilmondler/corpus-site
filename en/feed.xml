@@ -56,6 +56,10 @@
 <h2 id="step-2-upload">Step 2. Upload</h2>
 <p>In corpus, you can upload the table as an XLSX or CSV file, or simply paste it from the clipboard. Headers are recognised in Russian, English and French, and a template with the right columns can be downloaded straight from the network page. If you have an adjacency matrix rather than a list of ties, that works too.</p>
 <p>If the codes in the table match the codes of the study’s participants, the nodes automatically pick up their attributes: age, region, interview wave. That comes in handy when you want to colour the network by group.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/en/net-import.webp" alt="platform screenshot" loading="lazy" decoding="async">
+<figcaption>the imported table: corpus first shows how it read the columns</figcaption>
+</figure>
 <h2 id="step-3-lay-it-out">Step 3. Lay it out</h2>
 <p>A layout is a way of placing the points on a plane. There are several, and they answer different questions:</p>
 <ul>
@@ -67,6 +71,10 @@
 <p>You can drag nodes around by hand, and their positions are saved. That is useful for an illustration in a chapter, but this is the moment to stop and say something important.</p>
 <p class="aside">a picture is not a finding, it’s a reason to look at the table.</p>
 <p>A layout can draw a “cluster” where there is none, and hide a tie behind another node. Whatever you see in the picture, check it with numbers.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/en/network.webp" alt="platform screenshot" loading="lazy" decoding="async">
+<figcaption>“who helped on arrival”: 17 nodes, force-directed layout</figcaption>
+</figure>
 <h2 id="step-4-run-the-numbers">Step 4. Run the numbers</h2>
 <p>A few measures worth knowing by sight:</p>
 <ul>
@@ -76,6 +84,10 @@
 <li><strong>Communities</strong>: groups that are more closely connected internally than to the rest.</li>
 </ul>
 <p>And the main caveat. A network built from twenty interviews is not the network of a community; it is a network of what was told. It contains the people who were remembered and whom the interviewees chose to name. A missing node here is not a random gap but a sociological fact, and one worth noting in a memo.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/en/net-metrics.webp" alt="platform screenshot" loading="lazy" decoding="async">
+<figcaption>metrics for the same network, with a reading guide</figcaption>
+</figure>
 <h2 id="step-5-save-it-so-you-can-find-it-in-a-year">Step 5. Save it so you can find it in a year</h2>
 <p>You can export the picture as PNG or SVG (SVG for print and editing), copy it to the clipboard for slides, or save it as a snapshot in the gallery or the study’s field archive. A snapshot remembers its date, so a year from now it will be clear which version of the network is in chapter 3.</p>
 <p>For further analysis, the network can be exported to GraphML and GEXF, to a matrix and to an R script. For example:</p>

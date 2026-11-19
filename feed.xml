@@ -56,6 +56,10 @@
 <h2 id="étape-2-importer">Étape 2. Importer</h2>
 <p>Dans corpus, le tableau peut être importé depuis un fichier XLSX ou CSV, ou tout simplement collé depuis le presse-papiers. Les en-têtes sont reconnus en russe, en anglais et en français, et un modèle avec les bonnes colonnes se télécharge directement depuis la page du réseau. Si vous avez une matrice d’adjacence plutôt qu’une liste de liens, elle convient aussi.</p>
 <p>Si les codes du tableau correspondent à ceux des enquêté·es de l’enquête, les nœuds récupèrent automatiquement leurs caractéristiques : âge, région, vague d’entretiens. Ce sera utile le jour où vous voudrez colorer le réseau par groupe.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/fr/net-import.webp" alt="capture d’écran de la plateforme" loading="lazy" decoding="async">
+<figcaption>le tableau importé : corpus montre d’abord comment il a lu les colonnes</figcaption>
+</figure>
 <h2 id="étape-3-disposer">Étape 3. Disposer</h2>
 <p>Une disposition (layout), c’est une manière de placer les points sur le plan. Il en existe plusieurs, et elles répondent à des questions différentes :</p>
 <ul>
@@ -67,6 +71,10 @@
 <p>On peut déplacer les nœuds à la main, et leur position est enregistrée. C’est pratique pour une illustration dans un chapitre, mais c’est le moment de s’arrêter pour dire une chose importante.</p>
 <p class="aside">l’image n’est pas une conclusion, c’est une invitation à retourner au tableau.</p>
 <p>Une disposition peut dessiner un « cluster » là où il n’y en a pas, et cacher un lien derrière un autre nœud. Tout ce que vous avez vu sur l’image, vérifiez-le par les chiffres.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/fr/network.webp" alt="capture d’écran de la plateforme" loading="lazy" decoding="async">
+<figcaption>« qui a aidé à l’arrivée » : 17 nœuds, disposition par forces</figcaption>
+</figure>
 <h2 id="étape-4-calculer">Étape 4. Calculer</h2>
 <p>Quelques indicateurs à connaître de vue :</p>
 <ul>
@@ -76,6 +84,10 @@
 <li><strong>Les communautés</strong> : des groupes plus fortement liés en interne qu’avec le reste du réseau.</li>
 </ul>
 <p>Et la principale réserve. Un réseau reconstitué à partir de vingt entretiens n’est pas le réseau d’une communauté : c’est le réseau de ce qui a été raconté. Y figurent celles et ceux dont on s’est souvenu et qu’on a choisi de nommer. Un nœud absent n’est pas ici une donnée manquante au hasard, mais un fait sociologique, qui mérite d’être noté dans un mémo.</p>
+<figure class="polaroid post-shot">
+<img class="polaroid-photo" src="/shots/fr/net-metrics.webp" alt="capture d’écran de la plateforme" loading="lazy" decoding="async">
+<figcaption>les indicateurs du même réseau, avec un rappel de lecture</figcaption>
+</figure>
 <h2 id="étape-5-enregistrer-pour-retrouver-dans-un-an">Étape 5. Enregistrer pour retrouver dans un an</h2>
 <p>L’image peut être exportée en PNG ou en SVG (le SVG pour l’impression et la retouche), copiée dans le presse-papiers pour des diapositives, ou enregistrée sous forme d’instantané dans la galerie ou dans les archives de terrain de l’enquête. L’instantané garde sa date : dans un an, on saura quelle version du réseau figure dans le chapitre 3.</p>
 <p>Pour la suite de l’analyse, le réseau s’exporte en GraphML et en GEXF, en matrice et en script R. Par exemple :</p>
