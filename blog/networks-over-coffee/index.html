@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css?v=799a11dd">
-  <link rel="stylesheet" href="/css/site.css?v=799a11dd">
+  <link rel="stylesheet" href="/css/fonts.css?v=d1732878">
+  <link rel="stylesheet" href="/css/site.css?v=d1732878">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="article">
   <meta property="og:title" content="L’analyse de réseaux dans corpus : du tableau de liens au graphe et aux indicateurs — blog corpus">
@@ -29,11 +29,12 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/js/site.js?v=799a11dd"></script>
-  <script src="/js/gallery.js?v=799a11dd" defer></script>
+  <script src="/js/site.js?v=d1732878"></script>
+  <script src="/js/gallery.js?v=d1732878" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">aller au contenu</a>
+  <p class="stage-note" role="note">Projet en développement — pilote fermé. Aucune donnée réelle n’est encore hébergée.</p>
 
   <header class="masthead" data-masthead>
     <div class="wrap masthead-inner">
@@ -111,13 +112,13 @@
 </table>
 <p>Quelques règles qui vous feront gagner une heure à l’étape suivante :</p>
 <ul>
-<li><strong>Les personnes sont désignées par des codes.</strong> Les enquêté·es ont leur propre code (P-014), et les personnes seulement évoquées en ont un distinct (N-02, « frère de P-022 »). Aucun nom ne doit figurer dans le tableau des liens : les images de réseaux ont une fâcheuse tendance à finir dans des présentations.</li>
+<li><strong>Les personnes sont désignées par des codes.</strong> Les personnes enquêtées ont leur propre code (P-014), et les personnes seulement évoquées en ont un distinct (N-02, « frère de P-022 »). Aucun nom ne doit figurer dans le tableau des liens : les images de réseaux ont une fâcheuse tendance à finir dans des présentations.</li>
 <li><strong>Ce qui est identique s’écrit de façon identique.</strong> « P-14 », « P-014 » et « P 014 », ce sont trois personnes différentes pour n’importe quel logiciel. Même chose pour les types de liens : mettez-vous d’accord à l’avance sur une liste courte.</li>
 <li><strong>L’orientation, en connaissance de cause.</strong> « A aidé à trouver du travail » est un lien orienté : la première colonne, c’est la personne qui a aidé. « Même village » est un lien non orienté. En cas de doute, notez l’orientation : il est plus facile de la supprimer ensuite que de la reconstituer.</li>
 </ul>
 <h2 id="étape-2-importer">Étape 2. Importer</h2>
 <p>Dans corpus, le tableau peut être importé depuis un fichier XLSX ou CSV, ou tout simplement collé depuis le presse-papiers. Les en-têtes sont reconnus en russe, en anglais et en français, et un modèle avec les bonnes colonnes se télécharge directement depuis la page du réseau. Si vous avez une matrice d’adjacence plutôt qu’une liste de liens, elle convient aussi.</p>
-<p>Si les codes du tableau correspondent à ceux des enquêté·es de l’enquête, les nœuds récupèrent automatiquement leurs caractéristiques : âge, région, vague d’entretiens. Ce sera utile le jour où vous voudrez colorer le réseau par groupe.</p>
+<p>Si les codes du tableau correspondent à ceux des personnes enquêtées de l’enquête, les nœuds récupèrent automatiquement leurs caractéristiques : âge, région, vague d’entretiens. Ce sera utile le jour où vous voudrez colorer le réseau par groupe.</p>
 <figure class="polaroid post-shot">
 <img class="polaroid-photo" src="/shots/fr/net-import.webp" alt="capture d’écran de la plateforme" loading="lazy" decoding="async">
 <figcaption>le tableau importé : corpus montre d’abord comment il a lu les colonnes</figcaption>
@@ -125,9 +126,9 @@
 <h2 id="étape-3-disposer">Étape 3. Disposer</h2>
 <p>Une disposition (layout), c’est une manière de placer les points sur le plan. Il en existe plusieurs, et elles répondent à des questions différentes :</p>
 <ul>
-<li><strong>par forces</strong> : les nœuds liés s’attirent, les autres se repoussent ; les groupes denses ressortent bien ;</li>
-<li><strong>Kamada–Kawai</strong> : cherche à ce que la distance sur l’image ressemble à la distance dans le réseau ;</li>
-<li><strong>en cercle</strong> : tous les nœuds sur une circonférence ; pour les petits réseaux, où il importe de voir chaque lien ;</li>
+<li><strong>par forces</strong> : les nœuds liés s’attirent, les autres se repoussent ; les groupes denses ressortent bien ;</li>
+<li><strong>Kamada–Kawai</strong> : cherche à ce que la distance sur l’image ressemble à la distance dans le réseau ;</li>
+<li><strong>en cercle</strong> : tous les nœuds sur une circonférence ; pour les petits réseaux, où il importe de voir chaque lien ;</li>
 <li><strong>par groupes</strong> : les nœuds d’un même groupe sont rapprochés, par exemple selon la région d’origine.</li>
 </ul>
 <p>On peut déplacer les nœuds à la main, et leur position est enregistrée. C’est pratique pour une illustration dans un chapitre, mais c’est le moment de s’arrêter pour dire une chose importante.</p>
@@ -140,7 +141,7 @@
 <h2 id="étape-4-calculer">Étape 4. Calculer</h2>
 <p>Quelques indicateurs à connaître de vue :</p>
 <ul>
-<li><strong>La densité</strong> : la part des liens effectivement présents parmi tous les liens possibles. Dans un réseau de 20 personnes, 190 liens non orientés sont possibles ; s’il y en a 19, la densité est de 0,1.</li>
+<li><strong>La densité</strong> : la part des liens effectivement présents parmi tous les liens possibles. Dans un réseau de 20 personnes, 190 liens non orientés sont possibles ; s’il y en a 19, la densité est de 0,1.</li>
 <li><strong>Le degré</strong> : le nombre de liens d’un nœud. Ce sont les « centres » les plus évidents du réseau.</li>
 <li><strong>L’intermédiarité</strong> (betweenness) : la fréquence à laquelle un nœud se trouve sur le plus court chemin entre deux autres. Dans les réseaux migratoires, c’est souvent la personne arrivée la première et qui « connaît tout le monde ». Par elle passent le travail, le logement et les nouvelles, et son absence couperait le réseau en morceaux.</li>
 <li><strong>Les communautés</strong> : des groupes plus fortement liés en interne qu’avec le reste du réseau.</li>
@@ -161,7 +162,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
 <ol>
 <li>Trois colonnes : individu, type de lien, individu 2.</li>
 <li>Des codes au lieu des noms, une graphie uniforme, une liste courte de types.</li>
-<li>Importer, vérifier que les nœuds correspondent bien aux enquêté·es.</li>
+<li>Importer, vérifier que les nœuds correspondent bien aux personnes enquêtées.</li>
 <li>Disposer de deux façons différentes et comparer.</li>
 <li>Calculer la densité, le degré, l’intermédiarité.</li>
 <li>Rédiger un mémo : ce qui manque dans ce réseau, et pourquoi.</li>
@@ -216,7 +217,7 @@ sort(betweenness(g), decreasing = TRUE)[1:5]
 
       <div class="footer-base">
         <p>© 2026 Snezhana Galimova · <a href="/mentions-legales/">mentions légales</a> · <a href="/privacy/">confidentialité</a></p>
-        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme. la plateforme n’intègre aucune IA : les données ne sont transmises à aucun service d’IA et ne servent pas à entraîner des modèles.</p>
+        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme. la plateforme n’intègre aucune IA : les données ne sont transmises à aucun service d’IA et ne servent pas à entraîner des modèles.</p>
         <a class="to-top" href="#main">↑ haut</a>
       </div>
     </div>

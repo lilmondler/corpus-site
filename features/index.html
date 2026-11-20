@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/caveat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/fonts.css?v=799a11dd">
-  <link rel="stylesheet" href="/css/site.css?v=799a11dd">
+  <link rel="stylesheet" href="/css/fonts.css?v=d1732878">
+  <link rel="stylesheet" href="/css/site.css?v=d1732878">
   <meta property="og:site_name" content="corpus">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Fonctionnalités — corpus">
@@ -29,11 +29,12 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <script src="/js/site.js?v=799a11dd"></script>
-  <script src="/js/gallery.js?v=799a11dd" defer></script>
+  <script src="/js/site.js?v=d1732878"></script>
+  <script src="/js/gallery.js?v=d1732878" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">aller au contenu</a>
+  <p class="stage-note" role="note">Projet en développement — pilote fermé. Aucune donnée réelle n’est encore hébergée.</p>
 
   <header class="masthead" data-masthead>
     <div class="wrap masthead-inner">
@@ -68,7 +69,7 @@
   <p class="grammar"><i>n. f.,</i> pl. <b>fonctionnalités</b></p>
   <ol class="senses senses-small">
     <li>Un module de la plateforme et les tâches de l’enquête qu’il prend en charge.</li>
-    <li>Ensemble, treize modules&nbsp;: toute une enquête, du sujet et des hypothèses jusqu’aux exports, au même endroit.</li>
+    <li>Ensemble, treize modules : toute une enquête, du sujet et des hypothèses jusqu’aux exports, au même endroit.</li>
   </ol>
 </header>
 
@@ -83,7 +84,7 @@
         </li>
         <li>
           <span class="inv-no">02</span>
-          <a class="inv-title" href="#participants">enquêtés et consentements</a>
+          <a class="inv-title" href="#participants">personnes enquêtées et consentements</a>
         </li>
         <li>
           <span class="inv-no">03</span>
@@ -156,17 +157,17 @@
 <section class="module wrap module-flip" id="participants" aria-labelledby="participants-title">
   <div class="module-text">
     <p class="sec-no">§ 02 <span class="sticker sticker-field">terrain</span></p>
-    <h2 id="participants-title">Enquêtés et consentements</h2>
-    <p class="module-lead">Le registre des personnes avec qui l’enquête travaille. Dans tous les matériaux, une personne est désignée par un code (P-001) et, si besoin, un pseudonyme ; son nom et ses coordonnées sont conservés à part, chiffrés. Les consentements et leurs retraits sont suivis ici.</p>
+    <h2 id="participants-title">Personnes enquêtées et consentements</h2>
+    <p class="module-lead">Le registre des personnes avec qui l’enquête travaille. Dans tous les matériaux, une personne est désignée par un code (P-001) et, si besoin, un pseudonyme ; son nom et ses coordonnées sont conservés à part, chiffrés. Les consentements et leurs retraits sont suivis ici.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
-<li>codes, pseudonymes, rôle sur le terrain et variables de l’enquête : région, âge, génération</li><li>statut du consentement, date, scan ou enregistrement du consentement</li><li>nom et coordonnées dans un bloc chiffré ; chaque consultation est inscrite au journal</li><li>le retrait du consentement exclut les matériaux de l’enquêté de tous les exports, verbatims, statistiques et de l’API</li><li>effacement des données personnelles à la demande de l’enquêté</li>    </ul>
+<li>codes, pseudonymes, rôle sur le terrain et variables de l’enquête : région, âge, génération</li><li>statut du consentement, date, scan ou enregistrement du consentement</li><li>nom et coordonnées dans un bloc chiffré ; chaque consultation est inscrite au journal</li><li>après un retrait, les entretiens, transcriptions, verbatims et réponses de la personne enquêtée sont exclus de tous les exports</li><li>effacement des données personnelles à la demande de la personne enquêtée</li>    </ul>
     <p class="outputs"><span>en sortie</span> CSV sans noms ni coordonnées</p>
   </div>
   <div class="module-shot">
     <p class="shot-label">à quoi ça ressemble</p>
     <figure class="polaroid tilt-r">
-  <img class="polaroid-photo" src="/shots/fr/participants.webp" alt="Registre des enquêtés : codes, rôles, variables et statut du consentement." loading="lazy" decoding="async">
+  <img class="polaroid-photo" src="/shots/fr/participants.webp" alt="Registre des personnes enquêtées : codes, rôles, variables et statut du consentement." loading="lazy" decoding="async">
   <figcaption>registre des personnes enquêtées</figcaption>
 </figure>
 
@@ -179,7 +180,7 @@
     <p class="module-lead">L’entretien est conservé avec tout ce qu’on en sait : quand, où, avec qui, qui l’a mené, quel consentement a été signé. La transcription n’est pas un fichier unique mais une chaîne de versions : de la transcription brute au texte anonymisé et traduit.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
-<li>métadonnées de la rencontre et enquêtés sous code P-001, avec repérage des locuteurs</li><li>audio et vidéo à côté du texte ; transcriptions depuis .txt, .docx, .srt, .vtt et la sortie JSON des outils de reconnaissance vocale</li><li>versions du texte brut → nettoyage → normalisation → anonymisation → traduction, chacune avec sa recette</li><li>comparaison de deux versions : chaque mot modifié est visible</li><li>noms et coordonnées des enquêtés chiffrés, consentements scannés visibles par deux rôles seulement</li>    </ul>
+<li>métadonnées de la rencontre et personnes enquêtées sous code P-001, avec repérage des locuteurs</li><li>audio et vidéo à côté du texte ; transcriptions depuis .txt, .docx, .srt, .vtt et la sortie JSON des outils de reconnaissance vocale</li><li>versions du texte brut → nettoyage → normalisation → anonymisation → traduction, chacune avec sa recette</li><li>comparaison de deux versions : chaque mot modifié est visible</li><li>noms et coordonnées des personnes enquêtées chiffrés, consentements scannés visibles par deux rôles seulement</li>    </ul>
     <p class="outputs"><span>en sortie</span> corpus.jsonl · corpus.json · DOCX · Markdown</p>
   </div>
   <div class="module-shot">
@@ -214,10 +215,10 @@
   <div class="module-text">
     <p class="sec-no">§ 05 <span class="sticker sticker-analysis">analyse</span></p>
     <h2 id="coding-title">Codage et verbatims</h2>
-    <p class="module-lead">Vous sélectionnez un passage : vous le codez ou vous le gardez comme verbatim. Le codage est attaché à une version du texte et est reporté sur la version suivante ; le verbatim garde son adresse complète : entretien, enquêté, version, ligne.</p>
+    <p class="module-lead">Vous sélectionnez un passage : vous le codez ou vous le gardez comme verbatim. Le codage est attaché à une version du texte et est reporté sur la version suivante ; le verbatim garde son adresse complète : entretien, personne enquêtée, version, ligne.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
-<li>grille de codes : hiérarchie, définitions, critères d’inclusion et d’exclusion, exemples</li><li>fusion de codes, avec la raison consignée dans le journal des décisions</li><li>régularités : codes × textes, codes × groupes, cooccurrences, mot en contexte</li><li>accord inter-codeurs : kappa de Cohen entre deux codages</li><li>verbatims et sélections par chapitre ; hypothèses avec éléments « pour », « contre » et « nuance »</li>    </ul>
+<li>grille de codes : hiérarchie, définitions, critères d’inclusion et d’exclusion, exemples</li><li>fusion de codes, avec la raison consignée dans le journal des décisions</li><li>régularités : codes × textes, codes × groupes, cooccurrences, mot en contexte</li><li>accord inter-codeurs : kappa de Cohen entre deux codages</li><li>verbatims et sélections par chapitre ; hypothèses avec éléments « pour », « contre » et « nuance »</li>    </ul>
     <p class="outputs"><span>en sortie</span> DOCX · Markdown · CSV · JSON</p>
   </div>
   <div class="module-shot">
@@ -236,13 +237,13 @@
     <p class="module-lead">Une table « individu — type de lien — individu 2 », venue d’un fichier XLSX ou CSV ou simplement collée, devient un réseau qu’on peut déplacer à la main, disposer, mesurer et enregistrer comme image directement dans les archives de terrain.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
-<li>import d’une liste de liens ou d’une matrice d’adjacence ; nœuds tirés du registre des enquêtés</li><li>placement : par forces (Kamada-Kawai…), en cercle, par groupes ; le glisser-déposer est conservé</li><li>indicateurs : densité, degré, centralité d’intermédiarité, communautés</li><li>image PNG et SVG, copie dans le presse-papiers, cliché dans la galerie ou les archives</li><li>transformations de tables : liste de liens ↔ matrice, format large ↔ long</li>    </ul>
+<li>import d’une liste de liens ou d’une matrice d’adjacence ; nœuds tirés du registre des personnes enquêtées</li><li>placement : par forces (Kamada-Kawai…), en cercle, par groupes ; le glisser-déposer est conservé</li><li>indicateurs : densité, degré, centralité d’intermédiarité, communautés</li><li>image PNG et SVG, copie dans le presse-papiers, cliché dans la galerie ou les archives</li><li>transformations de tables : liste de liens ↔ matrice, format large ↔ long</li>    </ul>
     <p class="outputs"><span>en sortie</span> PNG · SVG · GraphML · GEXF · matrice · R (igraph)</p>
   </div>
   <div class="module-shot">
     <p class="shot-label">à quoi ça ressemble</p>
     <figure class="polaroid tilt-r">
-  <img class="polaroid-photo" src="/shots/fr/network.webp" alt="Graphe : nœuds-enquêtés, liens de plusieurs types, panneau d’indicateurs." loading="lazy" decoding="async">
+  <img class="polaroid-photo" src="/shots/fr/network.webp" alt="Graphe : nœuds : personnes enquêtées, liens de plusieurs types, panneau d’indicateurs." loading="lazy" decoding="async">
   <figcaption>réseau de compatriotes, 23 nœuds</figcaption>
 </figure>
 
@@ -271,10 +272,10 @@
   <div class="module-text">
     <p class="sec-no">§ 08 <span class="sticker sticker-analysis">analyse</span></p>
     <h2 id="stats-title">Statistiques</h2>
-    <p class="module-lead">Les premières questions aux données — « combien ? », « chez qui plus souvent ? » — ne devraient pas exiger d’exporter vers un autre logiciel. Les tableaux sont calculés sur les réponses nettoyées et savent sur quelle version des règles ils reposent. Pour un vrai modèle, R reste le meilleur choix — et l’export existe déjà.</p>
+    <p class="module-lead">Les premières questions aux données — « combien ? », « chez qui plus souvent ? » — ne devraient pas exiger d’exporter vers un autre logiciel. Les tableaux sont calculés sur les réponses nettoyées et savent sur quelle version des règles ils reposent. Pour un vrai modèle, R reste le meilleur choix — et l’export existe déjà.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
-<li>fréquences et statistiques descriptives par variable du questionnaire</li><li>tableaux croisés par groupes d’enquêtés</li><li>chaque tableau sait sur quelles données et quelles règles de nettoyage il est construit</li>    </ul>
+<li>fréquences et statistiques descriptives par variable du questionnaire</li><li>tableaux croisés par groupes de personnes enquêtées</li><li>chaque tableau sait sur quelles données et quelles règles de nettoyage il est construit</li>    </ul>
     <p class="outputs"><span>en sortie</span> CSV · XLSX</p>
   </div>
   <div class="module-shot">
@@ -319,7 +320,7 @@
     <p class="shot-label">à quoi ça ressemble</p>
     <figure class="polaroid tilt-r">
   <img class="polaroid-photo" src="/shots/fr/quality.webp" alt="Liste des requêtes sur les données avec les statuts « ouverte », « répondue », « close »." loading="lazy" decoding="async">
-  <figcaption>requête n° 12 : âge 214 ?</figcaption>
+  <figcaption>requête n° 12 : âge 214 ?</figcaption>
 </figure>
 
   </div>
@@ -331,7 +332,7 @@
     <p class="module-lead">Les sources vivent à côté des données : un livre, un article ou une page web peut être rattaché à un verbatim ou à un mémo. Saisie manuelle dans les champs CSL-JSON, import depuis un gestionnaire de références, copie de la page web au cas où elle disparaîtrait.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
-<li>saisie manuelle, import RIS et CSL-JSON depuis un gestionnaire de références</li><li>copie de la page web avec date de consultation</li><li>mise en forme APA ; export BibTeX, RIS, CSL-JSON</li>    </ul>
+<li>saisie manuelle, import RIS et CSL-JSON depuis un gestionnaire de références</li><li>copie de la page web avec date de consultation</li><li>mise en forme APA ; export BibTeX, RIS, CSL-JSON</li>    </ul>
     <p class="outputs"><span>en sortie</span> BibTeX · RIS · CSL-JSON</p>
   </div>
   <div class="module-shot">
@@ -347,7 +348,7 @@
   <div class="module-text">
     <p class="sec-no">§ 12 <span class="sticker sticker-quality">qualité des données</span></p>
     <h2 id="audit-title">Journal d’audit</h2>
-    <p class="module-lead">Chaque création, modification, suppression, dépôt, export et consultation du nom d’un enquêté est consigné automatiquement. Les entrées sont liées par une chaîne de hachage : si quelqu’un corrige discrètement une entrée directement dans la base, la vérification montre l’endroit de la rupture. À côté, un journal des décisions où le chercheur écrit pourquoi.</p>
+    <p class="module-lead">Chaque création, modification, suppression, dépôt, export et consultation du nom d’une personne enquêtée est consigné automatiquement. Les entrées sont liées par une chaîne de hachage : si quelqu’un corrige discrètement une entrée directement dans la base, la vérification montre l’endroit de la rupture. À côté, un journal des décisions où le chercheur écrit pourquoi.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
 <li>journal d’audit : utilisateur, heure du serveur, champs « avant » et « après »</li><li>chaîne de hachage et vérification de l’intégrité du journal et des fichiers</li><li>journal des décisions : « on exclut…, parce que… » — les entrées ne s’effacent pas</li><li>paquet de données avec inventaire et sha256 pour l’archivage ou un dépôt</li>    </ul>
@@ -366,10 +367,10 @@
   <div class="module-text">
     <p class="sec-no">§ 13 <span class="sticker sticker-project">enquête</span></p>
     <h2 id="team-title">Travail en équipe</h2>
-    <p class="module-lead">Une enquête se fait rarement seul. Chacun dans l’équipe a son rôle et ses droits : la personne qui code ne voit pas les noms des enquêtés, l’observateur ne peut rien abîmer, et la responsable voit qui a fait quoi.</p>
+    <p class="module-lead">Une enquête se fait rarement seul. Chacun dans l’équipe a son rôle et ses droits : la personne qui code ne voit pas les noms des personnes enquêtées, l’observateur ne peut rien abîmer, et la responsable voit qui a fait quoi.</p>
     <h3 class="small-head">ce qu’il fait</h3>
     <ul class="dash-list">
-<li>rôles : responsable, chercheur, codeur, observateur — droits vérifiés sur chaque page</li><li>interface en français, anglais et russe ; le journal s’affiche dans la langue de chacun</li><li>API REST avec jetons personnels — pour vos scripts R ou autres</li><li>notifications ; échanges sur les requêtes qualité</li>    </ul>
+<li>rôles : responsable, chercheur, codeur, observateur — droits vérifiés sur chaque page</li><li>interface en français, anglais et russe ; le journal s’affiche dans la langue de chacun</li><li>API REST avec jetons personnels — pour vos scripts R ou autres</li><li>notifications ; échanges sur les requêtes qualité</li>    </ul>
     <p class="outputs"><span>en sortie</span> API · JSON</p>
   </div>
   <div class="module-shot">
@@ -391,12 +392,11 @@
   <div class="receipt-wrap tilt-l later">
     <div class="receipt">
       <ul class="plain-list">
-        <li>échange de projets avec les logiciels d’analyse qualitative (format ouvert REFI-QDA)&nbsp;;</li>
-        <li>import et export des questionnaires aux formats des logiciels statistiques (.sav, .dta) et DDI Codebook&nbsp;;</li>
-        <li>synchronisation de la transcription avec l’enregistrement par horodatage&nbsp;;</li>
-        <li>notes de terrain sur téléphone, sans connexion&nbsp;;</li>
-        <li>transcription audio — en local, sans que les enregistrements quittent la plateforme&nbsp;;</li>
-        <li>connexion avec le compte universitaire (Renater, eduGAIN).</li>
+        <li>échange de projets avec les logiciels d’analyse qualitative (format ouvert REFI-QDA) ;</li>
+        <li>import et export des questionnaires aux formats des logiciels statistiques (.sav, .dta) et DDI Codebook ;</li>
+        <li>synchronisation de la transcription avec l’enregistrement par horodatage ;</li>
+        <li>notes de terrain sur téléphone, sans connexion ;</li>
+        <li>transcription audio — en local, sans que les enregistrements quittent la plateforme.</li>
       </ul>
       <p class="receipt-foot">suggestions — <a href="/contacts/">par ici</a></p>
     </div>
@@ -406,7 +406,7 @@
 <section class="wrap closing">
   <div class="closing-sheet taped">
     <h2>Accès de démonstration</h2>
-    <p>La plateforme contient une enquête de démonstration, «&nbsp;Migrations de travail&nbsp;», aux données fictives&nbsp;: enquêtés et consentements, entretiens, questionnaire, réseau, codage et journal d’audit. Elle permet d’essayer tous les modules décrits ci-dessus avant d’y transférer votre propre enquête.</p>
+    <p>La plateforme contient une enquête de démonstration, « Migrations de travail », aux données fictives : personnes enquêtées et consentements, entretiens, questionnaire, réseau, codage et journal d’audit. Elle permet d’essayer tous les modules décrits ci-dessus avant d’y transférer votre propre enquête.</p>
     <div class="cta">
       <a class="btn btn-primary" href="mailto:contact@moncorpus.fr?subject=Demande%20d%E2%80%99acc%C3%A8s%20de%20d%C3%A9monstration%20%C3%A0%20corpus">demander une démo <span aria-hidden="true">→</span></a>
       <a class="btn btn-ghost" href="/contacts/#demo">nous écrire</a>
@@ -450,7 +450,7 @@
 
       <div class="footer-base">
         <p>© 2026 Snezhana Galimova · <a href="/mentions-legales/">mentions légales</a> · <a href="/privacy/">confidentialité</a></p>
-        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme. la plateforme n’intègre aucune IA : les données ne sont transmises à aucun service d’IA et ne servent pas à entraîner des modèles.</p>
+        <p>ce site n’utilise ni traceurs, ni cookies, ni serveurs tiers. le journal d’audit n’existe que dans la plateforme. la plateforme n’intègre aucune IA : les données ne sont transmises à aucun service d’IA et ne servent pas à entraîner des modèles.</p>
         <a class="to-top" href="#main">↑ haut</a>
       </div>
     </div>

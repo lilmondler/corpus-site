@@ -764,3 +764,20 @@ html.lb-open { overflow: hidden; }
   .js .polaroid-photo.undeveloped { filter: none; opacity: 1; }
   .js [data-draw] .prov-line path, .js [data-draw] .prov-stops li { transition: none; }
 }
+
+/* Две карточки в ряд (раздел «мемо»): шире и спокойнее */
+.index-cards.index-cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 62rem; }
+@media (max-width: 640px) { .index-cards.index-cards-2 { grid-template-columns: 1fr; } }
+
+/* Плашка о стадии проекта — тонкая полоса над шапкой на каждой странице */
+.stage-note { margin: 0; padding: .45rem clamp(1rem, 4vw, 2rem); background: var(--ink); color: var(--card);
+  font-family: var(--type); font-size: .78rem; letter-spacing: .02em; text-align: center; line-height: 1.4; }
+@media print { .stage-note { background: none; color: var(--ink); border-bottom: 1px solid var(--line); } }
+
+/* Крупные словарные заголовки: межстрочный .92 — у «p», «q», «g» хвосты уходят ниже строки.
+   Отступ снизу, чтобы следующая строка («1. …», грамматика, рукописная правка) не наезжала. */
+.entry-title { padding-bottom: .14em; margin-bottom: .35rem; }
+.entry-title + .senses, .entry-title + .correction { margin-top: .4rem; }
+
+/* Воздух между заголовком карточки и текстом — на телефоне строки стояли впритык */
+.index-card h3, .who-list h3 { margin-bottom: .5rem; line-height: 1.12; }

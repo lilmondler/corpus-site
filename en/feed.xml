@@ -4,7 +4,7 @@
   <title>corpus — notebook</title>
   <link>https://moncorpus.fr/en/blog/</link>
   <atom:link href="https://moncorpus.fr/en/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>corpus is a web platform for running a sociological study end to end: participants and consent, interviews, field notes, surveys, networks, coding and exports to R. Every change is logged; data is hosted in France.</description>
+  <description>corpus is a web platform for running a sociological study end to end: participants and consent, interviews, field notes, surveys, networks, coding and exports to R. Every change is logged.</description>
   <language>en</language>
   <item>
     <title>Network analysis in corpus: from a tie table to a graph and its measures</title>
