@@ -781,3 +781,8 @@ html.lb-open { overflow: hidden; }
 
 /* Воздух между заголовком карточки и текстом — на телефоне строки стояли впритык */
 .index-card h3, .who-list h3 { margin-bottom: .5rem; line-height: 1.12; }
+
+/* Карточки: шапка «§ 01 … COR-…» не растягивается (иначе заголовки стоят на разной высоте);
+   заголовок не рвёт слова посередине — кегль подстраивается под ширину карточки. */
+.index-card .ic-head { flex: 0 0 auto; }
+.index-card h3 { font-size: clamp(1.25rem, 1.05rem + .6vw, 1.65rem); overflow-wrap: normal; word-break: normal; hyphens: manual; }
