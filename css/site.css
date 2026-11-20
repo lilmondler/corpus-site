@@ -41,7 +41,7 @@
   --gutter: clamp(1rem, 4vw, 3rem);
   --space-md: 2rem;
   --space-lg: clamp(2.5rem, 5vw, 4rem);
-  --space-xl: clamp(4rem, 9vw, 7.5rem);
+  --space-xl: clamp(2.75rem, 5.5vw, 4.5rem);
   --header-h: 64px;
   --ease: .22s ease;
   --ease-out: cubic-bezier(.2, .7, .2, 1);
